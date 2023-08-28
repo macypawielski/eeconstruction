@@ -96,7 +96,7 @@ a#nohover {
 /*Header*/
 .EG_Header_Box {
     width: 86%;
-    height: 450px;
+    height: 850px;
     background-color: rgba(159,168,146,255);
     padding-top: 60px;
     text-align: center;
@@ -107,7 +107,7 @@ a#nohover {
 
 @media screen and (max-width: 600px) {
     .EG_Header_Box {
-        height:700px;
+        height:1000px;
         margin-bottom:2em;
     }
 }
