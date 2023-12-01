@@ -344,9 +344,119 @@
 
 
 
-/*Logo Header & Nav Bar*/
+/*Temp Logo Header & Nav Bar*/
 
+.responsivenav {
+    height: 0px;
+    width: 100%;
+    background-color: transparent;
+    position: relative;
+    z-index: 5;
+    font-family: 'Martel Sans';
+}
 
+    .responsivenav > .nav-header {
+        display: inline;
+    }
+
+        .responsivenav > .nav-header > .nav-title {
+            display: inline-block;
+            font-size: 22px;
+            color: #fff;
+            padding: 10px 10px 10px 10px;
+        }
+
+    .responsivenav > .nav-btn {
+        display: none;
+    }
+
+    .responsivenav > .nav-links {
+        display: inline;
+        float: right;
+        font-size: 13px;
+        margin-top: 30px;
+    }
+
+        .responsivenav > .nav-links > a {
+            display: inline-block;
+            padding: 13px 10px 13px 10px;
+            text-decoration: none;
+            color: #efefef;
+        }
+
+            .responsivenav > .nav-links > a:hover {
+                background-color: rgba(0, 0, 0, 0.3);
+                transition: 1s;
+            }
+
+    .responsivenav > #nav-check {
+        display: none;
+    }
+
+@media (max-width:600px) {
+    .responsivenav > .nav-btn {
+        display: inline-block;
+        position: absolute;
+        right: 0px;
+        top: 0px;
+    }
+
+        .responsivenav > .nav-btn > label {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            padding: 13px;
+        }
+
+            .responsivenav > .nav-btn > label:hover, .responsivenav #nav-check:checked ~ .nav-btn > label {
+                background-color: rgba(0, 0, 0, 0.3);
+            }
+
+            .responsivenav > .nav-btn > label > span {
+                display: block;
+                width: 25px;
+                height: 10px;
+                border-top: 2px solid #eee;
+            }
+
+    .responsivenav > .nav-links {
+        position: absolute;
+        display: block;
+        width: 100%;
+        background-color: #333;
+        height: 0px;
+        transition: all 0.3s ease-in;
+        overflow-y: hidden;
+        top: 50px;
+        left: 0px;
+    }
+
+        .responsivenav > .nav-links > a {
+            display: block;
+            width: 100%;
+        }
+
+    .responsivenav > #nav-check:not(:checked) ~ .nav-links {
+        height: 0px;
+    }
+
+    .responsivenav > #nav-check:checked ~ .nav-links {
+        height: calc(100vh - 50px);
+        overflow-y: auto;
+    }
+}
+
+.logo-responsive {
+    height: 80px;
+    margin-left: 20%;
+}
+
+@media only screen and (max-width: 800px) {
+    .logo-responsive {
+        height: 70px;
+        margin-left: 10%;
+    }
+}
 
 
 
@@ -1128,17 +1238,19 @@ letter-spacing:1px;
     }
 }
 
-    .himg-contact {
-        background-image: url("contactheader3.png");
-        height: 700px;
-        width: 100%;
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        padding-top: 0px;
-        margin-top: 0px;
-    }
+.himg-contact {
+    /*background-image: url("contactheader3.png");*/
+    background-image: url("EngageEventsContact.jpg");
+    height: 500px;
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 0px;
+    margin-bottom: 100px;
+    margin: auto;
+}
 
 @media only screen and (max-width: 800px) {
     .himg-contact {
@@ -1151,43 +1263,46 @@ letter-spacing:1px;
         width: 100%;
         height: 100%;
         margin: auto;
-        padding: 150px 0 0 0;
+        padding: 100px 0 0 0;
         position: relative;
     }
 
 
-
-
-    .headerintro {
-        width: 500px;
-        height: 400px;
-        margin: auto;
-        font-size: 30px;
-        color: white;
-        text-align: center;
-        letter-spacing: 3px;
-        font-family: Martel Sans;
-        position: relative;
-        padding-left: 40px;
-        padding-right: 40px;
-        background-color: rgba(160, 170, 148, 0.9);
-        box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
-    }
+.headerintro {
+    width: 500px;
+    height: 200px;
+    margin: auto;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    letter-spacing: 4px;
+    font-family: Martel Sans;
+    font-weight:100;
+    position: relative;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-top:50px;
+    padding-top:20px;
+    /*background-color: rgba(160, 170, 148, 0.9);*/
+    background-color:rgba(255,255,255,0.5);
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+}
 
     @media only screen and (max-width: 800px) {
         .headerintro {
             width: 100%;
             padding-top: 20px;
+            height: 220px;
         }
     }
 
     .headerbio {
         font-family: Martel Sans;
-        font-size: 15px;
-        line-height: 25px;
+        font-size: 10px;
+        line-height: 0px;
         letter-spacing: 1px;
         color: black;
-        padding-top: 30px;
+        padding-top: 0px;
         text-align: center;
     }
 
@@ -2415,7 +2530,7 @@ letter-spacing:1px;
 
         .wrappericon .icon span i {
             font-size: 25px;
-            line-height: 60px;
+            line-height: 55px;
         }
 
         .wrappericon .icon .tooltip {
@@ -2471,23 +2586,13 @@ letter-spacing:1px;
             opacity: 1;
         }
 
-        .wrappericon .weddingwire span {
-            background: rgba(115, 172, 183, 0.56);
-        }
-
-        .wrappericon .weddingwire:hover span,
-        .wrappericon .weddingwire:hover .tooltip,
-        .wrappericon .weddingwire:hover .tooltip:before {
-            background: #169fa5;
-        }
-
-        .wrappericon .theknot span {
+        .wrappericon .google span {
             background: rgba(239, 109, 87, 0.56);
         }
 
-        .wrappericon .theknot:hover span,
-        .wrappericon .theknot:hover .tooltip,
-        .wrappericon .theknot:hover .tooltip:before {
+        .wrappericon .google:hover span,
+        .wrappericon .google:hover .tooltip,
+        .wrappericon .google:hover .tooltip:before {
             background: #ef6d57;
         }
 
@@ -2569,7 +2674,7 @@ letter-spacing:1px;
 }
 
         .footerlinksbox {
-            width: 90%;
+            width: 67%;
             height: 130px;
             margin: auto;
             border-bottom: 1px white solid;
@@ -3511,33 +3616,71 @@ letter-spacing:1px;
             margin-bottom: 50px;
             /*/background-color: rgba(226, 160, 124,0.9);*/
         }
-
+@media screen and (max-width: 600px) {
+    .contact-3 {
+        height:1000px;
+    }
+}
         .contact-3-centered {
             width: 70%;
             height: 80%;
             margin: auto;
         }
-
+@media screen and (max-width: 600px) {
+    .contact-3-centered {
+        width: 90%;
+    }
+}
 
         .map-ringbox {
             width: 460px;
-            height: 100px;
+            height: 500px;
         }
 
-        .map-diamond {
-            width: 460px;
-            height: 100px;
-            margin-top: 20px;
-        }
+@media screen and (max-width: 600px) {
+    .map-ringbox {
+        width: 100%;
+    }
+}
 
-        .map-circle {
-            width: 470px;
-            height: 470px;
-            border-radius: 50%;
-            background-color: #fad25a;
-            padding-top: 10px;
-        }
+.map-diamond {
+    width: 460px;
+    height: 100px;
+    margin-top: 20px;
+}
 
+@media screen and (max-width: 600px) {
+    .map-diamond {
+        width: 100%;
+    }
+}
+
+.map-iframe {
+    width: 450px; 
+    height: 450px; 
+    border-radius: 50%; 
+    object-fit: cover;
+}
+@media screen and (max-width: 600px) {
+    .map-iframe {
+        width: 350px;
+        height: 350px;
+    }
+}
+.map-circle {
+    width: 470px;
+    height: 470px;
+    border-radius: 50%;
+    background-color: #fad25a;
+    padding-top: 10px;
+}
+
+@media screen and (max-width: 600px) {
+    .map-circle {
+        width: 370px;
+        height: 370px;
+    }
+}
 
         .contact-3-boxes {
             height: 70%;
@@ -3552,6 +3695,15 @@ letter-spacing:1px;
             border-right: 1px solid white;
         }
 
+@media screen and (max-width: 600px) {
+    .contact-3-boxes {
+        width: 100%;
+        margin-top: 10px;
+        height: 300px;
+        border-right: none;
+    }
+}
+
         .contact-3-mapbox {
             width: calc(100%*(2/3));
             float: left;
@@ -3560,31 +3712,46 @@ letter-spacing:1px;
             font-weight: lighter;
             color: white;
             text-align: center;
+            padding-left:100px; 
         }
-
+@media screen and (max-width: 600px) {
+    .contact-3-mapbox {
+        width: 100%;
+        padding-left: 0px;
+    }
+}
         .contact-container {
             height: 1300px;
             width: 1300px;
             margin: auto;
         }
 
+.formpadding {
+    padding-bottom: 100px;
+    padding-top: 100px;
+}
 
+@media only screen and (max-width: 800px) {
+    .formpadding {
+        padding-top: 50px;
+    }
+}
         .form-banner-outline {
             height: 450px;
-            width: 100%;
-            margin-bottom: 100px;
-            margin-top: 180px;
+            width: 90%;
             /*background-color: rgba(191,183,167,1);*/
             background-image: url('form.png');
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
+            margin:auto;
         }
 
 @media only screen and (max-width: 800px) {
     .form-banner-outline {
         width: 100%;
-        margin-top: 50px;
+        margin-top: 80px;
+
     }
 }
 
@@ -3671,19 +3838,20 @@ letter-spacing:1px;
 
 
         .contact-row {
-            width: 1230px;
+            width: 80%;
             margin: auto;
             height: 600px;
         }
 
-
-        .contact-indrow {
-            width: 100%;
-            height: 50%;
-        }
+@media only screen and (max-width: 620px) {
+    .contact-row {
+        width: 90%;
+        height: 1400px;
+    }
+}
 
         .contact-thirds {
-            width: 400px;
+            width: 32%;
             border: 2px solid white;
             margin: 5px;
             height: 300px;
@@ -3696,16 +3864,45 @@ letter-spacing:1px;
             text-align: center;
         }
 
+@media only screen and (max-width: 620px) {
+    .contact-thirds {
+        width: 98%;
+        margin: 2px;
+    }
+}
 
+.contact-thirdspic {
+    object-fit: cover;
+    height: 300px;
+    width: 100%;
+    opacity: 0.6;
+}
+
+
+@media only screen and (max-width: 620px) {
+    .contact-thirdspic {
+     height:150px;
+    }
+}
+
+@media only screen and (max-width: 620px) {
+    #contact-thirdshalf {
+        height: 150px;
+    }
+}
 
 
         .contact-row2 {
-            width: 1200px;
+            width: 75%;
             margin: auto;
             height: 400px;
         }
 
-
+@media only screen and (max-width: 620px) {
+    .contact-row2 {
+        width: 90%;
+    }
+}
         .contact-row-right {
             width: 55%;
             margin-left: 10%;
@@ -3720,31 +3917,66 @@ letter-spacing:1px;
             background-color: rgba(226, 160, 124,0.6);
         }
 
-        .contact-left {
-            width: 50%;
-            float: left;
-            height: 400px;
-            background-color: #61655a;
-            border-bottom: 1px solid black;
-            text-align: center;
-            font-family: 'Martel Sans';
-            letter-spacing: 1px;
-            font-weight: lighter;
-            color: white;
-        }
+.contact-left {
+    width: 50%;
+    float: left;
+    height: 400px;
+    background-color: #61655a;
+    border-bottom: 1px solid black;
+    text-align: center;
+    font-family: 'Martel Sans';
+    letter-spacing: 1px;
+    font-weight: lighter;
+    color: white;
+}
+.contact-title {
+    margin-top:80px; 
+    font-size:35px;
+}
 
-        .contact-right {
-            width: 50%;
-            float: left;
-            height: 400px;
-            background-color: #61655a;
-            border-bottom: 1px solid black;
-            text-align: center;
-            font-family: 'Martel Sans';
-            letter-spacing: 1px;
-            font-weight: lighter;
-            color: white;
-        }
+@media only screen and (max-width: 620px) {
+    .contact-title {
+        font-size: 25px;
+        margin-top: 50px;
+    }
+}
+
+.contact-subtitle {
+    font-size:15px; 
+    line-height:15px;
+}
+@media only screen and (max-width: 620px) {
+    .contact-subtitle {
+        font-size: 10px;
+        line-height: 10px;
+    }
+}
+.contact-text {
+    font-size: 13px;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+@media only screen and (max-width: 620px) {
+    .contact-text {
+        margin-left: 20px;
+        margin-right: 20px;
+        font-size: 10px;
+    }
+}
+
+.contact-right {
+    width: 50%;
+    float: left;
+    height: 400px;
+    background-color: #61655a;
+    border-bottom: 1px solid black;
+    text-align: center;
+    font-family: 'Martel Sans';
+    letter-spacing: 1px;
+    font-weight: lighter;
+    color: white;
+}
 
 
 
@@ -4053,17 +4285,36 @@ letter-spacing:1px;
             margin-bottom: 100px
         }
 
-        .moreoptions-box2 {
-            width: 100%;
-            margin: auto;
-            padding-top: 50px;
-            height: 350px;
-            background-color: rgba(88, 92, 79, 0.5);
-            text-align: center;
-            color: white;
-            padding-left: 200px;
-            padding-right: 200px;
-        }
+.moreoptions-box2 {
+    width: 100%;
+    margin: auto;
+    padding-top: 50px;
+    height: 350px;
+    background-color: rgba(88, 92, 79, 0.5);
+    text-align: center;
+    color: white;
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+@media screen and (max-width: 600px) {
+    .moreoptions-box2 {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+.moreoptions-textbox {
+    font-family: poppins;
+    letter-spacing: 2px;
+    font-size: 23px;
+}
+
+@media screen and (max-width: 600px) {
+    .moreoptions-textbox {
+        font-size: 15px;
+    }
+}
 /*
         .plan-contain {
             margin: auto;
