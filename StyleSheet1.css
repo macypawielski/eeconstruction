@@ -1138,12 +1138,15 @@ letter-spacing:1px;
 
     .himg-packages {
         background-image: url('p2.png');
-        height: 700px;
+        height: 500px;
         width: 100%;
+        background-attachment: fixed;
+        background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
         padding-top: 0px;
-        margin-top: 0px;
+        margin-bottom: 100px;
+        margin: auto;
     }
 
 @media only screen and (max-width: 800px) {
