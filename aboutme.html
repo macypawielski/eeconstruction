@@ -1,0 +1,983 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+    <title>about me</title>
+    <link rel="stylesheet" href="StyleSheet1.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b2a08806f6.js" crossorigin="anonymous"></script>
+
+
+
+
+
+    <style>
+        body {
+            background-color: #323924;
+            height: 100%;
+            overflow-x: hidden;
+            overflow-y: scroll;
+        }
+
+        a:hover, a:focus, a:active, a:visited, a:link {
+            text-decoration: none;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+
+        .footernav {
+            position: relative;
+            display: block;
+            cursor: pointer;
+            color: #fff;
+            text-decoration: none;
+        }
+
+
+        .second {
+            color: white;
+            top: -1rem;
+            font-size: 40px;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+        }
+
+        @keyframes slide-up {
+            from {
+                transform: translateY(5rem);
+            }
+
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        :root {
+            --surface-color: #fff;
+            --curve: 40;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+
+
+        .cards {
+            display: grid;
+            font-family: 'Martel Sans', sans-serif;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 0 5vw;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        .card {
+            position: relative;
+            display: block;
+            height: 100%;
+            border-radius: calc(var(--curve) * 1px);
+            overflow: hidden;
+            text-decoration: none;
+        }
+
+        .card__image {
+            width: 100%;
+            height: auto;
+        }
+
+        .card__overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 1;
+            border-radius: calc(var(--curve) * 1px);
+            background-color: var(--surface-color);
+            transform: translateY(100%);
+            transition: .2s ease-in-out;
+        }
+
+        .card:hover .card__overlay {
+            transform: translateY(0);
+        }
+
+        .card__header {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 2em;
+            padding: 2em;
+            border-radius: calc(var(--curve) * 1px) 0 0 0;
+            background-color: var(--surface-color);
+            transform: translateY(-100%);
+            transition: .2s ease-in-out;
+        }
+
+        .card__arc {
+            width: 80px;
+            height: 80px;
+            position: absolute;
+            bottom: 100%;
+            right: 0;
+            z-index: 1;
+        }
+
+            .card__arc path {
+                fill: var(--surface-color);
+                d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
+            }
+
+        .card:hover .card__header {
+            transform: translateY(0);
+        }
+
+        .card__thumb {
+            flex-shrink: 0;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .card__title {
+            font-size: 1em;
+            margin: 0 0 .3em;
+            color: #6A515E;
+        }
+
+        .card__tagline {
+            display: block;
+            margin: 1em 0;
+            font-family: 'Martel Sans';
+            font-size: 10px;
+            color: #D7BDCA;
+        }
+
+        .card__status {
+            font-size: .8em;
+            color: #D7BDCA;
+        }
+
+        .card__description {
+            padding: 0 2em 2em;
+            margin: 0;
+            font-size: 13px;
+            color: #6A515E;
+            font-family: 'Martel Sans';
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+        }
+
+        .anna-image {
+            height: 300px;
+            width: 300px;
+            margin: auto;
+            background: url("aboutmepic.jpg") no-repeat transparent;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border: 1px solid white;
+            opacity: 0;
+        }
+
+        @media only screen and (max-width: 800px) {
+            .anna-image {
+                height: 100%;
+                width: 100%;
+                margin: auto;
+                background: url("aboutmepic3.jpg") no-repeat transparent;
+                background-repeat: no-repeat;
+                background-size: cover;
+                border: 1px solid #dbd3d347;
+                opacity: 1;
+                padding:10px;
+            }
+        }
+
+        .slideshow-title {
+            background-color: rgba(226,160,124,0.7);
+            font-size:50px;
+            line-height:90px;
+        }
+        @media only screen and (max-width: 800px) {
+            .slideshow-title {
+                font-size: 25px;
+                line-height: 70px;
+            }
+        }
+
+        .Anna-AboutMeContainer {
+            height:900px; 
+            width:100%; 
+            padding-top:100px;
+        }
+
+        @media only screen and (max-width: 800px) {
+            .Anna-AboutMeContainer {
+                height: 750px;
+                padding-top: 0px;
+            }
+        }
+
+        .anna-outlinebox {
+            background-color: rgba(0, 0, 0, 0.25);
+            padding: 20px;
+            width: 70%;
+            margin: auto;
+            box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+        }
+
+        @media only screen and (max-width: 800px) {
+            .anna-outlinebox {
+                width:98%;
+            }
+        }
+        /*SLIDESHOW*/
+        .slide-wrapper {
+            background: url("aboutmepic.jpg") no-repeat transparent;
+            background-size: cover;
+            font-family: sans-serif;
+            height: 35rem;
+            max-width: 1075px;
+            position: relative;
+            margin: auto;
+        }
+
+        @media only screen and (max-width: 800px) {
+            .slide-wrapper {
+                background:none;
+                opacity:0.9;
+                max-width: 800px;
+            }
+        }
+
+            .slide-wrapper::before {
+                display: block;
+                mix-blend-mode: multiply;
+                position: absolute;
+                z-index: 2;
+            }
+
+            .slide-wrapper::after {
+                background-color: rgba(0, 0, 0, 0.5);
+                content: "";
+                height: 100%;
+                left: 0;
+                opacity: 0;
+                position: absolute;
+                top: 0;
+                transition: all 1s ease 0s;
+                width: 100%;
+            }
+
+            .slide-wrapper .slide-text {
+                bottom: 60px;
+                box-sizing: border-box;
+                color: #fff;
+                font-size: 1.5rem;
+                left: 0;
+                line-height: 2.8rem;
+                padding: 0 8rem;
+                position: absolute;
+                transition: top 0.35s ease 0s;
+                width: 100%;
+                z-index: 2;
+            }
+
+        @media only screen and (max-width: 800px) {
+            .slide-wrapper .slide-text {
+                font-size: 10px;
+                line-height: 20px;
+                padding: 0px;
+                font-family: martel sans;
+                padding: 0px 20px 0px 20px;
+            }
+        }
+                .slide-wrapper .slide-text .slide-heading {
+                    text-transform: uppercase;
+                }
+
+                .slide-wrapper .slide-text .slide-body {
+                    max-height: 0;
+                    opacity: 0;
+                    overflow: hidden;
+                    transition: all 1.5s ease 0s;
+                }
+
+                .slide-wrapper .slide-text h2 {
+                    color: #fff;
+                    font-size: 3.8rem;
+                    line-height: 4.5rem;
+                    margin: 0 0 10px;
+                    padding: 3px 0 0 0;
+                    text-transform: none;
+                }
+
+                .slide-wrapper .slide-text p:last-child {
+                    margin-bottom: 0;
+                }
+
+                .slide-wrapper .slide-text a {
+                    color: #fff;
+                }
+
+                    .slide-wrapper .slide-text a.button {
+                        background-color: transparent;
+                        border: 3px solid #fff;
+                        color: #fff;
+                        display: inline-block;
+                        font-size: 1.7rem;
+                        letter-spacing: 1px;
+                        padding: 0.8rem 2.3rem;
+                        text-decoration: none;
+                    }
+
+                        .slide-wrapper .slide-text a.button:active, .slide-wrapper .slide-text a.button:focus, .slide-wrapper .slide-text a.button:hover {
+                            color: #ff3233;
+                        }
+
+            .slide-wrapper:hover::after {
+                opacity: 1;
+            }
+
+        @media only screen and (max-width: 800px) {
+            .slide-wrapper:hover .slide-body {
+                max-height:auto;
+            }
+        }
+
+            .slide-wrapper:hover .slide-body {
+                max-height: 660px;
+                opacity: 1;
+            }
+
+            #navbar {
+                overflow: hidden;
+                padding: 10px 0 20px 0; /* Large padding which will shrink on scroll (using JS) */
+                transition: 0.4s; /* Adds a transition effect when the padding is decreased */
+                position: fixed; /* Sticky/fixed navbar */
+                width: 100%;
+                top: 0; /* At the top */
+                z-index: 99;
+            }
+
+
+
+            .navbarcentered {
+                width: 10%;
+                height: 120px;
+                float: left;
+            }
+
+            .navbarsides {
+                width: 1500px;
+                height: 80px;
+                margin: auto;
+                font-family: 'Martel Sans';
+                list-style-type: none;
+            }
+
+                .navbarsides a {
+                    color: white;
+                    text-decoration: none;
+                    font-family: 'Martel Sans';
+                    text-transform: uppercase;
+                    text-decoration: none;
+                }
+            /* Style the navbar links */
+
+
+            .logo-centered {
+                height: 100px;
+                width: 135.35px;
+                margin: auto;
+                display: block;
+                transition: 0.4s;
+            }
+
+
+            .logo-upper {
+                height: 0px;
+                width: 135.35px;
+                margin: auto;
+                display: block;
+                transition: 0.4s;
+            }
+
+            #logo {
+            }
+
+
+            .navcirclelinks {
+                width: 200px;
+                float: right;
+                padding-top: 22px;
+            }
+
+            .nav {
+                padding: 20px 20px;
+                width: 470px;
+                float: right;
+                font-family: 'Martel Sans';
+                list-style-type: none;
+            }
+
+                .nav li {
+                    padding: 10px;
+                    float: left;
+                    text-decoration: none;
+                    cursor: pointer;
+                    font-size: 16px;
+                    margin-left: 25px;
+                    margin-right: 25px;
+                }
+
+                    .nav li:after {
+                        content: '';
+                        display: block;
+                        border-bottom: 2px solid #e4a989;
+                        transform: scaleX(0);
+                        transition: .2s ease-in-out;
+                    }
+
+                    .nav li:hover:after {
+                        transform: scaleX(1);
+                    }
+
+
+            .navf {
+                padding: 20px 20px;
+                width: 670px;
+                float: left;
+                font-family: 'Martel Sans';
+                list-style-type: none;
+            }
+
+                .navf li {
+                    padding: 10px;
+                    float: right;
+                    margin-left: 25px;
+                    margin-right: 25px;
+                    text-decoration: none;
+                    cursor: pointer;
+                    font-size: 16px;
+                }
+
+                    .navf li:after {
+                        content: '';
+                        display: block;
+                        border-bottom: 2px solid #e4a989;
+                        transform: scaleX(0);
+                        transition: .2s ease-in-out;
+                    }
+
+                    .navf li:hover:after {
+                        transform: scaleX(1);
+                    }
+
+        @-webkit-keyframes bob-on-hover {
+            0% {
+                -webkit-transform: translateY(-8px);
+                transform: translateY(-8px);
+            }
+
+            50% {
+                -webkit-transform: translateY(-4px);
+                transform: translateY(-4px);
+            }
+
+            100% {
+                -webkit-transform: translateY(-8px);
+                transform: translateY(-8px);
+            }
+        }
+
+        @keyframes bob-on-hover {
+            0% {
+                -webkit-transform: translateY(-8px);
+                transform: translateY(-8px);
+            }
+
+            50% {
+                -webkit-transform: translateY(-4px);
+                transform: translateY(-4px);
+            }
+
+            100% {
+                -webkit-transform: translateY(-8px);
+                transform: translateY(-8px);
+            }
+        }
+
+        @-webkit-keyframes bob-on-hover-float {
+            100% {
+                -webkit-transform: translateY(-8px);
+                transform: translateY(-8px);
+            }
+        }
+
+        @keyframes bob-on-hover-float {
+            100% {
+                -webkit-transform: translateY(-8px);
+                transform: translateY(-8px);
+            }
+        }
+
+        .bob-on-hover {
+            display: inline-block;
+            vertical-align: middle;
+            -webkit-transform: perspective(1px) translateZ(0);
+            transform: perspective(1px) translateZ(0);
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+        }
+
+            .bob-on-hover,
+            .bob-on-hover:focus,
+            .bob-on-hover:active {
+                -webkit-animation-name: bob-on-hover-float, bob-on-hover;
+                animation-name: bob-on-hover-float, bob-on-hover;
+                -webkit-animation-duration: 0.3s, 1.5s;
+                animation-duration: 0.3s, 1.5s;
+                -webkit-animation-delay: 0s, 0.3s;
+                animation-delay: 0s, 0.3s;
+                -webkit-animation-timing-function: ease-out, ease-in-out;
+                animation-timing-function: ease-out, ease-in-out;
+                -webkit-animation-iteration-count: 1, infinite;
+                animation-iteration-count: 1, infinite;
+                -webkit-animation-fill-mode: forwards;
+                animation-fill-mode: forwards;
+                -webkit-animation-direction: normal, alternate;
+                animation-direction: normal, alternate;
+            }
+
+    </style>
+
+</head>
+
+<body>
+    <!--Navigation Bar-->
+    <header>
+        <div class="responsivenav">
+            <input type="checkbox" id="nav-check">
+            <div class="nav-header">
+                <div class="nav-title">
+                    <img src="oflogoop.png" class="logo-responsive" />
+                </div>
+            </div>
+            <div class="nav-btn">
+                <label for="nav-check">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
+
+            <div class="nav-links">
+                <a href="index.html">Homepage</a>
+                <a href="packages.html">Packages</a>
+                <a href="contact.html">Contact</a>
+                <a href="aboutme.html">About Me</a>
+
+            </div>
+        </div>
+        <!--<div id="navbar">
+            <div class="navbarsides">
+                <div class="navcirclelinks">
+                    <div class="nav-social-one">
+                        <a href="https://www.facebook.com/engageeventsllc/" class="nav-social-circle grow-on-hover" style="padding-top:8px; text-decoration:none; padding-left:6px;">
+                            <span><i style="text-decoration:none; color:white;" class="icon-facebook"></i></span>
+                        </a>
+
+
+                        <a href="https://www.weddingwire.com/biz/engage-events-llc/bbe08d4dc837a88f.html" class="nav-social-circle grow-on-hover" style="padding-top: 6px; padding-left: 7px;">
+                            <span><i style="text-decoration:none; color:white;" class="fab icon-oadop501"></i></span>
+                        </a>
+
+                        <a href="https://www.theknot.com/marketplace/engage-events-llc-santa-fe-nm-2067284" class="nav-social-circle grow-on-hover" style="padding-top: 2px; padding-left: 3px;">
+                            <span><i style="text-decoration:none; color:white;" class="fab icon-cjr1qs01"></i></span>
+                        </a>
+
+                        <a href="https://www.instagram.com/engage.events.sf/" class="nav-social-circle grow-on-hover" style="padding-top: 8px; padding-left: 5px;">
+                            <span><i style="text-decoration: none; color: white; margin-top: -2px;" class="fab icon-instagram"></i></span>
+                        </a>
+                    </div>
+                </div>
+
+                <ul class="nav" id="spacing">
+                    <li><a href="aboutme.html">About Me </a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+                <ul class="navf" id="spacing">
+                    <li><a href="gallerypage.html">Gallery </a></li>
+                    <li><a href="packages.html">Packages</a></li>
+                    <li><a href="homepage.html">Home </a></li>
+                </ul>
+
+                <div class="logo-upper" id="upper"></div>
+                <div class="logo-centered" id="logo">
+                    <img src="oflogo.png" style="object-fit:cover; height:100%; width:100%;" />
+                </div>
+
+
+            </div>
+
+        </div>-->
+
+    </header>
+
+    <!--End Nav Bar-->
+    <!--About Me HEADER-->
+    <div class="himg-ab">
+
+        <div class="hintro">
+            <div class="headerintro">
+                <p>
+                    <i class="fa-solid fa-pencil"></i><br />
+                    ABOUT ME
+                </p>
+
+
+                <p class="headerbio" style="letter-spacing:1px; color:white; line-height:15px;">
+                    MEET YOUR NEW WEDDING PLANNER
+
+                </p>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <!--Anna Start-->
+    <div class="Anna-AboutMeContainer">
+
+        <div class="annabox">
+            <div class="anna-outlinebox">
+                <div class="slide-wrapper" style="align-self: start; box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;">
+                    <div class="anna-image"></div>
+                    <div class="slide-text">
+                        <div class="slide-heading">Let's Meet your Wedding Planner</div>
+                        <p class="slideshow-title"> Hello! My name is Anna. </p>
+                        <div style="height:30px; width:20px; margin:auto;">
+                            <div class="link link-four bob-on-hover"><i class="fa-solid fa-angles-up"></i></div>
+                        </div>
+                        
+                        <div class="slide-body">
+                            Hello, I'm Anna Kaiser, the heart and soul behind Engage Events, and I'm thrilled to be your partner in creating unforgettable weddings.
+                            As a proud boy mom and loving wife, I understand the importance of creating moments that hold a special place in your heart.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!--Dashed Lines
+            <div style="height:250px; width:1000px; margin:auto; padding-top:20px;">
+                <div style="height:100%; width:50%; border-right:2px dashed white"></div>
+            </div>
+
+            <div style="height:100px; width:1380px; margin:auto;">
+                <div style="width:12.5%; height:100px; float:left;"></div>
+                <div style="width:12.5%; height:100px; float:left; border-left:2px dashed white; border-top: 2px dashed white;"></div>
+                <div style="width: 12.5%; height: 100px; float: left; border-top: 2px dashed white;"></div>
+                <div style="width: 12.5%; height: 100px; float: left; border-top: 2px dashed white; border-left: 2px dashed white; "></div>
+                <div style="width: 12.5%; height: 100px; float: left; border-top: 2px dashed white; "></div>
+                <div style="width: 12.5%; height: 100px; float: left; border-top: 2px dashed white; border-left: 2px dashed white; "></div>
+                <div style="width: 12.5%; height: 100px; float: left; border-top: 2px dashed white; border-right: 2px dashed white; "></div>
+                <div style="width:12.5%; height:100px; float:left; "></div>
+
+
+            </div>
+            -->
+        </div>
+    </div>
+
+    <!--About Engage Events -->
+    <div class="anna-container" data-anime="centerup">
+
+        <div class="anna-picture1"></div>
+        <div class="anna-picture1box">
+            <img src="oflogo.png" style="height:100px; width: auto; margin:auto;" />
+            <p>
+                Nestled in the picturesque landscapes of Santa Fe, New Mexico,
+                I've made it my mission to bring your dream wedding to life with a touch of Southwestern charm and a whole lot of heart.
+                Engage Events is not just a business;
+                it's a reflection of my passion for turning your love story into a beautifully orchestrated celebration.
+            </p>
+
+        </div>
+        <div class="anna-picture2box">
+            <p>
+                With a deep appreciation for the details that make each wedding unique,
+                I'm here to guide you through the planning process, ensuring that your special day is a seamless and joy-filled experience.
+                <br />
+                <br />
+                I take pride in creating weddings that resonate with your wishes and capture the essence of your love.
+                I enjoy taking on unique challenges to create your vision and suggesting endless DIY projects to personalize your event.
+                <br />
+                <br />
+                Trust me to handle the details, so you can focus on savoring every precious moment.
+
+            </p>
+            <img src="signature.png" class="sign" />
+
+        </div>
+        <div class="anna-picture2"></div>
+        <div class="anna-contheader">
+            <p>
+               <div class="anna-padding"></div>
+                <div class="anna-contactmetext">
+
+                    Think we could be the perfect wedding planning match? Contact me today!
+                </div>
+
+                <div class="contact-button3 centeredbutton3" style="height: 40px; padding-top: 10px; margin-top: 20px; text-decoration:none;">
+                    <a href="contact.html">
+                        <p>Contact Me </p>
+                        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </p>
+        </div>
+
+    </div>
+
+    <!--info boxes small
+    <div data-anime="centerup" style="align-self:start;">
+        <div class="cards-container">
+            <ul class="cards">
+                <li>
+                    <a class="card">
+                        <img src="mqt.png" class="card__image" alt="" style="opacity:0.8;" />
+                        <div class="card__overlay">
+                            <div class="card__header">
+                                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>
+                                <div class="card__header-text">
+                                    <h3 class="card__title">Marquette, Michigan</h3>
+                                    <span class="card__status">Hometown</span>
+                                </div>
+                            </div>
+                            <p class="card__description">
+                                I grew up in a small town on the northern coast of the upper penninsula of Michigan!
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="card">
+                        <img src="mtu.png" class="card__image" alt="" style="opacity:0.8;" />
+                        <div class="card__overlay">
+                            <div class="card__header">
+                                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>
+                                <div class="card__header-text">
+                                    <h3 class="card__title" style="font-size:15px;">Michigan Technological University</h3>
+                                    <span class="card__status">University (B.S. Management 2022)</span>
+                                </div>
+                            </div>
+                            <p class="card__description">
+
+                                I chose my degree because I knew that someday I wanted to plan events &#38; manage my own event planning business.
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="card">
+                        <img src="outdoors.jpg" class="card__image" alt="" style="opacity:0.8;" />
+                        <div class="card__overlay">
+                            <div class="card__header">
+                                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>
+                                <div class="card__header-text">
+                                    <h3 class="card__title">Outdoor Weddings</h3>
+                                    <span class="card__status">Favorite Type of Wedding</span>
+                                </div>
+                            </div>
+                            <p class="card__description">
+                                Outdoor weddings have to be my favorite- I love all the different scenery of new places!
+                            </p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="card">
+                        <img src="connections.jpg" class="card__image" alt="" />
+                        <div class="card__overlay">
+                            <div class="card__header">
+                                <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>
+                                <div class="card__header-text">
+                                    <h3 class="card__title">Personal Connections</h3>
+                                    <span class="card__status">Favorite Part of being a Wedding Planner</span>
+                                </div>
+                            </div>
+                            <p class="card__description">
+                                I love being with couples on the happiest day of their lives. It's amazing I get to be a part of that!
+                            </p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>-->
+    <!--Footer-->
+    <footer class="footerbody" style="margin-top:100px;">
+        <div class="footercentered">
+
+            <div class="footertitle">
+                <a class="big-text site-nav__link" style=" text-decoration: none; " href="contact.html">CONTACT</a>
+                <br />
+                <!--<a class="big-text site-nav__link" style=" text-decoration: none; " href="faq.html">FAQ</a>
+            <br />-->
+            <a class="big-text site-nav__link" style=" text-decoration: none; " href="aboutme.html">ABOUT ME</a>
+            <br />
+            <!--<a class="big-text site-nav__link" style=" text-decoration: none; " href="gallerypage.html">GALLERY</a>
+            <br />-->
+                <a class="big-text site-nav__link" style=" text-decoration: none; " href="packages.html">PACKAGES</a>
+                <br />
+                <a class="big-text site-nav__link" style=" text-decoration: none; " href="homepage.html">HOME</a>
+
+            </div>
+            <div class="footerlinks">
+                <div class="footerlinksbox">
+
+                    <!--Social Media Icons-->
+                    <div class="ringsfull">
+                        <div class="ringscentered">
+
+                            <div class="diamondbox">
+
+                                <div class="diamondboxtwo">
+                                    <div class="diamond-one"></div>
+                                    <div class="diamond-two"></div>
+                                    <div class="diamond-three"></div>
+                                    <div class="diamond-two"></div>
+                                    <div class="diamond-one"></div>
+                                </div>
+                                <div class="diamondbox-centered">
+                                    <div class="diamond"></div>
+                                </div>
+
+                            </div>
+
+                            <div class="diamondbox">
+
+                                <div class="diamondboxtwo">
+                                    <div class="diamond-one"></div>
+                                    <div class="diamond-two"></div>
+                                    <div class="diamond-three"></div>
+                                    <div class="diamond-two"></div>
+                                    <div class="diamond-one"></div>
+                                </div>
+                                <div class="diamondbox-centered">
+                                    <div class="diamond"></div>
+                                </div>
+
+                            </div>
+
+                            <div class="diamondbox-nomargin">
+
+                                <div class="diamondboxtwo">
+                                    <div class="diamond-one"></div>
+                                    <div class="diamond-two"></div>
+                                    <div class="diamond-three"></div>
+                                    <div class="diamond-two"></div>
+                                    <div class="diamond-one"></div>
+                                </div>
+                                <div class="diamondbox-centered">
+                                    <div class="diamond"></div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="wrappericon">
+
+                            <a href="https://www.facebook.com/engageeventsllc/" class="icon facebook">
+                                <div class="tooltip">Facebook</div>
+                                <span><i class="icon-facebook" style="line-height: 60px;"></i></span>
+                            </a>
+
+                            <a href="https://www.google.com/search?sca_esv=587040545&rlz=1C1VDKB_enUS933US934&q=Engage+Events-+Wedding+and+Event+Planning&si=ALGXSlav9v2ESo4FabHCUDHSZqdp6_feqP4koY9qM2Ao6DS0o1Xc1i1XCzBrBfTcYUWeaoGO2nKXvbsnByarP2Q_4TSijZm8cE1dj_D4AP0Mz00kpTMB2DuZ1QQ6Qcrs635dDlHrY_1-JyV3W74WbTYm46MbeKgbgYK6mbvMlY-NWb-UncrfsDKxxXIt5W6ZCxp6LkGhZx93&sa=X&ved=2ahUKEwiK-fjDie-CAxWOvokEHdzeACcQ6RN6BAgLEAE&biw=1536&bih=738&dpr=1.25" class="icon google">
+                                <div class="tooltip" style="left:-19%;">Google</div>
+                                <span><i class="fa-brands fa-google"></i></span>
+                            </a>
+
+                            <a href="https://www.instagram.com/engage.events/" class="icon instagram">
+                                <div class="tooltip">Instagram</div>
+                                <span><i class="fab icon-instagram"></i></span>
+                            </a>
+
+                        </div>
+                        <!--End Social Media Icons-->
+                    </div>
+                </div>
+                <div class="copyright">
+                    <p class="little-text">copyright &#169; design by macy pawielski</p>
+                </div>
+            </div>
+
+
+        </div>
+
+    </footer>
+
+
+
+
+</body>
+</html>
+<script>
+
+    window.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+            document.getElementById("navbar").style.padding = "0px 0px";
+            document.getElementById("logo").style.height = "80px";
+            document.getElementById("logo").style.width = "115.35px";
+            document.getElementById("upper").style.height = "4px";
+            document.getElementById("navbar").style.background = "rgba(171, 183, 183,0.4)";
+
+
+
+
+
+        } else {
+            document.getElementById("navbar").style.padding = "10px 0 20px 0";
+            document.getElementById("logo").style.height = "100px";
+            document.getElementById("logo").style.width = "135.35px";
+            document.getElementById("upper").style.height = "0px";
+            document.getElementById("navbar").style.background = "transparent";
+
+        }
+    }
+
+    const cards = document.querySelectorAll("[data-anime]");
+
+    window.addEventListener("scroll", () => {
+        const windowTop = window.pageYOffset + (window.innerHeight);
+
+        cards.forEach((card) => {
+            if (windowTop > card.offsetTop) card.classList.add("animate");
+            else card.classList.remove("animate");
+        });
+    });
+</script>

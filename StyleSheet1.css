@@ -1135,19 +1135,18 @@ letter-spacing:1px;
     }
 
 
-
-    .himg-packages {
-        background-image: url('p2.png');
-        height: 500px;
-        width: 100%;
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        padding-top: 0px;
-        margin-bottom: 100px;
-        margin: auto;
-    }
+.himg-packages {
+    background-image: url('p2.png');
+    height: 500px;
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 0px;
+    margin-bottom: 100px;
+    margin: auto;
+}
 
 @media only screen and (max-width: 800px) {
     .himg-packages {
@@ -1198,11 +1197,187 @@ letter-spacing:1px;
         }
     }
 
+.anna-container{
+    margin:auto;
+    width:80%;
+    background-color:;
+    height:1200px;
+
+}
+
+@media only screen and (max-width: 800px) {
+    .anna-container {
+        width: 100%;
+        height: 1600px;
+    }
+}
+
+.anna-contheader {
+    text-align: center;
+    font-family: 'Martel Sans';
+    color: white;
+    height: 1100px;
+    width: 90%;
+    margin: auto;
+    background-color:  rgba(255,255,255,0.4);
+    padding-left: 50px;
+    padding-right: 50px;
+    border-radius: 20px;
+    /*border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;*/
+}
+
+@media only screen and (max-width: 800px) {
+    .anna-contheader {
+        height: 400px;
+        margin: 0px;
+        width: 100%;
+        background-color: none;
+        float: left;
+        border-radius: 0px;
+        margin-top: 2%;
+        background-color: rgba(217,201,190,0.2);
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+    }
+}
+.anna-padding{
+    width:100%;
+    height:920px;
+}
+
+@media only screen and (max-width: 800px) {
+    .anna-padding {
+        width: 100%;
+        height: 100px;
+    }
+}
+
+.anna-contactmetext{
+    line-height:30px;
+    font-size:20px;
+    font-family:'Martel Sans';
+}
+
+@media only screen and (max-width: 800px) {
+    .anna-contactmetext {
+        line-height: 30px;
+        font-size: 20px;
+    }
+}
+
+.anna-picture1 {
+    background-image: url("swing.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 39%;
+    float: left;
+    margin: 1%;
+    height: 400px;
+    background-color: lightgoldenrodyellow;
+}
+@media only screen and (max-width: 800px) {
+    .anna-picture1 {
+        margin-top: 1%;
+        width: 100%;
+        margin: 0px;
+    }
+}
+.anna-picture1box {
+    width: 58%;
+    float: left;
+    margin-right: 1%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    height: 400px;
+    background-color: rgba(36,41,26,255);
+    text-align: center;
+    color: white;
+    font-family: 'Martel Sans';
+    font-weight: 100;
+    font-size: 15px;
+    padding: 40px;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+}
+@media only screen and (max-width: 800px) {
+    .anna-picture1box {
+        font-size: 10px;
+        width: 100%;
+        margin: 0px;
+        margin-top: 5px;
+        height: 250px;
+        border-top: 1px solid white;
+        border-left: 1px solid white;
+        border-right: 1px solid white;
+        box-shadow: none;
+    }
+}
+.anna-picture2 {
+    width: 39%;
+    float: left;
+    margin: 1%;
+    margin-top: 0%;
+    height: 400px;
+    background-image: url("newmexico.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+@media only screen and (max-width: 800px) {
+    .anna-picture2 {
+        width: 100%;
+        height: 200px;
+        margin: 0px;
+        margin-top: 1%;
+    }
+}
+.anna-picture2box {
+    width: 58%;
+    float: left;
+    margin-left: 1%;
+    margin-top: 0%;
+    margin-bottom: 1%;
+    height: 400px;
+    background-color: rgba(36,41,26,255);
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+    text-align: center;
+    color: white;
+    font-family: 'Martel Sans';
+    font-size: 15px;
+    padding: 40px;
+    font-weight: lighter;
+}
+@media only screen and (max-width: 800px) {
+    .anna-picture2box {
+        font-size: 10px;
+        padding: 20px;
+        width: 100%;
+        margin: 0px;
+        height: 350px;
+        border-bottom: 1px solid white;
+        border-left: 1px solid white;
+        border-right: 1px solid white;
+        box-shadow: none;
+        margin-bottom: 1%;
+    }
+}
+
+.sign {
+    margin:auto; 
+    height:80px; 
+    width:auto;
+}
+
+@media only screen and (max-width: 800px) {
+    .sign {
+        height:70px;
+        padding-top:20px;
+    }
+}
 
 .annabox {
     height: 670px; 
     width: 100%; 
-    background-color: #282e1d; 
     padding-top: 50px;
 }
 
@@ -1222,17 +1397,18 @@ letter-spacing:1px;
 }
 
     /*Large Photo Header*/
-    .himg-ab {
-        background-image: url("annaheader.png");
-        height: 700px;
-        width: 100%;
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        padding-top: 0px;
-        margin-top: 0px;
-    }
+.himg-ab {
+    background-image: url("annaheader.png");
+    height: 500px;
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 0px;
+    margin-bottom: 100px;
+    margin: auto;
+}
 
 
 @media only screen and (max-width: 800px) {
@@ -1240,6 +1416,7 @@ letter-spacing:1px;
         width: 100%;
     }
 }
+
 
 .himg-contact {
     /*background-image: url("contactheader3.png");*/
