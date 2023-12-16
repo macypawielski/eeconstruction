@@ -1161,7 +1161,7 @@ letter-spacing:1px;
 
 .himg-packages {
     background-image: url('p2.png');
-    height: 500px;
+    height: 300px;
     width: 100%;
     background-attachment: fixed;
     background-position: center;
@@ -1175,6 +1175,8 @@ letter-spacing:1px;
 @media only screen and (max-width: 800px) {
     .himg-packages {
         width: 100%;
+            height: 500px;
+
     }
 }
 
@@ -1423,7 +1425,7 @@ letter-spacing:1px;
     /*Large Photo Header*/
 .himg-ab {
     background-image: url("annaheader.png");
-    height: 500px;
+    height: 300px;
     width: 100%;
     background-attachment: fixed;
     background-position: center;
@@ -1438,6 +1440,7 @@ letter-spacing:1px;
 @media only screen and (max-width: 800px) {
     .himg-ab {
         width: 100%;
+        height:500px;
     }
 }
 
@@ -1445,7 +1448,7 @@ letter-spacing:1px;
 .himg-contact {
     /*background-image: url("contactheader3.png");*/
     background-image: url("EngageEventsContact.jpg");
-    height: 500px;
+    height: 300px;
     width: 100%;
     background-attachment: fixed;
     background-position: center;
@@ -1459,6 +1462,7 @@ letter-spacing:1px;
 @media only screen and (max-width: 800px) {
     .himg-contact {
         width: 100%;
+        height:500px;
     }
 }
 
