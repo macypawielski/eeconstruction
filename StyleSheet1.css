@@ -3381,7 +3381,7 @@ letter-spacing:1px;
 }
 @media screen and (max-width: 600px) {
     .works-background {
-        
+        height:1700px;
     }
 }
 .works-centered-container {
