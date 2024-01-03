@@ -568,7 +568,63 @@
     </div>
 </div>
 
+<!--Testimonials-->
+ <div class="quotesslide-container">
+        <div class="mySlides1">
+            <div style="width: 100%; height: 250px; padding-top:50px; background-color: rgba(20,23,13,255); color:white; font-family:'martel sans'; text-align:center; font-size:15px; font-weight:lighter;" class="fade">
 
+                <p>
+                    "Anna did an AMAZING job making my wedding perfect and carrying out all of my visions. She took matters into her own hands, <br />
+                    had so many great ideas, and is such a sweet and kind person. I never had to worry about a thing. I loved working with her and I highly recommend her!"
+                    <br />
+                    <br />
+                    - Karissa L. | (<i>Karissa + Christopher</i>)
+                </p>
+            </div>
+        </div>
+
+        <div class="mySlides1">
+            <div style="width: 100%; height: 250px; padding-top:50px; background-color: rgba(20,23,13,255); color:white; font-family:'martel sans'; text-align:center; font-size:15px; font-weight:lighter;" class="fade">
+                <p>
+                    "Engage Events did and amazing job at my wedding! Anna took on the challenge of my guest list of 300
+                    <br />and was able to turn all of our ideas into reality. Anna was fantastic at communicating, professional, and made my day stress-free!"
+                    <br />
+                    <br />
+                    - Tyler P. | (<i>Tyler + Wolff</i>)
+                </p>
+            </div>
+        </div>
+
+        <div class="mySlides1">
+            <div style="width: 100%; height: 250px; padding-top:50px; background-color: rgba(20,23,13,255); color:white; font-family:'martel sans'; text-align:center; font-size:15px; font-weight:lighter;" class="fade">
+                <p>
+                    "Anna did a great job coordinating with the party and the cater’s at our event. It was nothing but a great wedding.
+                    <br />To the table settings to the bar, Engage Events rocked it out of the park!
+                    <br />I sincerely recommend them to anyone who needs a great, creative wedding planner!"
+                    <br />
+                    <br />
+                    - John C. | (<i>Vendor, Vango's'</i>)
+
+                </p>
+
+
+            </div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+    <br>
+    
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+
+    
         <!--100% Across Header-->
         <!--How This Works-->
         <div class="works-background">
@@ -879,7 +935,47 @@
     </html>
 
 <script>
+//Slideshow for Quotes (Original Base code from @lutfiadnan92 on Codepen)
+    var slideIndex = 1;
+    var timer = null;
+    showSlides(slideIndex);
 
+    function plusSlides(n) {
+        clearTimeout(timer);
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        clearTimeout(timer);
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides1");
+        var dots = document.getElementsByClassName("dot");
+        if (n == undefined) { n = ++slideIndex }
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        timer = setTimeout(showSlides, 4000);
+    }
+
+    $('.mySlides1').on({
+        mouseover: function () {
+            clearTimeout(timer);
+        },
+        mouseout: function () {
+            timer = setTimeout(showSlides, 3000);
+        }
+    })//end of slideshow
     window.onscroll = function () { scrollFunction() };
 
     function scrollFunction() {
