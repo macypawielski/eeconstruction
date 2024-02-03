@@ -2,6 +2,16 @@
 <html lang="en">
 
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WJ59BL4D25"></script>
+    <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WJ59BL4D25');
+    </script>
+
     <title>Packages</title>
     <link rel="icon" type="image/x-icon" href="EEIcon.png">
     <link rel="stylesheet" href="StyleSheet1.css">
@@ -326,31 +336,31 @@
 
         @media only screen and (max-width: 800px) {
             .CSSgal {
-                height:600px;
+                height: 600px;
             }
         }
 
-            /* SLIDER */
+        /* SLIDER */
 
-            .CSSgal .slider {
+        .CSSgal .slider {
+            height: 100%;
+            white-space: nowrap;
+            font-size: 0;
+            transition: 0.8s;
+        }
+
+            /* SLIDES */
+
+            .CSSgal .slider > * {
+                font-size: 1rem;
+                display: inline-block;
+                white-space: normal;
+                vertical-align: top;
                 height: 100%;
-                white-space: nowrap;
-                font-size: 0;
-                transition: 0.8s;
+                width: 100%;
+                background: none 50% no-repeat;
+                background-size: cover;
             }
-
-                /* SLIDES */
-
-                .CSSgal .slider > * {
-                    font-size: 1rem;
-                    display: inline-block;
-                    white-space: normal;
-                    vertical-align: top;
-                    height: 100%;
-                    width: 100%;
-                    background: none 50% no-repeat;
-                    background-size: cover;
-                }
 
         .centerbuttons {
             width: 100%;
@@ -1040,12 +1050,19 @@
 
         #navbar {
             overflow: hidden;
+            display:revert;
             padding: 10px 0 20px 0; /* Large padding which will shrink on scroll (using JS) */
             transition: 0.4s; /* Adds a transition effect when the padding is decreased */
             position: fixed; /* Sticky/fixed navbar */
             width: 100%;
             top: 0; /* At the top */
             z-index: 99;
+        }
+
+        @media only screen and (max-width: 899px) {
+            #navbar {
+                display: none;
+            }
         }
 
         .navbarcentered {
@@ -1099,8 +1116,6 @@
             padding-top: 22px;
         }
 
-        
-//*
         .nav {
             padding: 20px 20px;
             width: 470px;
@@ -1132,6 +1147,7 @@
                 }
 
 
+
         .navf {
             padding: 20px 20px;
             width: 670px;
@@ -1160,125 +1176,18 @@
 
                 .navf li:hover:after {
                     transform: scaleX(1);
-                }*/
+                }
+
 
 
     </style>
-
-
 </head>
 
 <body>
-
+    <!--Navigation Bar-->
     <header>
-        <!--
-        <div id="navbar">
-            <div class="navbarsides">
-                <div class="navcirclelinks">
-                    <div class="nav-social-one">
-                        <a href="https://www.facebook.com/engageeventsllc/" class="nav-social-circle grow-on-hover" style="padding-top:8px; text-decoration:none; padding-left:6px;">
-                            <span><i style="text-decoration:none; color:white;" class="icon-facebook"></i></span>
-                        </a>
-
-
-                        <a href="https://www.weddingwire.com/biz/engage-events-llc/bbe08d4dc837a88f.html" class="nav-social-circle grow-on-hover" style="padding-top: 6px; padding-left: 7px;">
-                            <span><i style="text-decoration:none; color:white;" class="fab icon-oadop501"></i></span>
-                        </a>
-
-                        <a href="https://www.theknot.com/marketplace/engage-events-llc-santa-fe-nm-2067284" class="nav-social-circle grow-on-hover" style="padding-top: 2px; padding-left: 3px;">
-                            <span><i style="text-decoration:none; color:white;" class="fab icon-cjr1qs01"></i></span>
-                        </a>
-
-                        <a href="https://www.instagram.com/engage.events.sf/" class="nav-social-circle grow-on-hover" style="padding-top: 8px; padding-left: 5px;">
-                            <span><i style="text-decoration: none; color: white; margin-top: -2px;" class="fab icon-instagram"></i></span>
-                        </a>
-                    </div>
-                </div>
-
-                <ul class="nav" id="spacing">
-                    <li><a href="aboutme.html">About Me </a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                </ul>
-                <ul class="navf" id="spacing">
-                    <li><a href="gallerypage.html">Gallery </a></li>
-                    <li><a href="packages.html">Packages</a></li>
-                    <li><a href="homepage.html">Home </a></li>
-                </ul>
-
-                <div class="logo-upper" id="upper"></div>
-                <div class="logo-centered" id="logo">
-                    <img src="oflogo.png" style="object-fit:cover; height:100%; width:100%;" />
-                </div>
-
-
-            </div>
-
-        </div>
-
-        <!--<div class="navbarcentered">
-            <a href="#default" id="logo"></a>
-        </div>
-            <ul class="nav">
-                    <li><a href="homepage.html">a </a></li>
-                    <li><a href="packages.html">b</a></li>
-                    <li><a href="faq.html">c </a></li>
-
-
-                    <li><a href="homepage.html">HOME </a></li>
-                    <li><a href="packages.html">PACKAGES</a></li>
-                    <li><a href="faq.html">FAQ </a></li>
-                </ul>
-            -->
-        <!--
-        <div class="navbar navbar-fixed-top container-fluid" id="navbar">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle navbar-default" data-toggle="collapse" data-target="#myNavbar">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <div class="navbar-brand">
-                    <img src="oflogo.png" style="height:100px; margin-top:10px; width:auto; object-fit:cover;" />
-                </div>
-            </div>
-
-            <div class="nav-padding-right"></div>
-            <div class="collapse navbar-right navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav">
-                    <li><a href="homepage.html">HOME </a></li>
-                    <li><a href="packages.html">PACKAGES</a></li>
-                    <li><a href="faq.html">FAQ </a></li>
-                    <li><a href="aboutme.html">ABOUT ME</a></li>
-                    <li><a href="contact.html">CONTACT </a></li>
-                    <li><a href="gallerypage.html">GALLERY</a></li>
-
-                </ul>
-            </div>
-
-            <div class="nav-social">
-                <div class="nav-social-one">
-                    <a href="https://www.facebook.com/engageeventsllc/" class="nav-social-circle grow-on-hover" style="padding-top:8px; text-decoration:none; padding-left:6px;">
-                        <span><i style="text-decoration:none; color:white;" class="icon-facebook"></i></span>
-                    </a>
-
-
-                    <a href="https://www.weddingwire.com/biz/engage-events-llc/bbe08d4dc837a88f.html" class="nav-social-circle grow-on-hover" style="padding-top: 6px; padding-left: 7px;">
-                        <span><i style="text-decoration:none; color:white;" class="fab icon-oadop501"></i></span>
-                    </a>
-
-                    <a href="https://www.theknot.com/marketplace/engage-events-llc-santa-fe-nm-2067284" class="nav-social-circle grow-on-hover" style="padding-top: 2px; padding-left: 3px;">
-                        <span><i style="text-decoration:none; color:white;" class="fab icon-cjr1qs01"></i></span>
-                    </a>
-
-                    <a href="https://www.instagram.com/engage.events.sf/" class="nav-social-circle grow-on-hover" style="padding-top: 8px; padding-left: 5px;">
-                        <span><i style="text-decoration: none; color: white; margin-top: -2px;" class="fab icon-instagram"></i></span>
-                    </a>
-                </div>
-            </div>
-        </div>-->
-
-         <div class="responsivenav">
+        <!--Mobile Navbar-->
+        <div id="mobilenav" class="responsivenav">
             <input type="checkbox" id="nav-check">
             <div class="nav-header">
                 <div class="nav-title">
@@ -1298,10 +1207,48 @@
                 <a href="packages.html">Packages</a>
                 <a href="contact.html">Contact</a>
                 <a href="aboutme.html">About Me</a>
-
+                <a href="gallerypage.html">Featured Weddings</a>
             </div>
         </div>
+
+        <!--Main Navbar-->
+        <div id="navbar">
+            <div class="navbarsides">
+                <div class="navcirclelinks">
+                    <div class="nav-social-one">
+                        <a href="https://www.facebook.com/engageeventsllc/" class="nav-social-circle grow-on-hover" style="padding-top:8px; text-decoration:none; padding-left:6px;">
+                            <span><i style="text-decoration:none; color:white;" class="icon-facebook"></i></span>
+                        </a>
+                        <a href="https://www.instagram.com/engage.events.sf/" class="nav-social-circle grow-on-hover" style="padding-top: 8px; padding-left: 5px;">
+                            <span><i style="text-decoration: none; color: white; margin-top: -2px;" class="fab icon-instagram"></i></span>
+                        </a>
+                    </div>
+                </div>
+
+                <ul class="nav" id="spacing">
+                    <li><a href="aboutme.html">About Me </a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <!--<li><a href="faq.html">FAQ</a></li>-->
+                </ul>
+                <ul class="navf" id="spacing">
+                    <li><a href="gallerypage.html">Gallery </a></li>
+                    <li><a href="packages.html">Packages</a></li>
+                    <li><a href="homepage.html">Home </a></li>
+                </ul>
+
+                <div class="logo-upper" id="upper"></div>
+                <div class="logo-centered" id="logo">
+                    <img src="oflogo.png" style="object-fit:cover; height:100%; width:100%;" />
+                </div>
+
+
+            </div>
+
+        </div>
+
     </header>
+
+    <!--End Nav Bar-->
 
 
     <!--Packages HEADER-->
@@ -1309,9 +1256,11 @@
 
         <div class="hintro">
             <div class="headerintro">
-                
-                <p><i class="fa-solid fa-cubes"></i><br>
-                    PLANNING &amp; PACKAGES</p>
+
+                <p>
+                    <i class="fa-solid fa-cubes"></i><br>
+                    PLANNING &amp; PACKAGES
+                </p>
 
 
                 <p class="headerbio" style="letter-spacing:1px; line-height:15px; color:white;">
@@ -1700,7 +1649,7 @@
     <br />
 
 
-  <!--Florals-->
+    <!--Florals-->
 
     <div class="plan-outline2">
         <div class="plan-contain-flexbox">
@@ -1723,7 +1672,7 @@
                         <i style="font-size:40px;" class="fa-brands fa-pagelines"></i>
                         <br />
                         <br />
-                        <p style="font-family: 'Martel Sans'; font-size: 30px; font-weight: lighter; text-transform: uppercase; letter-spacing: 2px; line-height: 25px; margin-bottom: 20px; "> Streamline your experience <br> <span style= "font-size:10px;">(and skip the stress!)</span></p>
+                        <p style="font-family: 'Martel Sans'; font-size: 30px; font-weight: lighter; text-transform: uppercase; letter-spacing: 2px; line-height: 25px; margin-bottom: 20px; "> Streamline your experience <br> <span style="font-size:10px;">(and skip the stress!)</span></p>
                         <p style="font-family:poppins; font-weight:lighter; font-size:12px; line-height:25px; letter-spacing:1px;">
                             Engage Events is delighted to announce a blooming addition to our services.
                             allow us to craft your stunning floral centerpieces effortlessly. Let our expertise handle the details, saving you time and ensuring your event blossoms with beauty seamlessly.
@@ -2447,18 +2396,18 @@
 
     <!--Footer-->
 
- <footer class="footerbody" style="margin-top:100px;">
+    <footer class="footerbody" style="margin-top:100px;">
         <div class="footercentered">
 
             <div class="footertitle">
                 <a class="big-text site-nav__link" style=" text-decoration: none; " href="contact.html">CONTACT</a>
                 <br />
                 <!--<a class="big-text site-nav__link" style=" text-decoration: none; " href="faq.html">FAQ</a>
-            <br />-->
-            <a class="big-text site-nav__link" style=" text-decoration: none; " href="aboutme.html">ABOUT ME</a>
-            <br />
-            <!--<a class="big-text site-nav__link" style=" text-decoration: none; " href="gallerypage.html">GALLERY</a>
-            <br />-->
+                <br />-->
+                <a class="big-text site-nav__link" style=" text-decoration: none; " href="aboutme.html">ABOUT ME</a>
+                <br />
+                <a class="big-text site-nav__link" style=" text-decoration: none; " href="gallerypage.html">GALLERY</a>
+                <br />
                 <a class="big-text site-nav__link" style=" text-decoration: none; " href="packages.html">PACKAGES</a>
                 <br />
                 <a class="big-text site-nav__link" style=" text-decoration: none; " href="homepage.html">HOME</a>
@@ -2545,6 +2494,7 @@
 
 
         </div>
+        </footer>
 </body>
 
 
@@ -2562,7 +2512,7 @@
             document.getElementById("logo").style.height = "80px";
             document.getElementById("logo").style.width = "115.35px";
             document.getElementById("upper").style.height = "4px";
-            document.getElementById("navbar").style.background = "rgba(171, 183, 183,0.95)";
+            document.getElementById("navbar").style.background = "rgba(171, 183, 183,0.4)";
 
 
 
@@ -2574,13 +2524,6 @@
             document.getElementById("logo").style.width = "135.35px";
             document.getElementById("upper").style.height = "0px";
             document.getElementById("navbar").style.background = "transparent";
-
-
-
-
-
-
-
 
         }
     }

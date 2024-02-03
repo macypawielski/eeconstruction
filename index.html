@@ -2,8 +2,18 @@
 <html lang="en">
 
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WJ59BL4D25"></script>
+    <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WJ59BL4D25');
+    </script>
+
     <meta charset="utf-8" />
-    <title>Engage Events Wedding Planning</title>
+    <title>Engage Events Wedding and Event Planning | New Mexico </title>
     <link rel="icon" type="image/x-icon" href="EEIcon.png">
     <link rel="stylesheet" href="StyleSheet1.css">
     <link rel="stylesheet" href="fontello.css">
@@ -25,18 +35,28 @@
             overflow-x: hidden;
             overflow-y: scroll;
         }
+
         * {
             margin: 0;
             padding: 0;
         }
+
+
         #navbar {
             overflow: hidden;
-            padding: 10px 0 20px 0; /* Large padding which will shrink on scroll (using JS) */
+            padding: 20px 0 40px 0; /* Large padding which will shrink on scroll (using JS) */
             transition: 0.4s; /* Adds a transition effect when the padding is decreased */
-            position: fixed; /* Sticky/fixed navbar */
+            position:; /* Sticky/fixed navbar */
             width: 100%;
-            top: 40px; /* At the top */
-            z-index: 99;
+            background-color: rgba(0,0,0,0.2);
+            top: 0; /* At the top */
+        }
+
+        @media only screen and (max-width: 800px) {
+            #navbar {
+                visibility: hidden;
+                padding: 10px 0 20px 0; /* Large padding which will shrink on scroll (using JS) */
+            }
         }
 
         .navbarcentered {
@@ -119,6 +139,7 @@
                 .nav li:hover:after {
                     transform: scaleX(1);
                 }
+
 
 
         .navf {
@@ -363,14 +384,15 @@
             font-family: 'Martel Sans';
         }
 
-/*Quotes Slideshow*/
-      /* Slideshow container */
+        /*Quotes Slideshow*/
+        /* Slideshow container */
         .quotesslide-container {
-            width:100%;
+            width: 100%;
             position: relative;
             margin: auto;
         }
 
+      
         /* Next & previous buttons */
         .prev, .next {
             cursor: pointer;
@@ -430,7 +452,7 @@
             transition: none;
         }
 
- 
+
 
         /* Fading animation */
         .fade {
@@ -461,11 +483,28 @@
         }
 
         /* On smaller screens, decrease text size */
-        @media only screen and (max-width: 300px) {
+        @media only screen and (max-width: 800px) {
             .prev, .next, .text {
                 font-size: 11px
             }
-        }        
+        }
+
+        #mobilenav {
+           display:none;
+        }
+
+        @media only screen and (max-width: 800px) {
+            #mobilenav {
+                display: revert;
+            }
+        }
+
+        @media only screen and (max-width: 800px) {
+            #navbar {
+                display: none;
+            }
+        }
+
     </style>
 
 </head>
@@ -473,165 +512,113 @@
 <body>
     <!--Navigation Bar-->
     <header>
-
-        <div style="height: 50px; width: 100%; padding-top: 10px; background-color: rgba(225, 130, 122, 0.76); /* Sticky/fixed navbar */ top: 0; /* At the top */ z-index: 99; text-align: center; font-family: martel sans; font-weight: lighter; box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px; ">
-        <a href="packages.html" style="text-decoration: none; color: white; font-size: 13px;"><u>Our Newest Service: Now Offering Floral Arrangements!</u></a>
-    </div>
-
-<!--
-    <div id="navbar">
-        <div class="navbarsides">
-            <div class="navcirclelinks">
-                <div class="nav-social-one">
-                    <a href="https://www.facebook.com/engageeventsllc/" class="nav-social-circle grow-on-hover" style="padding-top:8px; text-decoration:none; padding-left:6px;">
-                        <span><i style="text-decoration:none; color:white;" class="icon-facebook"></i></span>
-                    </a>
-
-
-                    <a href="https://www.weddingwire.com/biz/engage-events-llc/bbe08d4dc837a88f.html" class="nav-social-circle grow-on-hover" style="padding-top: 6px; padding-left: 7px;">
-                        <span><i style="text-decoration:none; color:white;" class="fab icon-oadop501"></i></span>
-                    </a>
-
-                    <a href="https://www.theknot.com/marketplace/engage-events-llc-santa-fe-nm-2067284" class="nav-social-circle grow-on-hover" style="padding-top: 2px; padding-left: 3px;">
-                        <span><i style="text-decoration:none; color:white;" class="fab icon-cjr1qs01"></i></span>
-                    </a>
-
-                    <a href="https://www.instagram.com/engage.events.sf/" class="nav-social-circle grow-on-hover" style="padding-top: 8px; padding-left: 5px;">
-                        <span><i style="text-decoration: none; color: white; margin-top: -2px;" class="fab icon-instagram"></i></span>
-                    </a>
+        <!--Mobile Navbar-->
+        <div id="mobilenav" class="responsivenav">
+            <input type="checkbox" id="nav-check">
+            <div class="nav-header">
+                <div class="nav-title">
+                    <img src="oflogoop.png" class="logo-responsive" />
                 </div>
             </div>
-
-            <ul class="nav" id="spacing">
-                <li><a href="aboutme.html">About Me </a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-            </ul>
-            <ul class="navf" id="spacing">
-                <li><a href="gallerypage.html">Gallery </a></li>
-                <li><a href="packages.html">Packages</a></li>
-                <li><a href="homepage.html">Home </a></li>
-            </ul>
-
-            <div class="logo-upper" id="upper"></div>
-            <div class="logo-centered" id="logo">
-                <img src="oflogo.png" style="object-fit:cover; height:100%; width:100%;" />
+            <div class="nav-btn">
+                <label for="nav-check">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
             </div>
 
+            <div class="nav-links">
+                <a href="index.html">Homepage</a>
+                <a href="packages.html">Packages</a>
+                <a href="contact.html">Contact</a>
+                <a href="aboutme.html">About Me</a>
+                <a href="gallerypage.html">Featured Weddings</a>
 
-        </div>
 
-    </div>-->
-        <div class="responsivenav">
-        <input type="checkbox" id="nav-check">
-        <div class="nav-header">
-            <div class="nav-title">
-                <img src="oflogoop.png" class="logo-responsive" />
             </div>
         </div>
-        <div class="nav-btn">
-            <label for="nav-check">
-                <span></span>
-                <span></span>
-                <span></span>
-            </label>
-        </div>
+        <!--Main Navbar-->
+        <div id="navbar">
+            <div class="navbarsides">
+                <div class="navcirclelinks">
+                    <div class="nav-social-one">
+                        <a href="https://www.facebook.com/engageeventsllc/" class="nav-social-circle grow-on-hover" style="padding-top:8px; text-decoration:none; padding-left:6px;">
+                            <span><i style="text-decoration:none; color:white;" class="icon-facebook"></i></span>
+                        </a>
+                        <a href="https://www.instagram.com/engage.events.sf/" class="nav-social-circle grow-on-hover" style="padding-top: 8px; padding-left: 5px;">
+                            <span><i style="text-decoration: none; color: white; margin-top: -2px;" class="fab icon-instagram"></i></span>
+                        </a>
+                    </div>
+                </div>
 
-        <div class="nav-links">
-            <a href="index.html">Homepage</a>
-            <a href="packages.html">Packages</a>
-            <a href="contact.html">Contact</a>
-            <a href="aboutme.html">About Me</a>
+                <ul class="nav" id="spacing">
+                    <li><a href="aboutme.html">About Me </a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <!--<li><a href="faq.html">FAQ</a></li>-->
+                </ul>
+                <ul class="navf" id="spacing">
+                    <li><a href="gallerypage.html">Gallery </a></li>
+                    <li><a href="packages.html">Packages</a></li>
+                    <li><a href="index.html">Home </a></li>
+                </ul>
 
-        </div>
+                <div class="logo-upper" id="upper"></div>
+                <div class="logo-centered" id="logo">
+                    <img src="oflogo.png" style="object-fit:cover; height:100%; width:100%;" />
+                </div>
+
+
+            </div>
+
         </div>
 
     </header>
 
     <!--End Nav Bar-->
-    <!--Start-->
-    
-    
-<!--New Header--
-    
-    <div style="height:800px; margin-top:0px; width:100%; background-color:rgba(255,255,255,0.7);">           
-            <div style="height:620px; width:0%; float:left; background-color:;"></div>
-            <div style="height: 620px; width: 90%; float: left; margin: auto; background-color:;">
-                <!--ring1--
-                <div style="height:100%; width:300px; background-color:; float:left; margin:auto;">
-                    <!--diamond--
-                    <div style="width:520px;height:98px; background-color:;">
-                        <div style="height:100%; width:120px; background-color:; margin:auto;">
-                            <div style="width: 100%; height: 29px; padding-left: 20px; background-color: ;">
-                                <div class="trianglesmall1"></div>
-                                <div class="trianglesmall2"></div>
-                                <div class="trianglesmall1"></div>
-                                <div class="trianglesmall2"></div>
-                                <div class="trianglesmall1"></div>
-                            </div>
-                            <div class="trianglehomebig"></div>
-                        </div>
-                    </div>
-                    <!--ring circle--
-                    <div style="height: 510px; width: 520px; margin-top: px; border: 2px solid #c2af6d; background-color: #333333; position: absolute; z-index: 3; border-radius: 300px;">
-                        <div style="height: 480px; width: 490px; margin: 15px; border-radius: 300px; background-image: url('rowtwo.jpg'); background-position: center; background-repeat: no-repeat;background-size: cover; box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;"></div>
-                    </div>
-                </div>
-                <!--ring2--
-               
+   
 
-            </div>
-            <div style="width: 100%; height: 100%; float: left; position: ; z-index: 1;">
-                <div style="width: 70%; height: 450px; margin-top: 50px; background-color: #61625f; border-radius: 80px; margin-top: 150px; margin-left: 20%; box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px; ">
-                </div>
-            </div>
-        </div>
-    
-    
-    <!--Photo Header-->
-
-
-
+        <!--Photo Header-->
     <div class="headerbackground">
         <div class="header-color-box">
             <div class="headerboxmain">
                 <div class="firsthalfmain"></div>
                 <div class="secondhalfmain">
                     <!---<div class="logo-home-circle">
-            <div class="logo-home"></div>
-        </div>-->
-    </div>
+                        <div class="logo-home"></div>
+                    </div>-->
+                </div>
 
-    <!--I DO Text-->
-                    <div class="overlaytext">
-                        <div class="overlaybox">
-                            <div class="overlaysplitbox">
-                                <p class="youstyling">FROM SAYING YES</p>
-                            </div>
-                            <div class="overlaysplitbox">
-                                <div class="overlaysplitbox_1"></div>
-                                <div class="overlaysplitbox_2">
-                                    <span class="cursive">to saying "i do"</span>
-                                </div>
-                            </div>
-                            <!--Packages Button-->
-
-                            <div class="overlaybuttonbox">
-                                <a href="packages.html" class="button button1 buttonpadding" style="float:right;">
-                                    our services &#x1F822;
-                                </a>
-                            </div>
-
+                <!--I DO Text-->
+                <div class="overlaytext">
+                    <div class="overlaybox">
+                        <div class="overlaysplitbox">
+                            <p class="youstyling">FROM SAYING YES</p>
                         </div>
+                        <div class="overlaysplitbox">
+                            <div class="overlaysplitbox_1"></div>
+                            <div class="overlaysplitbox_2">
+                                <span class="cursive">to saying "i do"</span>
+                            </div>
+                        </div>
+                        <!--Packages Button-->
+
+                        <div class="overlaybuttonbox">
+                            <a href="packages.html" class="buttonyou button1 buttonpadding" style="float:right;">
+                                our services &#x1F822;
+                            </a>
+                        </div>
+
                     </div>
                 </div>
+            </div>
         </div>
     </div>
 
     <!--Testimonials-->
- <div class="quotesslide-container">
+    <div class="quotesslide-container">
         <div class="mySlides1">
-            <div style="width: 100%; height: 250px; padding-top:50px; background-color: rgba(20,23,13,255); color:white; font-family:'martel sans'; text-align:center; font-size:15px; font-weight:lighter;" class="fade">
+            <div class="slide-formating fade">
 
                 <p>
                     "Anna did an AMAZING job making my wedding perfect and carrying out all of my visions. She took matters into her own hands, <br />
@@ -644,7 +631,7 @@
         </div>
 
         <div class="mySlides1">
-            <div style="width: 100%; height: 250px; padding-top:50px; background-color: rgba(20,23,13,255); color:white; font-family:'martel sans'; text-align:center; font-size:15px; font-weight:lighter;" class="fade">
+            <div class="slide-formating fade">
                 <p>
                     "Engage Events did and amazing job at my wedding! Anna took on the challenge of my guest list of 300
                     <br />and was able to turn all of our ideas into reality. Anna was fantastic at communicating, professional, and made my day stress-free!"
@@ -656,7 +643,7 @@
         </div>
 
         <div class="mySlides1">
-            <div style="width: 100%; height: 250px; padding-top:50px; background-color: rgba(20,23,13,255); color:white; font-family:'martel sans'; text-align:center; font-size:15px; font-weight:lighter;" class="fade">
+            <div class="slide-formating fade">
                 <p>
                     "Anna did a great job coordinating with the party and the cater’s at our event. It was nothing but a great wedding.
                     <br />To the table settings to the bar, Engage Events rocked it out of the park!
@@ -676,128 +663,128 @@
 
     </div>
     <br>
-    
+
     <div style="text-align:center">
         <span class="dot" onclick="currentSlide(1)"></span>
         <span class="dot" onclick="currentSlide(2)"></span>
         <span class="dot" onclick="currentSlide(3)"></span>
     </div>
 
-    
-    
+
+
     <!--welcome to engage events-->
 
-<div class="ee-introcontainer">
-    <div class="ee-intro1">
-        <div class="ee-intro3">
-            <img src="logosolid.png" style="height:100px; margin:auto;"/>
+    <div class="ee-introcontainer">
+        <div class="ee-intro1">
+            <div class="ee-intro3">
+                <img src="logosolid.png" style="height:100px; margin:auto;" />
+            </div>
+        </div>
+        <div class="ee-intro2">
+            <br />
+            <br />
+            <br />
+            <br />
+            <p class="ee-headertext"> Welcome to Engage Events – </p>
+            <p>
+                <br />
+                <br />
+                Your dedicated partner in crafting unforgettable weddings throughout Santa Fe and its surrounding areas. Founded with a passion for creating moments that last a lifetime, Engage Events is your go-to wedding planning team for a seamless and personalized experience.
+
+                In the enchanting landscapes of Northern New Mexico, our team, led by Anna Kaiser, brings a wealth of experience to ensure your wedding day is nothing short of magical.
+                <br />
+                <br />
+                Our approach is simple: we listen to your vision and transform it into a beautifully curated celebration that reflects your unique love story. From the historic charm of Santa Fe to the breathtaking landscapes of the surrounding areas, we specialize in creating weddings that capture the essence of the Southwest.
+                <br />
+                <br />
+                At Engage Events, we believe in the power of details. Whether it's selecting the perfect venue, coordinating vendors, or adding personalized DIY touches, our team is committed to ensuring that your wedding day is stress-free and filled with joy.
+
+                Let us be your guide as you embark on this exciting journey.
+
+                <br />
+                <br />
+                Engage Events is here to make your dream wedding a reality, leaving you free to savor every moment of your special day.
+
+                Experience the simplicity of perfect weddings with Engage Events – contact us today!
+                <br />
+                <br />
+                <br />
+                <br />
+
+                NOW BOOKING 2024 & 2025
+            </p>
+
+
         </div>
     </div>
-    <div class="ee-intro2">
-        <br />
-        <br />
-        <br />
-        <br />
-        <p class="ee-headertext"> Welcome to Engage Events – </p>
-        <p>
-            <br />
-            <br />
-            Your dedicated partner in crafting unforgettable weddings throughout Santa Fe and its surrounding areas. Founded with a passion for creating moments that last a lifetime, Engage Events is your go-to wedding planning team for a seamless and personalized experience.
-
-            In the enchanting landscapes of Northern New Mexico, our team, led by Anna Kaiser, brings a wealth of experience to ensure your wedding day is nothing short of magical.
-            <br />
-            <br />
-            Our approach is simple: we listen to your vision and transform it into a beautifully curated celebration that reflects your unique love story. From the historic charm of Santa Fe to the breathtaking landscapes of the surrounding areas, we specialize in creating weddings that capture the essence of the Southwest.
-            <br />
-            <br />
-            At Engage Events, we believe in the power of details. Whether it's selecting the perfect venue, coordinating vendors, or adding personalized DIY touches, our team is committed to ensuring that your wedding day is stress-free and filled with joy.
-
-            Let us be your guide as you embark on this exciting journey.
-
-            <br />
-            <br />
-            Engage Events is here to make your dream wedding a reality, leaving you free to savor every moment of your special day.
-
-            Experience the simplicity of perfect weddings with Engage Events – contact us today!
-            <br />
-            <br />
-            <br />
-            <br />
-
-            NOW BOOKING 2024 & 2025
-        </p>
-
-
-    </div>
-</div>
 
 
 
-    
-        <!--100% Across Header-->
-        <!--How This Works-->
-        <div class="works-background">
-            <div class="works-centered-container">
-                <div class="works-header">
-                    <p>HOW TO GET STARTED</p>
-                </div>
+
+    <!--100% Across Header-->
+    <!--How This Works-->
+    <div class="works-background">
+        <div class="works-centered-container">
+            <div class="works-header">
+                <p>HOW TO GET STARTED</p>
+            </div>
 
 
-                <div class="works-box">
-                    <div class="works-circle" style="background-image: url(browse.jpg); opacity: 0.8; background-repeat: no-repeat; background-size: 200px 200px;"></div>
-                    <br />
-                    <p class="works-step">Browse Packages</p>
-                    <br />
-                    <p class="works-desc">
-                    Browse our packages and services to get an idea of what we offer.            
-                    </p>
-                    
-                    
-                    <br />
-                    <a href="packages.html" class="button button9">
-                        browse &#x1F822;
-                    </a>
+            <div class="works-box">
+                <div class="works-circle" style="background-image: url(browse.jpg); opacity: 0.8; background-repeat: no-repeat; background-size: 200px 200px;"></div>
+                <br />
+                <p class="works-step">Browse Packages</p>
+                <br />
+                <p class="works-desc">
+                    Browse our packages and services to get an idea of what we offer.
+                </p>
 
-                </div>
 
-                <div class="works-box">
-                    <div class="works-circle" style="background-image: url(annapicture2.png); background-repeat: no-repeat; background-size:200px 200px;"></div>
-                    <br />
-                    <p class="works-step">About Me</p>
-                    <br />
-                    <p class="works-desc">
+                <br />
+                <a href="packages.html" class="button button9">
+                    browse &#x1F822;
+                </a>
+
+            </div>
+
+            <div class="works-box">
+                <div class="works-circle" style="background-image: url(annapicture2.png); background-repeat: no-repeat; background-size:200px 200px;"></div>
+                <br />
+                <p class="works-step">About Me</p>
+                <br />
+                <p class="works-desc">
                     Introducing Anna- Learn more about your new wedding planner.
-                    </p>
-                    <br />
-                    <a href="contact.html" class="button button9">
-                        about &#x1F822;
-                    </a>
+                </p>
+                <br />
+                <a href="contact.html" class="button button9">
+                    about &#x1F822;
+                </a>
 
-                </div>
+            </div>
 
-                <div class="works-box" style="margin-right:0px;">
-                    <div class="works-circle" style="background-image: url(chat.jpg); opacity: 0.9; background-repeat: no-repeat; background-size: 200px 200px;"></div>
-                    <br />
-                    <p class="works-step">Let's Chat!</p>
-                    <br />
-                    <p class="works-desc">
+            <div class="works-box" style="margin-right:0px;">
+                <div class="works-circle" style="background-image: url(chat.jpg); opacity: 0.9; background-repeat: no-repeat; background-size: 200px 200px;"></div>
+                <br />
+                <p class="works-step">Let's Chat!</p>
+                <br />
+                <p class="works-desc">
                     Want to learn more or get started? Let's get coffee and chat.
-                        </p>
-                    <br />
-                    <a href="contact.html" class="button button9">
-                        connect &#x1F822;
-                    </a>
-
-
-                </div>
+                </p>
+                <br />
+                <a href="contact.html" class="button button9">
+                    connect &#x1F822;
+                </a>
 
 
             </div>
+
+
         </div>
+    </div>
 
 
 
-        <!--Slideshow
+    <!--Slideshow
 
         <div class="wrapper">
             <div class="container">
@@ -933,117 +920,117 @@
 
 
     </div>-->
-        <!--Footer-->
-        <!--Footer-->
+    <!--Footer-->
 
-            <footer class="footerbody" style="margin-top:100px;">
-                <div class="footercentered">
+    <footer class="footerbody" style="margin-top:100px;">
+        <div class="footercentered">
 
-                    <div class="footertitle">
-                        <a class="big-text site-nav__link" style=" text-decoration: none; " href="contact.html">CONTACT</a>
-                        <br />
-                        <!--<a class="big-text site-nav__link" style=" text-decoration: none; " href="faq.html">FAQ</a>
+            <div class="footertitle">
+                <a class="big-text site-nav__link" style=" text-decoration: none; " href="contact.html">CONTACT</a>
                 <br />
-                
+                <!--<a class="big-text site-nav__link" style=" text-decoration: none; " href="faq.html">FAQ</a>
+    <br />-->
+                <a class="big-text site-nav__link" style=" text-decoration: none; " href="aboutme.html">ABOUT ME</a>
+                <br />
                 <a class="big-text site-nav__link" style=" text-decoration: none; " href="gallerypage.html">GALLERY</a>
-                <br />-->
-                        <a class="big-text site-nav__link" style=" text-decoration: none; " href="aboutme.html">ABOUT ME</a>
                 <br />
-                        <a class="big-text site-nav__link" style=" text-decoration: none; " href="packages.html">PACKAGES</a>
-                        <br />
-                        <a class="big-text site-nav__link" style=" text-decoration: none; " href="index.html">HOME</a>
+                <a class="big-text site-nav__link" style=" text-decoration: none; " href="packages.html">PACKAGES</a>
+                <br />
+                <a class="big-text site-nav__link" style=" text-decoration: none; " href="index.html">HOME</a>
 
-                    </div>
-                    <div class="footerlinks">
-                        <div class="footerlinksbox">
+            </div>
+            <div class="footerlinks">
+                <div class="footerlinksbox">
 
-                            <!--Social Media Icons-->
-                            <div class="ringsfull">
-                                <div class="ringscentered">
+                    <!--Social Media Icons-->
+                    <div class="ringsfull">
+                        <div class="ringscentered">
 
-                                    <div class="diamondbox">
+                            <div class="diamondbox">
 
-                                        <div class="diamondboxtwo">
-                                            <div class="diamond-one"></div>
-                                            <div class="diamond-two"></div>
-                                            <div class="diamond-three"></div>
-                                            <div class="diamond-two"></div>
-                                            <div class="diamond-one"></div>
-                                        </div>
-                                        <div class="diamondbox-centered">
-                                            <div class="diamond"></div>
-                                        </div>
-
-                                    </div>
-
-                                    <div class="diamondbox">
-
-                                        <div class="diamondboxtwo">
-                                            <div class="diamond-one"></div>
-                                            <div class="diamond-two"></div>
-                                            <div class="diamond-three"></div>
-                                            <div class="diamond-two"></div>
-                                            <div class="diamond-one"></div>
-                                        </div>
-                                        <div class="diamondbox-centered">
-                                            <div class="diamond"></div>
-                                        </div>
-
-                                    </div>
-
-                                    <div class="diamondbox-nomargin">
-
-                                        <div class="diamondboxtwo">
-                                            <div class="diamond-one"></div>
-                                            <div class="diamond-two"></div>
-                                            <div class="diamond-three"></div>
-                                            <div class="diamond-two"></div>
-                                            <div class="diamond-one"></div>
-                                        </div>
-                                        <div class="diamondbox-centered">
-                                            <div class="diamond"></div>
-                                        </div>
-
-                                    </div>
+                                <div class="diamondboxtwo">
+                                    <div class="diamond-one"></div>
+                                    <div class="diamond-two"></div>
+                                    <div class="diamond-three"></div>
+                                    <div class="diamond-two"></div>
+                                    <div class="diamond-one"></div>
+                                </div>
+                                <div class="diamondbox-centered">
+                                    <div class="diamond"></div>
                                 </div>
 
-                                <div class="wrappericon">
+                            </div>
 
-                                    <a href="https://www.facebook.com/engageeventsllc/" class="icon facebook">
-                                        <div class="tooltip">Facebook</div>
-                                        <span><i class="icon-facebook" style="line-height: 60px;"></i></span>
-                                    </a>
+                            <div class="diamondbox">
 
-                                    <a href="https://www.google.com/search?sca_esv=587040545&rlz=1C1VDKB_enUS933US934&q=Engage+Events-+Wedding+and+Event+Planning&si=ALGXSlav9v2ESo4FabHCUDHSZqdp6_feqP4koY9qM2Ao6DS0o1Xc1i1XCzBrBfTcYUWeaoGO2nKXvbsnByarP2Q_4TSijZm8cE1dj_D4AP0Mz00kpTMB2DuZ1QQ6Qcrs635dDlHrY_1-JyV3W74WbTYm46MbeKgbgYK6mbvMlY-NWb-UncrfsDKxxXIt5W6ZCxp6LkGhZx93&sa=X&ved=2ahUKEwiK-fjDie-CAxWOvokEHdzeACcQ6RN6BAgLEAE&biw=1536&bih=738&dpr=1.25" class="icon google">
-                                        <div class="tooltip" style="left:-19%;">Google</div>
-                                        <span><i class="fa-brands fa-google"></i></span>
-                                    </a>
-
-                                    <a href="https://www.instagram.com/engage.events/" class="icon instagram">
-                                        <div class="tooltip">Instagram</div>
-                                        <span><i class="fab icon-instagram"></i></span>
-                                    </a>
-
+                                <div class="diamondboxtwo">
+                                    <div class="diamond-one"></div>
+                                    <div class="diamond-two"></div>
+                                    <div class="diamond-three"></div>
+                                    <div class="diamond-two"></div>
+                                    <div class="diamond-one"></div>
                                 </div>
-                                <!--End Social Media Icons-->
+                                <div class="diamondbox-centered">
+                                    <div class="diamond"></div>
+                                </div>
+
+                            </div>
+
+                            <div class="diamondbox-nomargin">
+
+                                <div class="diamondboxtwo">
+                                    <div class="diamond-one"></div>
+                                    <div class="diamond-two"></div>
+                                    <div class="diamond-three"></div>
+                                    <div class="diamond-two"></div>
+                                    <div class="diamond-one"></div>
+                                </div>
+                                <div class="diamondbox-centered">
+                                    <div class="diamond"></div>
+                                </div>
+
                             </div>
                         </div>
-                        <div class="copyright">
-                            <p class="little-text">copyright &#169; design by macy pawielski</p>
+
+                        <div class="wrappericon">
+
+                            <a href="https://www.facebook.com/engageeventsllc/" class="icon facebook">
+                                <div class="tooltip">Facebook</div>
+                                <span><i class="icon-facebook" style="line-height: 60px;"></i></span>
+                            </a>
+
+                            <a href="https://www.google.com/search?sca_esv=587040545&rlz=1C1VDKB_enUS933US934&q=Engage+Events-+Wedding+and+Event+Planning&si=ALGXSlav9v2ESo4FabHCUDHSZqdp6_feqP4koY9qM2Ao6DS0o1Xc1i1XCzBrBfTcYUWeaoGO2nKXvbsnByarP2Q_4TSijZm8cE1dj_D4AP0Mz00kpTMB2DuZ1QQ6Qcrs635dDlHrY_1-JyV3W74WbTYm46MbeKgbgYK6mbvMlY-NWb-UncrfsDKxxXIt5W6ZCxp6LkGhZx93&sa=X&ved=2ahUKEwiK-fjDie-CAxWOvokEHdzeACcQ6RN6BAgLEAE&biw=1536&bih=738&dpr=1.25" class="icon google">
+                                <div class="tooltip" style="left:-19%;">Google</div>
+                                <span><i class="fa-brands fa-google"></i></span>
+                            </a>
+
+                            <a href="https://www.instagram.com/engage.events/" class="icon instagram">
+                                <div class="tooltip">Instagram</div>
+                                <span><i class="fab icon-instagram"></i></span>
+                            </a>
+
                         </div>
+                        <!--End Social Media Icons-->
                     </div>
-
-
                 </div>
+                <div class="copyright">
+                    <p class="little-text">copyright &#169; design by macy pawielski</p>
+                </div>
+            </div>
 
-            </footer>
-        </footer>
+
+        </div>
+
+    </footer>
 
 
 </body>
     </html>
 
 <script>
+
+
+
 //Slideshow for Quotes (Original Base code from @lutfiadnan92 on Codepen)
     var slideIndex = 1;
     var timer = null;
@@ -1087,109 +1074,7 @@
     })//end of slideshow
     window.onscroll = function () { scrollFunction() };
 
-    function scrollFunction() {
-        if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-            document.getElementById("navbar").style.padding = "0px 0px";
-            document.getElementById("logo").style.height = "80px";
-            document.getElementById("logo").style.width = "115.35px";
-            document.getElementById("upper").style.height = "4px";
-            document.getElementById("navbar").style.background = "rgba(171, 183, 183,0.4)";
-            document.getElementById("navbar").style.top = "0px";
 
-
-
-
-
-        } else {
-            document.getElementById("navbar").style.padding = "10px 0 20px 0";
-            document.getElementById("logo").style.height = "100px";
-            document.getElementById("logo").style.width = "135.35px";
-            document.getElementById("upper").style.height = "0px";
-            document.getElementById("navbar").style.background = "transparent";
-            document.getElementById("navbar").style.top = "40px";
-
-        }
-    }
-
-
-
-
-    var Lslide = document.querySelectorAll('.Lslide'),
-        Rslide = document.querySelectorAll('.Rslide'),
-        control = document.querySelectorAll('.oncontrol'),
-        slideHeight = document.querySelector('.wrapper').clientHeight,
-        color = ['#D3C6B8', '#e2a07c  ', '#7B7268'],
-        index = 0;
-
-
-    function init() {
-        slideHeight = document.querySelector('.wrapper').clientHeight;
-        for (i = 0; i < Lslide.length; i++) {
-            Lslide[i].style.backgroundColor = color[i];
-            Lslide[i].style.top = -slideHeight * i + "px";
-            Rslide[i].style.top = slideHeight * i + "px";
-        }
-    }
-    init()
-    window.addEventListener('resize', function () {
-        init()
-    });
-
-    function moveToTop() {
-
-        index++;
-        for (el = 0; el < Lslide.length; el++) {
-            Lslide[el].style.top = parseInt(Lslide[el].style.top) + slideHeight + "px";
-            Rslide[el].style.top = parseInt(Rslide[el].style.top) - slideHeight + "px";
-        }
-
-        if (index > Lslide.length - 1) {
-            index = 0;
-            for (el = 0; el < Lslide.length; el++) {
-                Lslide[el].style.top = -slideHeight * el + "px";
-                Rslide[el].style.top = slideHeight * el + "px";
-            }
-        }
-    }
-
-    function moveToBottom() {
-        index--;
-        for (el = 0; el < Lslide.length; el++) {
-            Lslide[el].style.top = parseInt(Lslide[el].style.top) - slideHeight + "px";
-            Rslide[el].style.top = parseInt(Rslide[el].style.top) + slideHeight + "px";
-
-        }
-        if (index < 0) {
-            index = Rslide.length - 1;
-            for (el = 0; el < Lslide.length; el++) {
-                Lslide[el].style.top = parseInt(Lslide[el].style.top) + slideHeight * Lslide.length + "px";
-                Rslide[el].style.top = parseInt(Rslide[el].style.top) - slideHeight * Rslide.length + "px";
-            }
-        }
-    }
-
-    function transition() {
-        for (t = 0; t < Lslide.length; t++) {
-            Lslide[t].style.transition = "all 0.8s";
-            Rslide[t].style.transition = "all 0.8s";
-        }
-    }
-
-
-    for (t = 0; t < control.length; t++) {
-        control[t].addEventListener("click", function () {
-
-            if (this.classList.contains('control-top')) {
-                moveToTop()
-            }
-            if (this.classList.contains('control-bottom')) {
-                moveToBottom()
-            }
-
-            transition()
-
-        });
-    }
 
 
 </script>

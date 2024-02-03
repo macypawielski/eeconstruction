@@ -1,0 +1,758 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WJ59BL4D25"></script>
+    <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WJ59BL4D25');
+    </script>
+
+    <meta charset="utf-8" />
+    <title>Gallery</title>
+    <link rel="stylesheet" href="StyleSheet1.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/b2a08806f6.js" crossorigin="anonymous"></script>
+
+
+
+    <style>
+        body {
+            background-color: #323924;
+            height: 100%;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #navbar {
+            overflow: hidden;
+            padding: 10px 0 20px 0; /* Large padding which will shrink on scroll (using JS) */
+            transition: 0.4s; /* Adds a transition effect when the padding is decreased */
+            position: fixed; /* Sticky/fixed navbar */
+            width: 100%;
+            top: 0; /* At the top */
+            z-index: 99;
+        }
+
+        @media only screen and (max-width: 800px) {
+            #navbar {
+                visibility: hidden;
+            }
+        }
+
+        .navbarcentered {
+            width: 10%;
+            height: 120px;
+            float: left;
+        }
+
+        .navbarsides {
+            width: 1500px;
+            height: 80px;
+            margin: auto;
+            font-family: 'Martel Sans';
+            list-style-type: none;
+        }
+
+            .navbarsides a {
+                color: white;
+                text-decoration: none;
+                font-family: 'Martel Sans';
+                text-transform: uppercase;
+                text-decoration: none;
+            }
+        /* Style the navbar links */
+
+
+        .logo-centered {
+            height: 100px;
+            width: 135.35px;
+            margin: auto;
+            display: block;
+            transition: 0.4s;
+        }
+
+
+        .logo-upper {
+            height: 0px;
+            width: 135.35px;
+            margin: auto;
+            display: block;
+            transition: 0.4s;
+        }
+
+        #logo {
+        }
+
+
+        .navcirclelinks {
+            width: 200px;
+            float: right;
+            padding-top: 22px;
+        }
+
+        .nav {
+            padding: 20px 20px;
+            width: 470px;
+            float: right;
+            font-family: 'Martel Sans';
+            list-style-type: none;
+        }
+
+            .nav li {
+                padding: 10px;
+                float: left;
+                text-decoration: none;
+                cursor: pointer;
+                font-size: 16px;
+                margin-left: 25px;
+                margin-right: 25px;
+            }
+
+                .nav li:after {
+                    content: '';
+                    display: block;
+                    border-bottom: 2px solid #e4a989;
+                    transform: scaleX(0);
+                    transition: .2s ease-in-out;
+                }
+
+                .nav li:hover:after {
+                    transform: scaleX(1);
+                }
+
+
+
+        .navf {
+            padding: 20px 20px;
+            width: 670px;
+            float: left;
+            font-family: 'Martel Sans';
+            list-style-type: none;
+        }
+
+            .navf li {
+                padding: 10px;
+                float: right;
+                margin-left: 25px;
+                margin-right: 25px;
+                text-decoration: none;
+                cursor: pointer;
+                font-size: 16px;
+            }
+
+                .navf li:after {
+                    content: '';
+                    display: block;
+                    border-bottom: 2px solid #e4a989;
+                    transform: scaleX(0);
+                    transition: .2s ease-in-out;
+                }
+
+                .navf li:hover:after {
+                    transform: scaleX(1);
+                }
+
+        @-webkit-keyframes bob-on-hover {
+            0% {
+                -webkit-transform: translateY(-8px);
+                transform: translateY(-8px);
+            }
+
+            50% {
+                -webkit-transform: translateY(-4px);
+                transform: translateY(-4px);
+            }
+
+            100% {
+                -webkit-transform: translateY(-8px);
+                transform: translateY(-8px);
+            }
+        }
+
+        @keyframes bob-on-hover {
+            0% {
+                -webkit-transform: translateY(-8px);
+                transform: translateY(-8px);
+            }
+
+            50% {
+                -webkit-transform: translateY(-4px);
+                transform: translateY(-4px);
+            }
+
+            100% {
+                -webkit-transform: translateY(-8px);
+                transform: translateY(-8px);
+            }
+        }
+
+        @-webkit-keyframes bob-on-hover-float {
+            100% {
+                -webkit-transform: translateY(-8px);
+                transform: translateY(-8px);
+            }
+        }
+
+        @keyframes bob-on-hover-float {
+            100% {
+                -webkit-transform: translateY(-8px);
+                transform: translateY(-8px);
+            }
+        }
+
+        .bob-on-hover {
+            display: inline-block;
+            vertical-align: middle;
+            -webkit-transform: perspective(1px) translateZ(0);
+            transform: perspective(1px) translateZ(0);
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+        }
+
+            .bob-on-hover,
+            .bob-on-hover:focus,
+            .bob-on-hover:active {
+                -webkit-animation-name: bob-on-hover-float, bob-on-hover;
+                animation-name: bob-on-hover-float, bob-on-hover;
+                -webkit-animation-duration: 0.3s, 1.5s;
+                animation-duration: 0.3s, 1.5s;
+                -webkit-animation-delay: 0s, 0.3s;
+                animation-delay: 0s, 0.3s;
+                -webkit-animation-timing-function: ease-out, ease-in-out;
+                animation-timing-function: ease-out, ease-in-out;
+                -webkit-animation-iteration-count: 1, infinite;
+                animation-iteration-count: 1, infinite;
+                -webkit-animation-fill-mode: forwards;
+                animation-fill-mode: forwards;
+                -webkit-animation-direction: normal, alternate;
+                animation-direction: normal, alternate;
+            }
+    </style>
+
+</head>
+
+<body>
+    <!--Navigation Bar-->
+    <header>
+        <!--Mobile Navbar-->
+        <div id="mobilenav" class="responsivenav">
+            <input type="checkbox" id="nav-check">
+            <div class="nav-header">
+                <div class="nav-title">
+                    <img src="oflogoop.png" class="logo-responsive" />
+                </div>
+            </div>
+            <div class="nav-btn">
+                <label for="nav-check">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
+
+            <div class="nav-links">
+                <a href="index.html">Homepage</a>
+                <a href="packages.html">Packages</a>
+                <a href="contact.html">Contact</a>
+                <a href="aboutme.html">About Me</a>
+                <a href="gallerypage.html">Featured Weddings</a>
+            </div>
+        </div>
+        <!--Main Navbar-->
+        <div id="navbar">
+            <div class="navbarsides">
+                <div class="navcirclelinks">
+                    <div class="nav-social-one">
+                        <a href="https://www.facebook.com/engageeventsllc/" class="nav-social-circle grow-on-hover" style="padding-top:8px; text-decoration:none; padding-left:6px;">
+                            <span><i style="text-decoration:none; color:white;" class="icon-facebook"></i></span>
+                        </a>
+                        <a href="https://www.instagram.com/engage.events.sf/" class="nav-social-circle grow-on-hover" style="padding-top: 8px; padding-left: 5px;">
+                            <span><i style="text-decoration: none; color: white; margin-top: -2px;" class="fab icon-instagram"></i></span>
+                        </a>
+                    </div>
+                </div>
+
+                <ul class="nav" id="spacing">
+                    <li><a href="aboutme.html">About Me </a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <!--<li><a href="faq.html">FAQ</a></li>-->
+                </ul>
+                <ul class="navf" id="spacing">
+                    <li><a href="gallerypage.html">Gallery </a></li>
+                    <li><a href="packages.html">Packages</a></li>
+                    <li><a href="index.html">Home </a></li>
+                </ul>
+
+                <div class="logo-upper" id="upper"></div>
+                <div class="logo-centered" id="logo">
+                    <img src="oflogo.png" style="object-fit:cover; height:100%; width:100%;" />
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <!--End Nav Bar-->
+    <!--Start-->
+    <!--Packages HEADER-->
+
+
+
+    <div class="himg-gallery">
+
+        <div class="hintro">
+            <div class="headerintro" style="padding-top:40px;">
+                <p>FEATURED WEDDINGS</p>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!--Gallery Accordian/ Karissa-->
+
+    <div class="acc-container-before">
+        <div class="acc-container-before-couple">
+            <i style="font-size: 40px; opacity: 0.5;" class="fa-solid fa-church"></i>
+            <h2 style="font-family: 'Poppins';">karissa + christopher</h2>
+            <br />
+            <p style="font-size: 13px; font-family: 'Martel Sans'; letter-spacing: 1px;">
+                <i>
+                    "Anna did an AMAZING job making my wedding perfect and carrying out all of my visions.She took matters into her own hands, had so many great ideas, and is such a sweet and kind person.
+                    I never had to worry about a thing. I loved working with her and I highly recommend her!
+
+
+                </i>
+            </p>
+        </div>
+    </div>
+
+    <div class="acc-container">
+        <div class="accslide active"
+             style="background-image: url('kc1.jpg');">
+            <h3><i>VB Photography</i></h3>
+        </div>
+        <div class="accslide"
+             style="background-image: url('kc5.jpg');">
+            <h3></h3>
+        </div>
+        <div class="accslide"
+             style="background-image: url('kc2.jpg');">
+            <h3><i>VB Photography</i></h3>
+        </div>
+        <div class="accslide"
+             style="background-image: url('kc4.jpg');">
+            <h3></h3>
+        </div>
+        <div class="accslide"
+             style="background-image: url('kc3.jpg');">
+            <h3><i>VB Photography</i></h3>
+        </div>
+    </div>
+
+
+
+    <!--It's All About the Stories-->
+
+    <div class="gallery-container">
+        <div class="gallery-opaque">
+            <p class="gallery-p">MORE PHOTOS AND EVENTS:</p>
+
+            <div class="gallery-button">
+                <a href="packages.html" class="buttong buttong1">
+                    Instagram &#x1F822;
+                </a>
+            </div>
+            <br />
+            <br />
+            <br />
+            <div class="gallery-button">
+                <a href="packages.html" class="buttong buttong1">
+                    Facebook &#x1F822;
+                </a>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <!--Intro--
+        <div class="gallery-container">
+            <div class="gallery-imagebox">
+                <div class="gallery-desc">
+                    <p style="font-size:20px;">IT'S ALL ABOUT THE STORIES</p>
+                    <div style="height:2px; width:350px; border-top:1px solid black; margin:auto;"></div>
+                    <br />
+                    <p style="font-size:13px;">
+                        Lorem ipsum dolor sit amet.
+                        Eos molestiae voluptates non impedit incidunt et quia laborum ut placeat similique.
+                        Ut voluptatibus animi non corporis magni ex rerum quisquam ut repellat quod et quisquam tenetur
+                    </p>
+
+
+                    <div style="text-align:right;">
+                        <a class='animated-arrow' style="margin-right:80px;" href='https://google.com'>
+                            <span class='the-arrow -left'>
+                                <span class='shaft'></span>
+                            </span>
+                            <span class='main'>
+                                <span class='text'>
+                                    <u>Christopher + Karissa</u>
+                                </span>
+                                <span class='the-arrow -right'>
+                                </span>
+                            </span>
+                        </a>
+                        <br />
+                        <a class='animated-arrow' style="margin-right:60px;" href='https://google.com'>
+                            <span class='the-arrow -left'>
+                                <span class='shaft'></span>
+                            </span>
+                            <span class='main'>
+                                <span class='text'>
+                                    <u>Wolff + Tyler</u>
+                                </span>
+                                <span class='the-arrow -right'>
+                                </span>
+                            </span>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>-->
+    <!--Gallery Accordian/ Tyler-->
+
+
+    <div class="acc-container2">
+        <div class="accslide"
+             style="background-image: url('tw2.jpg');">
+            <h3><i>Kate and Katie Co. Photography</i></h3>
+        </div>
+        <div class="accslide"
+             style="background-image: url('tw5.jpg');">
+            <h3><i>Kate and Katie Co. Photography</i></h3>
+        </div>
+        <div class="accslide"
+             style="background-image: url('tw1.jpg');">
+            <h3><i>Kate and Katie Co. Photography</i></h3>
+        </div>
+        <div class="accslide"
+             style="background-image: url('tw3.jpg');">
+            <h3><i>Kate and Katie Co. Photography</i></h3>
+        </div>
+        <div class="accslide active"
+             style="background-image: url('tw4.jpg');">
+            <h3><i>Kate and Katie Co. Photography</i></h3>
+        </div>
+    </div>
+
+    <div class="acc-container-before2">
+        <div class="acc-container-before-couple">
+            <i style="font-size:40px; opacity:0.5;" class="fa-brands fa-pagelines"></i>
+            <h2 style="font-family: 'Poppins';">tyler + wolff </h2>
+            <br />
+            <p style="font-size: 13px; font-family: 'Martel Sans'; letter-spacing:1px; ">
+                <i>
+                    "Anna took on the challenge of my guest list of 300 and was able to turn all of our ideas into reality.
+                    Anna was fantastic at communicating, professional, and made my day stress-free!"
+                </i>
+            </p>
+        </div>
+    </div>
+
+    <!--First Row and Pic--
+    <div class="section animate">
+        <div class="middle">
+            <img src="rowone.jpg" />
+        </div>
+        <div class="left title">
+            <div class="content">
+                <i style="font-size:40px; opacity:0.5;" class="fa-brands fa-pagelines"></i>
+                <h2 style="font-family: 'Poppins';">tyler + wolff </h2>
+                <br />
+                <p style="font-size: 13px; font-family: 'Martel Sans'; letter-spacing:1px; ">
+                    <i>
+                        "Anna took on the challenge of my guest list of 300 and was able to turn all of our ideas into reality.
+                        Anna was fantastic at communicating, professional, and made my day stress-free!"
+                    </i>
+                </p>
+            </div>
+        </div>
+        <div class="right tiles">
+            <img src="thr.jpg" />
+            <img src="fr.jpg" />
+            <img src="bone.jpg" />
+            <img src="tw.jpg" />
+        </div>
+    </div>
+    <!--Second Row and Pic--
+
+    <div class="section">
+        <div class="middle">
+            <img src="rowtwo.jpg" />
+        </div>
+        <div class="right title">
+            <div class="content">
+                <i style="font-size: 40px; opacity: 0.5;" class="fa-solid fa-church"></i>
+                <h2 style="font-family: 'Poppins';">karissa + christopher</h2>
+                <br />
+                <p style="font-size: 13px; font-family: 'Martel Sans'; letter-spacing: 1px;">
+                    <i>
+                        "Anna did an AMAZING job making my wedding perfect and carrying out all of my visions.She took matters into her own hands, had so many great ideas, and is such a sweet and kind person.
+                        I never had to worry about a thing. I loved working with her and I highly recommend her!
+
+
+                    </i>
+      
+    <!--Footer-->
+
+    <footer class="footerbody" style="margin-top:800px;">
+        <div class="footercentered">
+
+            <div class="footertitle">
+                <a class="big-text site-nav__link" style=" text-decoration: none; " href="contact.html">CONTACT</a>
+                <br />
+                <!--<a class="big-text site-nav__link" style=" text-decoration: none; " href="faq.html">FAQ</a>
+                <br />-->
+                <a class="big-text site-nav__link" style=" text-decoration: none; " href="aboutme.html">ABOUT ME</a>
+                <br />
+                <a class="big-text site-nav__link" style=" text-decoration: none; " href="gallerypage.html">GALLERY</a>
+                <br />
+                <a class="big-text site-nav__link" style=" text-decoration: none; " href="packages.html">PACKAGES</a>
+                <br />
+                <a class="big-text site-nav__link" style=" text-decoration: none; " href="homepage.html">HOME</a>
+
+            </div>
+            <div class="footerlinks">
+                <div class="footerlinksbox">
+
+                    <!--Social Media Icons-->
+                    <div class="ringsfull">
+                        <div class="ringscentered">
+
+                            <div class="diamondbox">
+
+                                <div class="diamondboxtwo">
+                                    <div class="diamond-one"></div>
+                                    <div class="diamond-two"></div>
+                                    <div class="diamond-three"></div>
+                                    <div class="diamond-two"></div>
+                                    <div class="diamond-one"></div>
+                                </div>
+                                <div class="diamondbox-centered">
+                                    <div class="diamond"></div>
+                                </div>
+
+                            </div>
+
+                            <div class="diamondbox">
+
+                                <div class="diamondboxtwo">
+                                    <div class="diamond-one"></div>
+                                    <div class="diamond-two"></div>
+                                    <div class="diamond-three"></div>
+                                    <div class="diamond-two"></div>
+                                    <div class="diamond-one"></div>
+                                </div>
+                                <div class="diamondbox-centered">
+                                    <div class="diamond"></div>
+                                </div>
+
+                            </div>
+
+                            <div class="diamondbox-nomargin">
+
+                                <div class="diamondboxtwo">
+                                    <div class="diamond-one"></div>
+                                    <div class="diamond-two"></div>
+                                    <div class="diamond-three"></div>
+                                    <div class="diamond-two"></div>
+                                    <div class="diamond-one"></div>
+                                </div>
+                                <div class="diamondbox-centered">
+                                    <div class="diamond"></div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="wrappericon">
+
+                            <a href="https://www.facebook.com/engageeventsllc/" class="icon facebook">
+                                <div class="tooltip">Facebook</div>
+                                <span><i class="icon-facebook" style="line-height: 60px;"></i></span>
+                            </a>
+
+                            <a href="https://www.google.com/search?sca_esv=587040545&rlz=1C1VDKB_enUS933US934&q=Engage+Events-+Wedding+and+Event+Planning&si=ALGXSlav9v2ESo4FabHCUDHSZqdp6_feqP4koY9qM2Ao6DS0o1Xc1i1XCzBrBfTcYUWeaoGO2nKXvbsnByarP2Q_4TSijZm8cE1dj_D4AP0Mz00kpTMB2DuZ1QQ6Qcrs635dDlHrY_1-JyV3W74WbTYm46MbeKgbgYK6mbvMlY-NWb-UncrfsDKxxXIt5W6ZCxp6LkGhZx93&sa=X&ved=2ahUKEwiK-fjDie-CAxWOvokEHdzeACcQ6RN6BAgLEAE&biw=1536&bih=738&dpr=1.25" class="icon google">
+                                <div class="tooltip" style="left:-19%;">Google</div>
+                                <span><i class="fa-brands fa-google"></i></span>
+                            </a>
+
+                            <a href="https://www.instagram.com/engage.events/" class="icon instagram">
+                                <div class="tooltip">Instagram</div>
+                                <span><i class="fab icon-instagram"></i></span>
+                            </a>
+
+                        </div>
+                        <!--End Social Media Icons-->
+                    </div>
+                </div>
+                <div class="copyright">
+                    <p class="little-text">copyright &#169; design by macy pawielski</p>
+                </div>
+            </div>
+
+
+        </div>
+
+    </footer>
+
+</body>
+</html>
+
+
+<script>
+
+   window.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+            document.getElementById("navbar").style.padding = "0px 0px";
+            document.getElementById("logo").style.height = "80px";
+            document.getElementById("logo").style.width = "115.35px";
+            document.getElementById("upper").style.height = "4px";
+            document.getElementById("navbar").style.background = "rgba(171, 183, 183,0.4)";
+
+
+
+
+
+        } else {
+            document.getElementById("navbar").style.padding = "10px 0 20px 0";
+            document.getElementById("logo").style.height = "100px";
+            document.getElementById("logo").style.width = "135.35px";
+            document.getElementById("upper").style.height = "0px";
+            document.getElementById("navbar").style.background = "transparent";
+
+        }
+    }
+
+
+const slides = document.querySelectorAll('.accslide');
+
+for (const slide of slides) {
+  slide.addEventListener('click', () => {
+    clearActiveClasses();
+
+    slide.classList.add('active');
+  });
+}
+
+function clearActiveClasses() {
+  slides.forEach(accslide => {
+    accslide.classList.remove('active');
+  });
+}
+
+
+    const cards = document.querySelectorAll("[data-anime]");
+
+    window.addEventListener("scroll", () => {
+        const windowTop = window.pageYOffset + (window.innerHeight * 3) / 4;
+
+        cards.forEach((card) => {
+            if (windowTop > card.offsetTop) card.classList.add("animate");
+            else card.classList.remove("animate");
+        });
+    });
+
+    window.onscroll = function () { scrollFunction() };
+
+
+
+
+
+
+
+
+
+
+
+    $(document).ready(function () {
+
+        var $sm = 480;
+        var $md = 768;
+
+        function resizeThis() {
+            $imgH = $('.middle img').width();
+            if ($(window).width() >= $sm) {
+                $('.left,.right,.section').css('height', $imgH);
+            } else {
+                $('.left,.right,.section').css('height', 'auto');
+            }
+        }
+
+        resizeThis();
+
+        $(window).resize(function () {
+            resizeThis();
+        });
+
+        $(window).scroll(function () {
+            $('.section').each(function () {
+                var $elementPos = $(this).offset().top;
+                var $scrollPos = $(window).scrollTop();
+
+                var $sectionH = $(this).height();
+                var $h = $(window).height();
+                var $sectionVert = (($h / 2) - ($sectionH / 4));
+
+
+                if (($elementPos - $sectionVert) <= $scrollPos && ($elementPos - $sectionVert) + $sectionH > $scrollPos) {
+                    $(this).addClass('animate');
+                } else {
+                    $(this).removeClass('animate');
+                }
+            });
+        });
+
+
+    });
+
+    $(function () {
+        $('a[href*="#"]:not([href="#"])').click(function () {
+            if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    $('html, body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000);
+                    return false;
+                }
+            }
+        });
+    });
+
+
+
+</script>
