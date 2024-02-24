@@ -1,0 +1,388 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WJ59BL4D25"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-WJ59BL4D25');
+    </script>
+
+    <meta charset="utf-8" />
+    <title>Our Services</title>
+    <link rel="icon" type="image/x-icon" href="EEIcon.png">
+    <link rel="stylesheet" href="StyleSheet1.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b2a08806f6.js" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            background-color: #323924;
+            height: 100%;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing:border-box;
+        }
+        #navbar {
+            overflow: hidden;
+            display: revert;
+            padding: 10px 0 20px 0; /* Large padding which will shrink on scroll (using JS) */
+            transition: 0.4s; /* Adds a transition effect when the padding is decreased */
+            position: fixed; /* Sticky/fixed navbar */
+            width: 100%;
+            top: 0; /* At the top */
+            z-index: 99;
+        }
+
+        @media only screen and (max-width: 899px) {
+            #navbar {
+                display: none;
+            }
+        }
+
+        .navbarcentered {
+            width: 10%;
+            height: 120px;
+            float: left;
+        }
+
+        .navbarsides {
+            width: 1500px;
+            height: 80px;
+            margin: auto;
+            font-family: 'Martel Sans';
+            list-style-type: none;
+        }
+
+            .navbarsides a {
+                color: white;
+                text-decoration: none;
+                font-family: 'Martel Sans';
+                text-transform: uppercase;
+                text-decoration: none;
+            }
+        /* Style the navbar links */
+
+
+        .logo-centered {
+            height: 100px;
+            width: 135.35px;
+            margin: auto;
+            display: block;
+            transition: 0.4s;
+        }
+
+
+        .logo-upper {
+            height: 0px;
+            width: 135.35px;
+            margin: auto;
+            display: block;
+            transition: 0.4s;
+        }
+
+        #logo {
+        }
+
+
+        .navcirclelinks {
+            width: 200px;
+            float: right;
+            padding-top: 22px;
+        }
+
+        .nav {
+            padding: 20px 20px;
+            width: 470px;
+            float: right;
+            font-family: 'Martel Sans';
+            list-style-type: none;
+        }
+
+            .nav li {
+                padding: 10px;
+                float: left;
+                text-decoration: none;
+                cursor: pointer;
+                font-size: 16px;
+                margin-left: 25px;
+                margin-right: 25px;
+            }
+
+                .nav li:after {
+                    content: '';
+                    display: block;
+                    border-bottom: 2px solid #e4a989;
+                    transform: scaleX(0);
+                    transition: .2s ease-in-out;
+                }
+
+                .nav li:hover:after {
+                    transform: scaleX(1);
+                }
+
+
+
+        .navf {
+            padding: 20px 20px;
+            width: 670px;
+            float: left;
+            font-family: 'Martel Sans';
+            list-style-type: none;
+        }
+
+            .navf li {
+                padding: 10px;
+                float: right;
+                margin-left: 25px;
+                margin-right: 25px;
+                text-decoration: none;
+                cursor: pointer;
+                font-size: 16px;
+            }
+
+                .navf li:after {
+                    content: '';
+                    display: block;
+                    border-bottom: 2px solid #e4a989;
+                    transform: scaleX(0);
+                    transition: .2s ease-in-out;
+                }
+
+                .navf li:hover:after {
+                    transform: scaleX(1);
+                }
+    </style>
+</head>
+
+<body>
+
+    <!--Navigation Bar-->
+    <header>
+        <!--Mobile Navbar-->
+        <div id="mobilenav" class="responsivenav">
+            <input type="checkbox" id="nav-check">
+            <div class="nav-header">
+                <div class="nav-title">
+                    <img src="oflogoop.png" class="logo-responsive" />
+                </div>
+            </div>
+            <div class="nav-btn">
+                <label for="nav-check">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
+
+            <div class="nav-links">
+                <a href="index.html">Homepage</a>
+                <a href="services.html">Services</a>
+                <a href="contact.html">Contact</a>
+                <a href="aboutme.html">About Me</a>
+                <a href="gallerypage.html">Featured Weddings</a>
+            </div>
+        </div>
+
+        <!--Main Navbar-->
+        <div id="navbar">
+            <div class="navbarsides">
+                <div class="navcirclelinks">
+                    <div class="nav-social-one">
+                        <a href="https://www.facebook.com/engageeventsllc/" class="nav-social-circle grow-on-hover" style="padding-top:8px; text-decoration:none; padding-left:6px;">
+                            <span><i style="text-decoration:none; color:white;" class="icon-facebook"></i></span>
+                        </a>
+                        <a href="https://www.instagram.com/engage.events/" class="nav-social-circle grow-on-hover" style="padding-top: 8px; padding-left: 5px;">
+                            <span><i style="text-decoration: none; color: white; margin-top: -2px;" class="fab icon-instagram"></i></span>
+                        </a>
+                    </div>
+                </div>
+
+                <ul class="nav" id="spacing">
+                    <li><a href="aboutme.html">About Me </a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <!--<li><a href="faq.html">FAQ</a></li>-->
+                </ul>
+                <ul class="navf" id="spacing">
+                    <li><a href="gallerypage.html">Gallery </a></li>
+                    <li><a href="packages.html">Packages</a></li>
+                    <li><a href="index.html">Home </a></li>
+                </ul>
+
+                <div class="logo-upper" id="upper"></div>
+                <div class="logo-centered" id="logo">
+                    <img src="oflogo.png" style="object-fit:cover; height:100%; width:100%;" />
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <!--End Nav Bar-->
+
+    <div class="services-navbarpadding"></div>
+
+    <div class="services-flexcontainer">
+
+
+        <div class="s-flex">
+            <div class="s-florals-2_Photo">
+                <div class="s-flex-overlay2">
+                    <div class="s-title">
+                        <p>FLORALS</p>
+                    </div>
+                    <a href="Florals.html">
+                        <i class="fa-solid fa-right-long forward-on-hover" style="color:rgba(255,255,255,0.5);"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="s-flex">
+            <div class="s-weddings-1_Photo">
+                <div class="s-flex-overlay2">
+                    <div class="s-title">
+                        <p>WEDDINGS</p>
+                    </div>
+                    <a href="packages.html">
+                        <i class="fa-solid fa-right-long forward-on-hover" style="color:rgba(255,255,255,0.5);"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="s-flex">
+            <div class="s-otherevents-3_Photo">
+                <div class="s-flex-overlay2">
+                    <div class="s-title2">
+                        <p>OTHER EVENTS</p>
+                    </div>
+                    <a href="OtherEvents.html">
+                        <i class="fa-solid fa-right-long forward-on-hover" style="color:rgba(255,255,255,0.5);"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <!--Footer-->
+
+    <footer class="footerbody" style="margin-top:100px;">
+        <div class="footercentered">
+
+            <div class="footertitle">
+                <a class="big-text site-nav__link" style=" text-decoration: none; " href="contact.html">CONTACT</a>
+                <br />
+                <!--<a class="big-text site-nav__link" style=" text-decoration: none; " href="faq.html">FAQ</a>
+                <br />-->
+                <a class="big-text site-nav__link" style=" text-decoration: none; " href="aboutme.html">ABOUT ME</a>
+                <br />
+                <a class="big-text site-nav__link" style=" text-decoration: none; " href="gallerypage.html">GALLERY</a>
+                <br />
+                <a class="big-text site-nav__link" style=" text-decoration: none; " href="services.html">SERVICES</a>
+                <br />
+                <a class="big-text site-nav__link" style=" text-decoration: none; " href="homepage.html">HOME</a>
+
+            </div>
+            <div class="footerlinks">
+                <div class="footerlinksbox">
+
+                    <!--Social Media Icons-->
+                    <div class="ringsfull">
+                        <div class="ringscentered">
+
+                            <div class="diamondbox">
+
+                                <div class="diamondboxtwo">
+                                    <div class="diamond-one"></div>
+                                    <div class="diamond-two"></div>
+                                    <div class="diamond-three"></div>
+                                    <div class="diamond-two"></div>
+                                    <div class="diamond-one"></div>
+                                </div>
+                                <div class="diamondbox-centered">
+                                    <div class="diamond"></div>
+                                </div>
+
+                            </div>
+
+                            <div class="diamondbox">
+
+                                <div class="diamondboxtwo">
+                                    <div class="diamond-one"></div>
+                                    <div class="diamond-two"></div>
+                                    <div class="diamond-three"></div>
+                                    <div class="diamond-two"></div>
+                                    <div class="diamond-one"></div>
+                                </div>
+                                <div class="diamondbox-centered">
+                                    <div class="diamond"></div>
+                                </div>
+
+                            </div>
+
+                            <div class="diamondbox-nomargin">
+
+                                <div class="diamondboxtwo">
+                                    <div class="diamond-one"></div>
+                                    <div class="diamond-two"></div>
+                                    <div class="diamond-three"></div>
+                                    <div class="diamond-two"></div>
+                                    <div class="diamond-one"></div>
+                                </div>
+                                <div class="diamondbox-centered">
+                                    <div class="diamond"></div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="wrappericon">
+
+                            <a href="https://www.facebook.com/engageeventsllc/" class="icon facebook">
+                                <div class="tooltip">Facebook</div>
+                                <span><i class="icon-facebook" style="line-height: 60px;"></i></span>
+                            </a>
+
+                            <a href="https://www.google.com/search?sca_esv=587040545&rlz=1C1VDKB_enUS933US934&q=Engage+Events-+Wedding+and+Event+Planning&si=ALGXSlav9v2ESo4FabHCUDHSZqdp6_feqP4koY9qM2Ao6DS0o1Xc1i1XCzBrBfTcYUWeaoGO2nKXvbsnByarP2Q_4TSijZm8cE1dj_D4AP0Mz00kpTMB2DuZ1QQ6Qcrs635dDlHrY_1-JyV3W74WbTYm46MbeKgbgYK6mbvMlY-NWb-UncrfsDKxxXIt5W6ZCxp6LkGhZx93&sa=X&ved=2ahUKEwiK-fjDie-CAxWOvokEHdzeACcQ6RN6BAgLEAE&biw=1536&bih=738&dpr=1.25" class="icon google">
+                                <div class="tooltip" style="left:-19%;">Google</div>
+                                <span><i class="fa-brands fa-google"></i></span>
+                            </a>
+
+                            <a href="https://www.instagram.com/engage.events/" class="icon instagram">
+                                <div class="tooltip">Instagram</div>
+                                <span><i class="fab icon-instagram"></i></span>
+                            </a>
+
+                        </div>
+                        <!--End Social Media Icons-->
+                    </div>
+                </div>
+                <div class="copyright">
+                    <p class="little-text">copyright &#169; design by macy pawielski</p>
+                </div>
+            </div>
+
+
+        </div>
+    </footer>
+</body>
+
+</html>
