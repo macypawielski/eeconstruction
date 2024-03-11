@@ -6127,6 +6127,416 @@ letter-spacing:1px;
 }
 
 
+.oe-headerpic {
+    height: 550px;
+    width: 100%;
+    background-image: url('otherevents.jpg');
+    opacity: 0.8;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 2%;
+}
+
+@media (max-width: 800px) {
+    .oe-headerpic {
+        height: 400px;
+    }
+}
+
+.oe-container{
+   width:100%;
+   height:570px;
+}
+
+@media (max-width: 800px) {
+    .oe-container {
+        height:2000px;
+    }
+}
+
+.oe-positioning {
+    position: absolute;
+    z-index: 1;
+    width:100%;
+    height:600px;
+}
+
+@media (max-width: 800px) {
+    .oe-positioning {
+        height: 2000px;
+    }
+}
+
+
+.oe-row1{
+    height:45%;
+    background-color:;
+    width:100%;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
+@media (max-width: 800px) {
+    .oe-row1 {
+        height:100%;
+    }
+}
+
+
+.oe-row2 {
+    height: 50%;
+    background-color:;
+    width: 100%;
+}
+
+@media (max-width: 800px) {
+    .oe-row2 {
+        display: none;
+    }
+}
+
+
+.oe-picture-styling {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    float: left;
+    opacity: 0.3;
+    margin-left:0.5%;
+    margin-right:0.5%;
+}
+
+@media (max-width: 800px) {
+    .oe-picturestyling {
+        float: none;
+        margin:0;
+    }
+}
+
+.oe-picture1 {
+    height: 100%;
+    width:20%;
+    background-image: url('birthday.jpg');
+    margin-left:0px;
+   
+}
+
+@media (max-width: 800px) {
+    .oe-picture7, .oe-picture8, .oe-picture9, .oe-picture10, .oe-picture11, .oe-picture12 {
+        display: none;
+    }
+}
+
+.oe-picture2 {
+    width: 15%;
+    height: 100%;
+    background-image: url('baby.jpg');
+
+}
+
+.oe-picture3 {
+    width: 15%;
+    background-image: url('business1.jpg');
+    height: 100%;
+}
+
+
+
+.oe-picture4 {
+    width: 13%;
+    height: 100%;
+    background-image: url('shower.jpg');
+}
+
+
+.oe-picture5 {
+    width: 15%;
+    height: 100%;
+    background-image: url('work.jpg');
+}
+
+
+.oe-picture6 {
+    width: 17%;
+    height: 100%;
+    background-image: url('tea.jpg');
+    margin-right:0px;
+}
+
+@media (max-width: 800px) {
+    .oe-picture1, .oe-picture2, .oe-picture3, .oe-picture4, .oe-picture5, .oe-picture6 {
+        width: 96%;
+        height: 14%;
+        margin: auto;
+        margin-left: 2%;
+        margin-right: 2%;
+        margin-bottom: 3%;
+        float:none;
+    }
+}
+
+@media (max-width: 800px) {
+    .oe-picture1 {
+        background-image: url('MobileOther1.jpg');
+    }
+}
+
+@media (max-width: 800px) {
+    .oe-picture2 {
+        background-image: url('MobileOther2.jpg');
+    }
+}
+
+@media (max-width: 800px) {
+    .oe-picture3 {
+        background-image: url('MobileOther3.jpg');
+    }
+}
+
+@media (max-width: 800px) {
+    .oe-picture4 {
+        background-image: url('MobileOther4.jpg');
+    }
+}
+
+@media (max-width: 800px) {
+    .oe-picture5 {
+        background-image: url('MobileOther5.jpg');
+    }
+}
+
+@media (max-width: 800px) {
+    .oe-picture6 {
+        background-image: url('MobileOther6.jpg');
+    }
+}
+
+.oe-picture7 {
+    width: 13%;
+    height: 100%;
+    margin-left: 0px;
+    background-image: url('grad.jpg');
+}
+
+.oe-picture8 {
+    width: 12%;
+    height: 100%;
+    background-image: url('bday.jpg');
+}
+
+.oe-picture9 {
+    width: 20%;
+    height: 100%;
+    background-image: url('birthday3.jpg');
+}
+
+.oe-picture10 {
+    width: 15%;
+    height: 100%;
+    background-image: url('birthday2.jpg');
+}
+
+.oe-picture11 {
+    width: 17%;
+    height: 100%;
+    background-image: url('talking.jpg');
+}
+
+.oe-picture12 {
+    width: 18%;
+    height: 100%;
+    background-image: url('work2.jpg');
+    margin-right:0px;
+}
+
+
+
+.oe-overlaybox {
+    height: 570px;
+    position: relative;
+    z-index: 10;
+    margin:auto;
+    width: 70%;
+    padding-top:10px;
+}
+
+@media (max-width: 800px) {
+    .oe-overlaybox {
+        height:2000px;
+        width:100%;
+    }
+}
+
+.oe-continue1 {
+    height: 850px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top:3%;
+}
+
+@media (max-width: 800px) {
+    .oe-continue1 {
+        height: 87%;
+        padding-top: 6%;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+}
+
+
+.oe-first {
+    height: 550px;
+    background-color: rgba(151, 132, 129, 255);
+}
+
+@media (max-width: 800px) {
+    .oe-first {
+        height: 800px;
+    }
+}
+
+.oe-second {
+    height: 700px;
+    background-color: #8c8988;
+}
+
+@media (max-width: 800px) {
+    .oe-second {
+        height: 1000px;
+    }
+}
+
+.oe-4-nextbox {
+    width: 80%;
+    padding-left: 3%;
+    padding-right: 3%;
+    margin: auto;
+    padding-top: 3%;
+}
+
+@media (max-width: 800px) {
+    .oe-4-nextbox {
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+}
+    .oe-4-nextbox h2 {
+        font-family: 'Martel Sans';
+        text-align: center;
+        color:white;
+        font-size: 17px;
+        font-weight: lighter;
+        letter-spacing: 2px;
+        line-height:50px;
+    }
+
+@media (max-width: 800px) {
+    .oe-4-nextbox h2 {
+        line-height:70px;
+    }
+}
+
+    .oe-4-nextbox img {
+        width:20%; 
+        margin-left:40%;
+        margin-right:40%;
+        margin-bottom:0px;
+    }
+
+@media (max-width: 800px) {
+    .oe-4-nextbox img {
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-bottom: 10%;
+        margin-top: 10%;
+    }
+}
+
+#line_height {
+    line-height: 70px;
+}
+
+@media (max-width: 800px) {
+    #line_height {
+        line-height: 30px;
+        margin-top:30px;
+        margin-bottom:20px;
+    }
+}
+
+@media (max-width: 800px) {
+    #line_height_florals {
+        margin-top: 30px;
+    }
+}
+    .oe-4-nextbox h3 {
+        font-family: 'Martel Sans';
+        color: rgba(255,255,255,0.7);
+        text-align: center;
+        font-size: 13px;
+        font-weight: lighter;
+        letter-spacing: 2px;
+    }
+
+    .oe-4-nextbox h1 {
+        font-family: 'Martel Sans';
+        text-align:center;
+        color: rgba(0,0,0,0.5);
+        font-size: 29px;
+        padding-bottom:40px;
+        padding-top:40px;
+        letter-spacing: 2px;
+        font-weight:400;
+    }
+
+.oe-continue3 h1 {
+    font-family: 'Martel Sans';
+    color: white;
+    text-align: left;
+    font-size: 17px;
+    font-weight: lighter;
+    letter-spacing: 2px;
+    line-height: 40px;
+}
+
+.oe-continue2, .oe-continue3 h2 {
+    font-family: 'Martel Sans';
+    color: white;
+    text-align: left;
+    font-size: 13px;
+    font-weight: lighter;
+    letter-spacing: 2px;
+}
+
+.petit-formal script-regular {
+    font-family: "Petit Formal Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.herr-von muellerhoff-regular {
+    font-family: "Herr Von Muellerhoff", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
+
+.other-footerspacing{
+    height:1000px;
+    width:100%;
+}
+
+
+@media only screen and (max-width: 800px) {
+    .other-footerspacing {
+        height:0px;
+    }
+}
+
+
 .f-header {
     background-color: rgba(229, 208, 192, 0.8);
     height: 400px;
