@@ -1,140 +1,717 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <link rel="stylesheet" href="ConstructionCSS.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WJ59BL4D25"></script>
+    <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WJ59BL4D25');
+    </script>
+
     <meta charset="utf-8" />
-    <title>Under Construction</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engage Events Wedding and Event Planning | New Mexico </title>
+    <link rel="icon" type="image/x-icon" href="EEIcon.png">
+    <link rel="stylesheet" href="StyleSheet1.css">
+    <link rel="stylesheet" href="fontello.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
     <script src="https://kit.fontawesome.com/b2a08806f6.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <style>
-        html, body {
+        body {
+            background-color: #323924;
+            height: 100%;
+            overflow-x: hidden;
+            overflow-y: scroll;
+        }
+
+        * {
             margin: 0;
             padding: 0;
         }
-               .responsivenav {
-            height: 100px;
+
+
+        #navbar {
+            overflow: hidden;
+            padding: 10px 0 20px 0; /* Large padding which will shrink on scroll (using JS) */
+            transition: 0.4s; /* Adds a transition effect when the padding is decreased */
+            position: absolute; /*Sticky fixed navbar */
             width: 100%;
-            background-color: rgba(225, 225, 225, 0.5);
-            position: relative;
+            top: 0; /* At the top */
+            z-index: 99;
+        }
+
+        @media only screen and (max-width: 899px) {
+            #navbar {
+                visibility: hidden;
+                width: 0px;
+                height: 0px;
+                padding: 0px;
+            }
+        }
+
+        .navbarcentered {
+            width: 10%;
+            height: 120px;
+            float: left;
+        }
+
+        .navbarsides {
+            width: 1500px;
+            height: 80px;
+            margin: auto;
             font-family: 'Martel Sans';
+            list-style-type: none;
         }
 
-            .responsivenav > .nav-header {
-                display: inline;
+        @media only screen and (max-width: 899px) {
+            .navbarsides {
+                width: 2%;
+            }
+        }
+
+        .navbarsides a {
+            color: white;
+            text-decoration: none;
+            font-family: 'Martel Sans';
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+        /* Style the navbar links */
+
+
+        .logo-centered {
+            height: 100px;
+            width: 135.35px;
+            margin: auto;
+            display: block;
+            transition: 0.4s;
+        }
+
+
+        .logo-upper {
+            height: 0px;
+            width: 135.35px;
+            margin: auto;
+            display: block;
+            transition: 0.4s;
+        }
+
+        #logo {
+        }
+
+
+        .navcirclelinks {
+            width: 200px;
+            float: right;
+            padding-top: 22px;
+        }
+
+        .nav {
+            padding: 20px 20px;
+            width: 470px;
+            float: right;
+            font-family: 'Martel Sans';
+            list-style-type: none;
+        }
+
+            .nav li {
+                padding: 10px;
+                float: left;
+                text-decoration: none;
+                cursor: pointer;
+                font-size: 16px;
+                margin-left: 25px;
+                margin-right: 25px;
             }
 
-                .responsivenav > .nav-header > .nav-title {
-                    display: inline-block;
-                    font-size: 22px;
-                    color: #fff;
-                    padding: 10px 10px 10px 10px;
-                }
-
-            .responsivenav > .nav-btn {
-                display: none;
-            }
-
-            .responsivenav > .nav-links {
-                display: inline;
-                float: right;
-                font-size: 13px;
-                margin-top:30px;
-            }
-
-                .responsivenav > .nav-links > a {
-                    display: inline-block;
-                    padding: 13px 10px 13px 10px;
-                    text-decoration: none;
-                    color: #efefef;
-                }
-
-                    .responsivenav > .nav-links > a:hover {
-                        background-color: rgba(0, 0, 0, 0.3);
-                        transition:1s;
-                    }
-
-            .responsivenav > #nav-check {
-                display: none;
-            }
-
-        @media (max-width:600px) {
-            .responsivenav > .nav-btn {
-                display: inline-block;
-                position: absolute;
-                right: 0px;
-                top: 0px;
-            }
-
-                .responsivenav > .nav-btn > label {
-                    display: inline-block;
-                    width: 50px;
-                    height: 50px;
-                    padding: 13px;
-                }
-
-                    .responsivenav > .nav-btn > label:hover, .responsivenav #nav-check:checked ~ .nav-btn > label {
-                        background-color: rgba(0, 0, 0, 0.3);
-                    }
-
-                    .responsivenav > .nav-btn > label > span {
-                        display: block;
-                        width: 25px;
-                        height: 10px;
-                        border-top: 2px solid #eee;
-                    }
-
-            .responsivenav > .nav-links {
-                position: absolute;
-                display: block;
-                width: 100%;
-                background-color: #333;
-                height: 0px;
-                transition: all 0.3s ease-in;
-                overflow-y: hidden;
-                top: 50px;
-                left: 0px;
-            }
-
-                .responsivenav > .nav-links > a {
+                .nav li:after {
+                    content: '';
                     display: block;
-                    width: 100%;
+                    border-bottom: 2px solid #e4a989;
+                    transform: scaleX(0);
+                    transition: .2s ease-in-out;
                 }
 
-            .responsivenav > #nav-check:not(:checked) ~ .nav-links {
-                height: 0px;
+                .nav li:hover:after {
+                    transform: scaleX(1);
+                }
+
+
+
+        .navf {
+            padding: 20px 20px;
+            width: 670px;
+            float: left;
+            font-family: 'Martel Sans';
+            list-style-type: none;
+        }
+
+            .navf li {
+                padding: 10px;
+                float: right;
+                margin-left: 25px;
+                margin-right: 25px;
+                text-decoration: none;
+                cursor: pointer;
+                font-size: 16px;
             }
 
-            .responsivenav > #nav-check:checked ~ .nav-links {
-                height: calc(100vh - 50px);
-                overflow-y: auto;
+                .navf li:after {
+                    content: '';
+                    display: block;
+                    border-bottom: 2px solid #e4a989;
+                    transform: scaleX(0);
+                    transition: .2s ease-in-out;
+                }
+
+                .navf li:hover:after {
+                    transform: scaleX(1);
+                }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+
+        h1, h2, h3, h4, h5, h6 {
+            padding: 0;
+            margin: 0;
+        }
+
+        ul, li, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+        }
+        /*Slideshow Multiple Slides*/
+        .wrapper {
+            height: 700px;
+            width: 100%;
+            padding-left: 5%;
+            padding-right: 5%;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            display: block;
+            background-color: rgba(0,0,0,0.1);
+            overflow: hidden;
+            margin: auto;
+        }
+
+        @media only screen and (max-width: 900px) {
+            .wrapper {
+                width: 99.9%;
+                height: 600px;
+                padding: 0 0 0 0;
             }
         }
-        .logo-responsive {
-            height:80px; margin-left:20%;
+
+        .wrapper .container {
+            height: 100%;
+            width: 100%;
+            display: block;
+            overflow: hidden;
+        }
+
+        .slideshow {
+            height: 100%;
+            width: 100%;
+            display: block;
+            overflow: hidden;
+            border-radius: 50px;
+        }
+
+            .slideshow .slideshow-left {
+                width: 40%;
+                float: left;
+                position: relative;
+                height: 100%;
+            }
+
+        @media only screen and (max-width: 900px) {
+            .slideshow .slideshow-left {
+                width: 100%;
+                height: 50%;
+                float: none;
+            }
+        }
+
+
+        .slideshow .slideshow-left .Lslide {
+            height: 100%;
+            display: block;
+            overflow: hidden;
+            position: absolute;
+            bottom: 0px;
+            top: 0;
+            left: 0;
+            right: 0;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+
+        .slideshow .Lslide-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+        }
+
+            .slideshow .Lslide-content h2 {
+                color: #fff;
+                font-weight: 600;
+                font-size: 50px;
+                line-height: 70px;
+                color: white;
+                letter-spacing: 5px;
+                font-family: Martel Sans;
+                font-weight: lighter;
+            }
+
+        @media only screen and (max-width: 900px) {
+            .slideshow .Lslide-content h2 {
+                line-height: 35px;
+                font-size: 27px;
+                font-family: 'Poppins';
+                text-align: center;
+                padding-bottom: 20px;
+            }
+        }
+
+        .slideshow .Lslide-content p {
+            color: #fff;
+            font-family: 'Poppins';
+            padding: 2.5em 0em;
+        }
+
+        @media only screen and (max-width: 900px) {
+            .slideshow .Lslide-content p {
+                padding: 5% 0% 5% 0%;
+                font-size: 14px;
+                font-family: 'martel sans';
+                text-align: center;
+                font-weight: lighter;
+            }
+        }
+
+        .slideshow .Lslide-content .button {
+            background-color: #fff;
+            display: inline-block;
+            border-radius: 25px;
+            position: relative;
+        }
+
+        @media only screen and (max-width: 900px) {
+            .slideshow .Lslide-content .button {
+                padding: 7px 0px 5px 0px;
+                margin-left: 7%;
+            }
+        }
+
+        .slideshow .Lslide-content .button i {
+            float: right;
+            position: absolute;
+            top: 50%;
+            right: 2.5em;
+            color: #000;
+            font-size: 9px;
+            transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+            transition: all 0.3s;
+        }
+
+        .slideshow .Lslide-content .button:hover i {
+            right: 1.7em;
+        }
+
+        .slideshow .Lslide-content .button p {
+            margin: 0;
+            text-align: left;
+            padding: 0em 7em 0em 1.5em;
+            font-size: 12px;
+            font-weight: 600;
+            font-family: 'martel sans';
+            color: rgba(0,0,0,0.5);
+        }
+
+        .slideshow .slideshow-right {
+            width: 60%;
+            float: left;
+            position: relative;
+            height: 100%;
+            object-fit: cover;
+            box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+        }
+
+        @media only screen and (max-width: 900px) {
+            .slideshow .slideshow-right {
+                width: 100%;
+                height: 50%;
+                float: none;
+            }
+        }
+
+        .slideshow .slideshow-right .Rslide {
+            height: 100%;
+            display: block;
+            overflow: hidden;
+            position: absolute;
+            bottom: 0px;
+            top: 0;
+            left: 0;
+            right: 0;
+            object-fit: cover;
+        }
+
+            .slideshow .slideshow-right .Rslide img {
+                min-width: 100%;
+                object-fit: cover;
+            }
+
+
+        .control {
+            position: absolute;
+            margin: 275px 0 0 0;
+            left: 40%;
+            transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+        }
+
+        @media only screen and (max-width: 900px) {
+            .control {
+                left: 0%;
+                margin-top: 0px;
+                z-index: 50;
+                margin: 0;
+                transform: translateY(-600%) translateX(30%);
+            }
+        }
+
+        @media only screen and (max-width: 900px) {
+            .oncontrol {
+                float:left;
+                margin-left:5px;
+            }
+        }
+
+        .control i {
+            left: 0;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            -moz-transform: translateY(-50%);
+            -webkit-transform: translateY(-50%);
+            text-align: center;
+            position: absolute;
+            color: #aaaaaa;
+            transition: all 0.3s;
+            -ms-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            -webkit-transition: all 0.3s;
+        }
+
+        @media only screen and (max-width: 900px) {
+            .control i {
+                color: rgba(0, 0, 0, 0.7);
+            }
+        }
+
+        .control .control-top {
+            width: 45px;
+            height: 50px;
+            background-color: #fff;
+            z-index: 5;
+            position: relative;
+            border-radius: 4px 4px 4px 4px;
+            cursor: pointer;
+            left: -45px;
+            margin: 0 0 3px 0;
+        }
+
+
+        @media only screen and (max-width: 900px) {
+            .control .control-top {
+                left: 0px;
+                background-color: rgba(255,255,255,0.5);
+            }
+        }
+
+
+        .control .control-top:hover i {
+            color: #333333;
+        }
+
+        .control .control-bottom {
+            width: 45px;
+            height: 50px;
+            background-color: #fff;
+            z-index: 5;
+            position: relative;
+            border-radius: 4px 0px 0px 4px;
+            left: -45px;
+            cursor: pointer;
+        }
+
+        @media only screen and (max-width: 900px) {
+            .control .control-bottom {
+                left: 0px;
+                background-color: rgba(255,255,255,0.5);
+            }
+        }
+
+        .control .control-bottom:hover i {
+            color: #333333;
+        }
+
+
+
+
+        /*Quotes Slideshow*/
+        /* Slideshow container */
+        .quotesslide-container {
+            width: 100%;
+            position: relative;
+            margin: auto;
+        }
+
+
+        /* Next & previous buttons */
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        @media only screen and (max-width: 900px) {
+            .prev, .next {
+                margin-top: 0px;
+                float: none;
+                z-index: 100;
+            }
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+            /* On hover, add a black background color with a little bit see-through */
+            .prev:hover, .next:hover {
+                background-color: rgba(0,0,0,0.8);
+            }
+
+        /* Caption text */
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+            cursor: none;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: transparent;
+            border-radius: 50%;
+            display: inline-block;
+            transition: none;
+        }
+
+
+
+        /* Fading animation */
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1s;
+            animation-name: fade;
+            animation-duration: 1s;
+        }
+
+        @-webkit-keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 800px) {
+            .prev, .next, .text {
+                font-size: 11px
+            }
+        }
+
+        #mobilenav {
+            display: none;
         }
 
         @media only screen and (max-width: 800px) {
-            .logo-responsive {
-                height: 70px; margin-left:10%;
+            #mobilenav {
+                display: revert;
             }
         }
-    </style>
-</head>
-<body>
-    <!--Navagation Bar for Social Media Links
-    <div class="topnav" id="myTopnav">
-        <a id="facebook" href="https://www.facebook.com/engageeventsllc/">Facebook</a>
-        <a href="https://www.instagram.com/engage.events/">Instagram</a>
-        <a id="nohover" style="color:white; font-size:14px; float:right; margin-right:10px;">
-            <i class="fa-solid fa-envelope" style="padding-right:7px; "></i> engageevents.byamn@gmail.com
-        </a>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-            <i class="fa fa-bars"></i>
-        </a>
-    </div>-->
 
-      <div class="responsivenav">
+        @media only screen and (max-width: 800px) {
+            #navbar {
+                display: none;
+            }
+        }
+
+
+        /*Loader before Homepage*/
+        .svg-container {
+            text-align: center;
+            margin: auto;
+            height: 40%;
+            width: 30%;
+        }
+
+        @media only screen and (max-width: 800px) {
+            .svg-container {
+                height: 70%;
+                width: 99%;
+            }
+        }
+
+        /*LOADING CONTAINER- to be removed once viewing*/
+        .loading {
+            position: relative;
+            z-index: 100;
+        }
+
+        /*LOADING BACKGROUND*/
+        .loading_bg {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background-color: rgba(171,116,116,255);
+            opacity: 1;
+            transition: all 600ms ease-out;
+        }
+
+        .loading_img-container {
+            display: flex;
+            width: 100vw;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .loading_img {
+            opacity: 1;
+            transform: translateY(-50%);
+            transition: all 300ms ease-out;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!--LOADING SCREEN; Inspo from 'Coding in Public' Youtube Channel--
+    <div class="loading">
+        <div class="loading_bg">
+            <div class="loading_img-container">
+                <div class="svg-container">
+                    <object>
+                        <embed src="LogoAnimate.svg" />
+                    </object>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        function loadingFade() {
+            const loadingBg = document.querySelector('.loading_bg');
+            const loadingImg = document.querySelector('.loading_img');
+            loadingBg.style.opacity = "0";
+            loadingImg.style.opacity = "0";
+        }
+
+        function loadingRemove() {
+            const loading = document.querySelector('.loading')
+            loading.style.display = "none";
+        }
+
+        setTimeout(loadingFade, 4000);
+        setTimeout(loadingRemove, 5000);
+
+    </script>-->
+
+
+
+    <!--Navigation Bar-->
+    <header>
+        <!--Mobile Navbar-->
+        <div id="mobilenav" class="responsivenav">
             <input type="checkbox" id="nav-check">
             <div class="nav-header">
                 <div class="nav-title">
@@ -150,176 +727,641 @@
             </div>
 
             <div class="nav-links">
-                <a href="index.html">Homepage</a>
-                <a href="packages.html">Packages</a>
+                <a href="index2.html">Homepage</a>
+                <a href="services.html">Services</a>
                 <a href="contact.html">Contact</a>
                 <a href="aboutme.html">About Me</a>
+                <a href="gallerypage.html">Featured Weddings</a>
+
 
             </div>
         </div>
-    <br />
-    <!--Header-->
-    <div class="EG_Header_Box">
-        <div class="EG_Header_Logo"></div>
-        <p class="EG_Caps">WELCOME TO ENGAGE EVENTS</p>
-        <p class="EG_Paragraph">
-            Welcome to Engage Events!
-<br>         
-            <br>
-            <br>
-My name is Anna, and I would love to work with you to make your perfect day come true. 
-<br>
-            <br>
-I am a wedding planner from Michigan, and I am excited for a whole new experience in the Land of Enchantment! We are currently located in Santa Fe, New Mexico as of January 2023.
-<br>
-            <br>
-I will be offering a variety of services, from full event planning & day-of coordination to virtual planning assistance packages for those just needing a little help but wanting to stay in more control of their own planning process. Keep an eye out for more information!
-</div>
-    <br />
-    <!--Under Construction-->
-    <div class="EG_UnderC_Box">
-        <div class="EG_UnderC_left">
-            <div class="EG_Opaque">
-                <i class="fa-solid fa-helmet-safety" style="color:rgba(255,255,255,0.5); padding-top:15px; font-size:40px;"></i>
-                <p class="EG_Caps_Little">OUR SITE IS UNDER CONSTRUCTION</p>
-                <p class="EG_Paragraph_Little">
-                    Our site is currently under temporary construction, but Engage Events is still ready to help with your special day! Please check out the social media links or contact me to learn more. <br /><br /> We apolgize for the inconvience- Our new site will be up soon!
+        <!--Main Navbar-->
+        <div id="navbar">
+            <div class="navbarsides">
+                <div class="navcirclelinks">
+                    <div class="nav-social-one">
+                        <a href="https://www.facebook.com/engageeventsllc/" class="nav-social-circle grow-on-hover" style="padding-top:8px; text-decoration:none; padding-left:6px;">
+                            <span><i style="text-decoration:none; color:white;" class="icon-facebook"></i></span>
+                        </a>
+                        <a href="https://www.instagram.com/engage.events.sf/" class="nav-social-circle grow-on-hover" style="padding-top: 8px; padding-left: 5px;">
+                            <span><i style="text-decoration: none; color: white; margin-top: -2px;" class="fab icon-instagram"></i></span>
+                        </a>
+                    </div>
+                </div>
+
+                <ul class="nav" id="spacing">
+                    <li><a href="aboutme.html">About Me </a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <!--<li><a href="faq.html">FAQ</a></li>-->
+                </ul>
+                <ul class="navf" id="spacing">
+                    <li><a href="gallerypage.html">Gallery </a></li>
+                    <li><a href="services.html">Service</a></li>
+                    <li><a href="index2.html">Home </a></li>
+                </ul>
+
+                <div class="logo-upper" id="upper"></div>
+                <div class="logo-centered" id="logo">
+                    <img src="oflogo.png" style="object-fit:cover; height:100%; width:100%;" />
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <!--End Nav Bar-->
+    <!--Homepage Banner-->
+    <div class="index-container">
+        <div class="index-image"></div>
+        <div class="index-textbox">
+            <div id="index-tagline-text">
+                <p id="break">Seamless Events.</p>
+                <p id="break">Personalized Florals.</p>
+                <p id="big">Your Perfect Combination.</p>
+            </div>
+            <a href="services.html" class="buttonyou button1 buttonpadding">
+                our services &#x1F822;
+            </a>
+        </div>
+    </div>
+
+    <!--welcome to engage events-->
+
+    <div class="ee-introcontainer">
+        <div class="ee-intro1">
+            <div class="ee-intro3">
+                <img src="logosolid.png" style="height:100px; margin:auto;" />
+            </div>
+        </div>
+        <div class="ee-intro2">
+
+            <p class="ee-headertext"> Welcome to Engage Events</p>
+            <div class="ee-photo-container">
+                <div class="ee-photo-box" id="photobox-visible"></div>
+                <div class="ee-photo-box" id="photobox-visible"></div>
+                <div class="ee-photo-box" id="photobox-visible"></div>
+                <div class="ee-photo-box" id="photobox-invisible"></div>
+                <div class="ee-photo-box" id="photobox-invisible"></div>
+
+
+                <!--<div class="ee-photo-box" style="background-image: url('00.jpg');"></div>
+    <div class="ee-photo-box" style="background-image: url('10.jpg');"></div>
+    <div class="ee-photo-box" style="background-image: url('20.jpg');"></div>
+    <div class="ee-photo-box" style="background-image: url('30.jpg');"></div>
+    <div class="ee-photo-box" style="background-image: url('40.jpg');"></div>-->
+
+            </div>
+            
+            <p class="ee-font-style ee-font-padding">Our team (led by Anna Kaiser) brings expertise to ensure your experience is nothing short of magical.</p>
+            <br />
+            <p class="ee-font-style">
+                We believe in the power of details (Whether it's selecting the perfect venue, beautiful florals, coordinating vendors, or adding personalized DIY touches).
+            </p>
+            <br />
+            <p class="ee-font-style">
+                Let us be your guide as you embark on this exciting journey. We are here to make your dream a reality.
+            </p>
+            <br />
+            <div class="button-spacing"></div>
+            <a href="services.html" class="buttonyou2 buttonpadding">
+                Now Booking 2023 & 2024 &#x1F822;
+            </a>
+
+
+            <!---
+        <div class="ee-linebox">
+            <div class="ee-linebox1">
+                <div class="ee-linebox-circle">
+                    <i class="ee-icon fa-solid fa-mountain-sun"></i>
+                </div>
+            </div>
+            <div class="ee-linebox2">
+                Our team (led by Anna Kaiser) brings a wealth of experience to ensure your event is nothing short of magical.
+            </div>
+        </div>
+
+        <div class="ee-linebox">
+            <div class="ee-linebox1">
+                <div class="ee-linebox-circle">
+                    <i class="ee-icon fa-solid fa-martini-glass-citrus"></i>
+                </div>
+            </div>
+            <div class="ee-linebox2">
+                We believe in the power of details (Whether it's selecting the perfect venue, beautiful florals, coordinating vendors, or adding personalized DIY touches).
+            </div>
+        </div>
+        <div class="ee-linebox">
+            <div class="ee-linebox1">
+                <div class="ee-linebox-circle">
+                    <i class="ee-icon fa-solid fa-signs-post"></i>
+                </div>
+            </div>
+            <div class="ee-linebox2">
+                Let us be your guide as you embark on this exciting journey. We are here to make your dream a reality.
+            </div>
+        </div>
+
+        <div class="ending-text">Experience the simplicity of perfect weddings with Engage Events – contact us today!</div>
+        <br />
+        <br />
+        <br />
+        <br />
+
+        NOW BOOKING 2024 & 2025
+    </p>-->
+
+
+        </div>
+    </div>
+
+
+
+    <!--Slideshow -->
+  
+    <!--Slideshow--->
+
+    <div class="wrapper">
+        <div class="container">
+
+            <div class="slideshow">
+
+                <div class="slideshow-left">
+                    <!--Reviews, Link to Gallery-->
+                    <div class="Lslide">
+                        <div class="Lslide-content">
+                            <h2>Our Glowing Reviews</h2>
+                            <p>Check out our featured weddings and reviews!</p>
+
+                            <div class="button">
+                                <a href="#gallerypage.html">
+                                    <p>Gallery</p>
+                                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Coffee Slide-->
+                    <div class="Lslide">
+                        <div class="Lslide-content">
+                            <h2>Hello- I'm Anna Kaiser</h2>
+                            <p>
+                                I'd love to be a part of your special day- learn more about me below:
+                            </p>
+
+                            <div class="button">
+                                <a href="#">
+                                    <p>About Me</p>
+                                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--I'm Anna, Links to About Me'-->
+                    <div class="Lslide">
+                        <div class="Lslide-content">
+                            <h2>Let's Grab Coffee</h2>
+                            <p>
+                                In person or online, let's grab coffee and chat!
+                            </p>
+
+                            <div class="button">
+                                <a href="#">
+                                    <p>Contact</p>
+                                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="slideshow-right">
+                    <!--OUR REVIEWS PHOTO-->
+                    <div class="Rslide" ">
+                        <img src="Reviews.png" style="height:100%; width:50%;">
+                    </div>
+                    <!--I'm Anna, Links to About Me'-->
+                    <div class="Rslide">
+                        <img src="anna_new1.jpg" alt="" style="height:100%; width:50%;">
+                    </div>
+                    <!--Reviews, Link to Gallery-->
+                    <div class="Rslide">
+                        <img src="coffeecontact.jpg" alt="" style="height:100%; width:50%;">
+                    </div>
+                </div>
+
+                <!--Control Arrows-->
+                <div class="control">
+                    <div class="oncontrol control-top">
+                        <i class="fa fa-arrow-up" aria-hidden="true"></i>
+                    </div>
+                    <div class="oncontrol control-bottom ">
+                        <i class="fa fa-arrow-down" aria-hidden="true"></i>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <!--New Testimonials Link-->
+    <!--Photo Header--
+    <div class="headerbackground">
+        <div class="header-color-box">
+            <div class="headerboxmain">
+                <div class="firsthalfmain"></div>
+                <div class="secondhalfmain">
+                    <!---<div class="logo-home-circle">
+                        <div class="logo-home"></div>
+                    </div>--
+                </div>
+
+                <!--I DO Text--
+                <div class="overlaytext">
+                    <div class="overlaybox">
+                        <div class="overlaysplitbox">
+                            <p class="youstyling">FROM SAYING YES</p>
+                        </div>
+                        <div class="overlaysplitbox">
+                            <div class="overlaysplitbox_1"></div>
+                            <div class="overlaysplitbox_2">
+                                <span class="cursive">to saying "i do"</span>
+                            </div>
+                        </div>
+                        <!--Packages Button--
+
+                        <div class="overlaybuttonbox">
+                            <a href="services.html" class="buttonyou button1 buttonpadding" style="float:right;">
+                                our services &#x1F822;
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>-->
+    <!--Testimonials--
+    <div class="quotesslide-container">
+        <div class="mySlides1">
+            <div class="slide-formating fade">
+
+                <p>
+                    "Anna did an AMAZING job making my wedding perfect and carrying out all of my visions. She took matters into her own hands, <br />
+                    had so many great ideas, and is such a sweet and kind person. I never had to worry about a thing. I loved working with her and I highly recommend her!"
+                    <br />
+                    <br />
+                    - Karissa L. | (<i>Karissa + Christopher</i>)
                 </p>
             </div>
         </div>
-        <div class="EG_UnderC_right">
-            <div class="EG_UnderC_right_line">
-                <div class="contact-button3" style="height: 40px; padding-top: 10px; margin-top: 20px; text-decoration:none;">
-                    <a href="https://www.facebook.com/engageeventsllc">
-                        <p>facebook</p>
-                        <i class="fa fa-chevron-right" aria-hidden="true"></i>
-                    </a>
-                </div>
-                <br />
-                <div class="contact-button3" style="height: 40px; padding-top: 10px; margin-top: 20px; text-decoration:none;">
-                    <a href="https://www.instagram.com/engage.events/">
-                        <p>instagram</p>
-                        <i class="fa fa-chevron-right" aria-hidden="true"></i>
-                    </a>
-                </div>
-                <br />
-                <br />
-                <!--email-->
-                <p style="color:white; font-size:14px;">
-                    <i class="fa-solid fa-envelope" style="padding-right:7px; "></i> engageevents.byamn@gmail.com
+
+        <div class="mySlides1">
+            <div class="slide-formating fade">
+                <p>
+                    "Engage Events did and amazing job at my wedding! Anna took on the challenge of my guest list of 300
+                    <br />and was able to turn all of our ideas into reality. Anna was fantastic at communicating, professional, and made my day stress-free!"
+                    <br />
+                    <br />
+                    - Tyler P. | (<i>Tyler + Wolff</i>)
                 </p>
             </div>
-
         </div>
+
+        <div class="mySlides1">
+            <div class="slide-formating fade">
+                <p>
+                    "Anna did a great job coordinating with the party and the cater’s at our event. It was nothing but a great wedding.
+                    <br />To the table settings to the bar, Engage Events rocked it out of the park!
+                    <br />I sincerely recommend them to anyone who needs a great, creative wedding planner!"
+                    <br />
+                    <br />
+                    - John C. | (<i>Vendor, Vango's'</i>)
+
+                </p>
+
+
+            </div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
     </div>
-    <!--Reviews-->
-    <div class="reviewbox_color">
-        <div class="reviewbox_circle">
-            <i style="font-size:25px; margin-top:35px; color:black;" class="fa-regular fa-star"></i>
-        </div>
-        <p class="reviewbox_title">Our Glowing Reviews</p>
+    <br>
 
-        <div class="reviewbox reviewbox_2">
-            <p>
-                "Anna did an AMAZING job making my wedding perfect and carrying out all of my visions. She took matters into her own hands, had so many great ideas, and is such a sweet and kind person. I never had to worry about a thing. I loved working with her and I highly recommend her!!"
-            </p>
-            <p style="text-align:right;">-Karissa , <i style="font-size:11px;">BRIDE (KARISSA + CHRISTOPHER)</i></p>
-        </div>
-        <div class="reviewbox">
-            <p>
-                "Engage Events did and amazing job at my wedding! Anna took on the challenge of my guest list of 300 and was able to turn all of our ideas into reality. Anna was fantastic at communicating, professional, and made my day stress-free!"
-            </p>
-            <p style="text-align:right;">-Tyler, <i style="font-size:11px;">BRIDE (TYLER + WOLFF)</i></p>
-        </div>
-        <div class="reviewbox">
-            <p>
-                "Anna did a great job coordinating with the party and the cater’s at our event. It was nothing but a great wedding. To the table settings to the bar, Engage Events rocked it out of the park! I sincerely recommend them to anyone who needs a great, creative wedding planner!"
-            </p>
-            <p style="text-align:right;">-Jack , <i style="font-size:11px;">VENDOR (VANGO'S)</i></p>
-        </div>
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
     </div>
 
 
 
-    <!--Gallery-->
-
-    <div class="container">
-        <!--Row 1-->
-        <img src="NM_Wedding_9.jpg">
-        <img src="NM_Wedding_EG_5.jpg">
-        <img src="NM_Wedding11.jpg">
-        <!--Row 2-->
-        <img src="NM_Wedding10.jpg">
-        <img src="NM_Wedding_EG.jpg">
-        <img src="NM_Wedding_8.jpg">
-        <!--Row 3-->
-        <img src="NM_Wedding_EG_2.jpg">
-        <img src="NM_Wedding_6.jpg">
-        <img src="NM_Wedding_EG_3.jpg">
 
 
-    </div>
 
+
+    <!--100% Across Header-->
+    <!--How This Works--
+    <div class="works-background">
+        <div class="works-centered-container">
+            <div class="works-header">
+                <p>HOW TO GET STARTED</p>
+            </div>
+
+
+            <div class="works-box">
+                <div class="works-circle" style="background-image: url(browse.jpg); opacity: 0.8; background-repeat: no-repeat; background-size: 200px 200px;"></div>
+                <br />
+                <p class="works-step">Browse Packages</p>
+                <br />
+                <p class="works-desc">
+                    Browse our packages and services to get an idea of what we offer.
+                </p>
+
+
+                <br />
+                <a href="packages.html" class="button button9">
+                    browse &#x1F822;
+                </a>
+
+            </div>
+
+            <div class="works-box">
+                <div class="works-circle" style="background-image: url(annapicture2.png); background-repeat: no-repeat; background-size:200px 200px;"></div>
+                <br />
+                <p class="works-step">About Me</p>
+                <br />
+                <p class="works-desc">
+                    Introducing Anna- Learn more about your new wedding planner.
+                </p>
+                <br />
+                <a href="contact.html" class="button button9">
+                    about &#x1F822;
+                </a>
+
+            </div>
+
+            <div class="works-box" style="margin-right:0px;">
+                <div class="works-circle" style="background-image: url(chat.jpg); opacity: 0.9; background-repeat: no-repeat; background-size: 200px 200px;"></div>
+                <br />
+                <p class="works-step">Let's Chat!</p>
+                <br />
+                <p class="works-desc">
+                    Want to learn more or get started? Let's get coffee and chat.
+                </p>
+                <br />
+                <a href="contact.html" class="button button9">
+                    connect &#x1F822;
+                </a>
+
+
+            </div>
+
+
+        </div>
+    </div>-->
+
+
+
+
+
+
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+   
     <!--Footer-->
-    <div class="footer">
-        <i style="margin-top:40px; color:white; font-size:40px;" class="fa-regular fa-heart"></i>
-    </div>
 
+    <footer class="footerbody" style="margin-top:100px;">
+        <div class="footercentered">
 
+            <div class="footertitle">
+                <a class="big-text site-nav__link" style=" text-decoration: none; " href="contact.html">CONTACT</a>
+                <br />
+                <!--<a class="big-text site-nav__link" style=" text-decoration: none; " href="faq.html">FAQ</a>
+                <br />-->
+                <a class="big-text site-nav__link" style=" text-decoration: none; " href="aboutme.html">ABOUT ME</a>
+                <br />
+                <a class="big-text site-nav__link" style=" text-decoration: none; " href="gallerypage.html">GALLERY</a>
+                <br />
+                <a class="big-text site-nav__link" style=" text-decoration: none; " href="services.html">SERVICES</a>
+                <br />
+                <a class="big-text site-nav__link" style=" text-decoration: none; " href="index.html">HOME</a>
 
-
-
-
-
-    <!--Photo and Caption-->
-    <!--<div class="leftbox"></div>
-
-    <div class="rightbox">
-        <h2>WELCOME TO ENGAGE EVENTS</h2>
-        <p>Our Site is currently under temporary construction. The full site will be up shortly! Please feel free to reach out or check out any of the links provided on this page. </p>
-    </div>
-        -->
-    <!--Socials Links
-
-
-
-
-        <div class="diamond-fullcontainer">
-            <div class="diamond-container">
-                <div class="diamond-up"></div>
-                <div class="diamond-down"></div>
-                <div class="diamond-up"></div>
-                <div class="diamond-down"></div>
-                <div class="diamond-up"></div>
             </div>
+            <div class="footerlinks">
+                <div class="footerlinksbox">
 
-            <div class="diamond-bottomtriangle"></div>
+                    <!--Social Media Icons-->
+                    <div class="ringsfull">
+                        <div class="ringscentered">
 
-        </div>
-        <div class="diamond-fullcontainer">
+                            <div class="diamondbox">
 
-            <div class="ring-circle">
-                <div class="ring-button facebook grow-on-hover">
-                    <i style="color:white; padding:8px 15px 0px 15px;" class="fa-brands fa-facebook-f"></i>
+                                <div class="diamondboxtwo">
+                                    <div class="diamond-one"></div>
+                                    <div class="diamond-two"></div>
+                                    <div class="diamond-three"></div>
+                                    <div class="diamond-two"></div>
+                                    <div class="diamond-one"></div>
+                                </div>
+                                <div class="diamondbox-centered">
+                                    <div class="diamond"></div>
+                                </div>
+
+                            </div>
+
+                            <div class="diamondbox">
+
+                                <div class="diamondboxtwo">
+                                    <div class="diamond-one"></div>
+                                    <div class="diamond-two"></div>
+                                    <div class="diamond-three"></div>
+                                    <div class="diamond-two"></div>
+                                    <div class="diamond-one"></div>
+                                </div>
+                                <div class="diamondbox-centered">
+                                    <div class="diamond"></div>
+                                </div>
+
+                            </div>
+
+                            <div class="diamondbox-nomargin">
+
+                                <div class="diamondboxtwo">
+                                    <div class="diamond-one"></div>
+                                    <div class="diamond-two"></div>
+                                    <div class="diamond-three"></div>
+                                    <div class="diamond-two"></div>
+                                    <div class="diamond-one"></div>
+                                </div>
+                                <div class="diamondbox-centered">
+                                    <div class="diamond"></div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="wrappericon">
+
+                            <a href="https://www.facebook.com/engageeventsllc/" class="icon facebook">
+                                <div class="tooltip">Facebook</div>
+                                <span><i class="icon-facebook" style="line-height: 60px;"></i></span>
+                            </a>
+
+                            <a href="https://www.google.com/search?sca_esv=587040545&rlz=1C1VDKB_enUS933US934&q=Engage+Events-+Wedding+and+Event+Planning&si=ALGXSlav9v2ESo4FabHCUDHSZqdp6_feqP4koY9qM2Ao6DS0o1Xc1i1XCzBrBfTcYUWeaoGO2nKXvbsnByarP2Q_4TSijZm8cE1dj_D4AP0Mz00kpTMB2DuZ1QQ6Qcrs635dDlHrY_1-JyV3W74WbTYm46MbeKgbgYK6mbvMlY-NWb-UncrfsDKxxXIt5W6ZCxp6LkGhZx93&sa=X&ved=2ahUKEwiK-fjDie-CAxWOvokEHdzeACcQ6RN6BAgLEAE&biw=1536&bih=738&dpr=1.25" class="icon google">
+                                <div class="tooltip" style="left:-19%;">Google</div>
+                                <span><i class="fa-brands fa-google"></i></span>
+                            </a>
+
+                            <a href="https://www.instagram.com/engage.events/" class="icon instagram">
+                                <div class="tooltip">Instagram</div>
+                                <span><i class="fab icon-instagram"></i></span>
+                            </a>
+
+                        </div>
+                        <!--End Social Media Icons-->
+                    </div>
+                </div>
+                <div class="copyright">
+                    <p class="little-text">copyright &#169; design by macy pawielski</p>
                 </div>
             </div>
+
+
         </div>
 
-    -->
+    </footer>
 
 
-    <script>
-        function myFunction() {
-            var x = document.getElementById("myTopnav");
-            if (x.className === "topnav") {
-                x.className += " responsive";
-            } else {
-                x.className = "topnav";
-            }
+</body>
+    </html>
+
+<script>
+
+//Slideshow- JavaScript Credit/Inspo from @GrandvincentMarion on Codepen.io//
+
+var Lslide      = document.querySelectorAll('.Lslide'),
+    Rslide      = document.querySelectorAll('.Rslide'),
+    control     = document.querySelectorAll('.oncontrol'),
+    slideHeight = document.querySelector('.wrapper').clientHeight,
+    color = ['#cdb19e', '#ab7474', '#84887c'],
+    index = 0;
+
+
+function init() {
+    slideHeight = document.querySelector('.wrapper').clientHeight;
+    for (i = 0; i < Lslide.length; i++) {
+        Lslide[i].style.backgroundColor = color[i];
+        Lslide[i].style.top = -slideHeight * i + "px";
+        Rslide[i].style.top = slideHeight * i + "px";
+    }  
+}
+init()
+window.addEventListener('resize', function(){
+    init()
+});
+
+function moveToTop() {
+
+    index++;
+    for (el = 0; el < Lslide.length; el++) {
+        Lslide[el].style.top = parseInt(Lslide[el].style.top) + slideHeight + "px";
+        Rslide[el].style.top = parseInt(Rslide[el].style.top) - slideHeight + "px";
+    }
+
+    if (index > Lslide.length-1) {
+        index = 0;
+        for (el = 0; el < Lslide.length; el++) {
+            Lslide[el].style.top = -slideHeight * el + "px";
+            Rslide[el].style.top = slideHeight * el + "px";
         }
-    </script>
+    }
+}
 
+function moveToBottom() {
+    index--;
+    for (el = 0; el < Lslide.length; el++) {
+        Lslide[el].style.top = parseInt(Lslide[el].style.top) - slideHeight + "px";
+        Rslide[el].style.top = parseInt(Rslide[el].style.top) + slideHeight + "px";
+        
+    }
+    if (index < 0) {
+        index = Rslide.length-1;
+        for (el = 0; el < Lslide.length; el++) {
+            Lslide[el].style.top = parseInt(Lslide[el].style.top) + slideHeight * Lslide.length + "px";
+            Rslide[el].style.top = parseInt(Rslide[el].style.top) - slideHeight * Rslide.length + "px";
+        }
+    }
+}
+
+function transition() {
+    for (t = 0; t < Lslide.length; t++) {
+        Lslide[t].style.transition = "all 0.8s";
+        Rslide[t].style.transition = "all 0.8s";
+    }
+}
+  
+
+for (t = 0; t < control.length; t++) {
+    control[t].addEventListener("click", function() {
+
+        if (this.classList.contains('control-top')) {
+            moveToTop()
+        } 
+        if (this.classList.contains('control-bottom')) {
+            moveToBottom()
+        }
+
+        transition()
+   
+    });
+}
+
+var wheeling;
+function mousemouve(e) {
+
+    clearTimeout(wheeling);
+    e.preventDefault();
+    var e = window.event || e; 
+    var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
+    
+    wheeling = setTimeout(function() {
+        wheeling = undefined;
+        if (delta === 1) {
+            moveToTop()
+        }
+        if (delta === -1) {
+            moveToBottom()
+        }
+    }, 100);
+
+    transition()
+}
+
+document.addEventListener("mousewheel", mousemouve);
+document.addEventListener("DOMMouseScroll", mousemouve);
+
+    window.onscroll = function () { scrollFunction() };
+
+
+
+
+</script>
 
 
 </body>
