@@ -41,7 +41,8 @@
             overflow: hidden;
             padding: 10px 0 20px 0; /* Large padding which will shrink on scroll (using JS) */
             transition: 0.4s; /* Adds a transition effect when the padding is decreased */
-            position: fixed; /* Sticky/fixed navbar */
+            /* position: fixed; Sticky/fixed navbar */
+            position:absolute;
             width: 100%;
             top: 0; /* At the top */
             z-index: 99;
@@ -277,83 +278,303 @@
             position: relative;
             min-height: 100%;
         }
+
+
+/*NEW ELEMENTS*/
+        @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700');
+        @import url('https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+
+
+        .cards {
+            width: 98%;
+            margin:auto;
+            display: flex;
+            display: -webkit-flex;
+            justify-content: center;
+            -webkit-justify-content: center;
+            margin-left:1%;
+            margin-right:1%;
+            margin-bottom:50px;
+        }
+
+
+        @media only screen and (max-width: 900px) {
+            .cards {
+                flex-direction: column;
+                width: 96%;
+                margin-left: 2%;
+                margin-right: 2%;
+                margin-bottom: 0px;
+            }
+        }
+
+        .card--1 .card__img, .card--1 .card__img--hover {
+            background-image: url('Kate_and_Katie_Co_Photo1.jpg');
+        }
+
+
+        .card--2 .card__img, .card--2 .card__img--hover {
+            background-image: url('Blue_Spruce_Photography_Photo1.jpg');
+        }
+
+        .card--3 .card__img, .card--3 .card__img--hover {
+            background-image: url('Creative_Clicks_Photography_Photo1.jpg');
+        }
+
+        .card--4 .card__img, .card--4 .card__img--hover {
+            background-image: url('Lauren_Natalia_Photography_Photo1.jpg');
+        }
+
+        .card__img {
+            visibility: hidden;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 235px;
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+        }
+
+        .card__info-hover {
+            position: absolute;
+            padding: 16px;
+            width: 100%;
+            opacity: 0;
+            top: 0;
+        }
+
+        .card__img--hover {
+            transition: 0.4s all ease-out;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 100%;
+            position: absolute;
+            height: 235px;
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+            top: 0;
+        }
+
+        .card {
+            margin-right: 25px;
+            transition: all .4s cubic-bezier(0.175, 0.885, 0, 1);
+            background-color: rgba(255,255,255,0.8);
+            width: 37%;
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0px 13px 10px -7px rgba(0, 0, 0,0.1);
+        }
+
+            .card:hover {
+                box-shadow: 0px 30px 18px -8px rgba(0, 0, 0,0.1);
+                transform: scale(1.10, 1.10);
+            }
+
+        @media only screen and (max-width: 900px) {
+            .card {
+               width:90%;
+               margin:20px 5% 20px 5%;
+               float:none;
+               
+            }
+        }
+
+        @media only screen and (max-width: 900px) {
+            .card:hover {
+                transform: scale(1);
+            }
+        }
+
+        .card__info {
+            z-index: 2;
+            background-color: rgba(255,255,255,0.4);
+            border-bottom-left-radius: 12px;
+            border-bottom-right-radius: 12px;
+            padding: 16px 24px 24px 24px;
+        }
+
+        .card__category {
+            font-family: 'Raleway', sans-serif;
+            text-transform: uppercase;
+            font-size: 10px;
+            letter-spacing: 2px;
+            font-weight: 500;
+            color: #868686;
+        }
+
+        .card__title {
+            margin-top: 5px;
+            margin-bottom: 10px;
+            font-family: 'poppins', serif;
+        }
+
+        .card__by {
+            font-size: 12px;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 500;
+        }
+
+        .card__author {
+            font-weight: 600;
+            text-decoration: none;
+            color: #AD7D52;
+        }
+
+        .card:hover .card__img--hover {
+            height: 100%;
+            opacity: 0.3;
+        }
+
+        .card:hover .card__info {
+            background-color: transparent;
+            position: relative;
+        }
+
+        .card:hover .card__info-hover {
+            opacity: 1;
+        }
+
+        @media only screen and (max-width: 900px) {
+            .card:hover .card__img--hover {
+            }
+        }
+
+
+
     </style>
 
 </head>
 
 <body>
     <!--Navigation Bar-->
-        <!--Mobile Navbar-->
-        <div id="mobilenav" class="responsivenav">
-            <input type="checkbox" id="nav-check">
-            <div class="nav-header">
-                <div class="nav-title">
-                    <img src="oflogoop.png" class="logo-responsive" />
-                </div>
-            </div>
-            <div class="nav-btn">
-                <label for="nav-check">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </label>
-            </div>
-
-            <div class="nav-links">
-                <a href="homepage.html">Homepage</a>
-                <a href="Services.html">Services</a>
-                <a href="contact.html">Contact</a>
-                <a href="aboutme.html">About Me</a>
-                <a href="gallerypage.html">Featured Weddings</a>
+    <!--Mobile Navbar-->
+    <div id="mobilenav" class="responsivenav">
+        <input type="checkbox" id="nav-check">
+        <div class="nav-header">
+            <div class="nav-title">
+                <img src="oflogoop.png" class="logo-responsive" />
             </div>
         </div>
-        <!--Main Navbar-->
-        <div id="navbar">
-            <div class="navbarsides">
-                <div class="navcirclelinks">
-                    <div class="nav-social-one">
-                        <a href="https://www.facebook.com/engageeventsllc/" class="nav-social-circle grow-on-hover" style="padding-top:8px; text-decoration:none; padding-left:6px;">
-                            <span><i style="text-decoration:none; color:white;" class="icon-facebook"></i></span>
-                        </a>
-                        <a href="https://www.instagram.com/engage.events/" class="nav-social-circle grow-on-hover" style="padding-top: 8px; padding-left: 5px;">
-                            <span><i style="text-decoration: none; color: white; margin-top: -2px;" class="fab icon-instagram"></i></span>
-                        </a>
-                    </div>
+        <div class="nav-btn">
+            <label for="nav-check">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        </div>
+
+        <div class="nav-links">
+            <a href="homepage.html">Homepage</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact</a>
+            <a href="aboutme.html">About Me</a>
+            <a href="gallerypage.html">Featured Weddings</a>
+        </div>
+    </div>
+    <!--Main Navbar-->
+    <div id="navbar">
+        <div class="navbarsides">
+            <div class="navcirclelinks">
+                <div class="nav-social-one">
+                    <a href="https://www.facebook.com/engageeventsllc/" class="nav-social-circle grow-on-hover" style="padding-top:8px; text-decoration:none; padding-left:6px;">
+                        <span><i style="text-decoration:none; color:white;" class="icon-facebook"></i></span>
+                    </a>
+                    <a href="https://www.instagram.com/engage.events/" class="nav-social-circle grow-on-hover" style="padding-top: 8px; padding-left: 5px;">
+                        <span><i style="text-decoration: none; color: white; margin-top: -2px;" class="fab icon-instagram"></i></span>
+                    </a>
                 </div>
-
-                <ul class="nav" id="spacing">
-                    <li><a href="aboutme.html">About Me </a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <!--<li><a href="faq.html">FAQ</a></li>-->
-                </ul>
-                <ul class="navf" id="spacing">
-                    <li><a href="gallerypage.html">Gallery </a></li>
-                    <li><a href="Services.html">Services</a></li>
-                    <li><a href="homepage.html">Home </a></li>
-                </ul>
-
-                <div class="logo-upper" id="upper"></div>
-                <div class="logo-centered" id="logo">
-                    <img src="oflogo.png" style="object-fit:cover; height:100%; width:100%;" />
-                </div>
-
-
             </div>
 
+            <ul class="nav" id="spacing">
+                <li><a href="aboutme.html">About Me </a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <!--<li><a href="faq.html">FAQ</a></li>-->
+            </ul>
+            <ul class="navf" id="spacing">
+                <li><a href="gallerypage.html">Gallery </a></li>
+                <li><a href="Services.html">Services</a></li>
+                <li><a href="homepage.html">Home </a></li>
+            </ul>
+
+            <div class="logo-upper" id="upper"></div>
+            <div class="logo-centered" id="logo">
+                <img src="oflogo.png" style="object-fit:cover; height:100%; width:100%;" />
+            </div>
+
+
         </div>
+
+    </div>
 
 
     <!--End Nav Bar-->
     <!--Start-->
     <!--Packages HEADER-->
+    <!--Featured Wedding: "Wedding Invite"-->
+
+    <div class="featuredwedding-darkbackground">
+        <div style="height:80px; width:100%;"></div>
+
+        <div class="ig_img2"></div>
+        <div class="ig_img1"></div>
+        <div class="ig_img3"></div>
+
+
+        <div class="invite_underlay_container">
+
+            <div class="invite_container">
+                <div class="invite_overlay_container"></div>
+
+                <!--<div class="ig_img1"></div>
+                <div class="ig_img2"></div>-->
+                <div class="invite_textbox">
+                    <div class="invite_textbox_inside">
+                        <p class="it_feature">FEATURED ENGAGE EVENTS WEDDING</p>
+                        <img src="featured.png" class="featured" />
+                        <br />
+                        <br />
+                        <p class="it_welcome">Welcome to the Wedding of:</p>
+                        <p class="it_names"> Ann + Orlando</p>
+                        <a class="er-button" href="weddingoa.html">take a look inside <i class="fa-solid fa-angles-right"></i></a>
+                        <!--<button class="er-button" href="weddingoa.html">take a look inside <i class="fa-solid fa-angles-right"></i></button>-->
+                    </div>
+
+                    <!--<button class="er-button2" href="">view our other highlighted weddings <br /> <i class="fa-solid fa-angle-down"></i></button>-->
+
+                </div>
+
+
+                <!--Invite-->
+                <div class="invite_paper_top_spacing"></div>
+                <div class="invite_paper">
+                    <div class="invite_paper_1">
+
+
+                    </div>
 
 
 
-    <div class="himg-gallery">
+                </div>
 
-        <div class="hintro">
-            <div class="headerintro" style="padding-top:40px;">
-                <p>FEATURED WEDDINGS</p>
+
+                <!--Envelope Top-->
+                <div class="envelope_rectangle_top">
+                    <div class="ert_left"></div>
+                    <div class="ert_letter"></div>
+                    <div class="ert_right"></div>
+                </div>
+                <!--Envelope Bottom-->
+                <div class="envelope_rectangle">
+                    <div class="er_right"></div>
+                    <div class="er_top"></div>
+                    <div class="er_bottom"></div>
+                    <div class="er_bottom2"></div>
+                </div>
+
+
 
             </div>
         </div>
@@ -362,7 +583,93 @@
 
 
 
-    <!--Gallery Accordian/ Karissa-->
+    <!--Other Weddings-->
+
+    <div class="otherweddings_intro">
+        <br />
+        <img src="logo.png" class="logo-otherweddings" />
+        <!--<p>More Weddings:</p>-->
+        <p class="otherweddings_intro_p">
+            Explore other Engage Events weddings below
+            -a curated collection of unforgettable events with exquisite details from real couples.
+        </p>
+    </div>
+
+
+    <div class="cards">
+
+        <!--Tyler Wedding-->
+        <article class="card card--1">
+            <div class="card__info-hover">
+            </div>
+
+            <div class="card__img"></div>
+            <a href="wedding_tw.html" class="card_link">
+                <div class="card__img--hover"></div>
+            </a>
+            <div class="card__info">
+                <span class="card__category"> Ramada by Wyndham Marquette, MI</span>
+                <h3 class="card__title">Tyler + Wolff</h3>
+                <span class="card__by">by <a href="https://kateandkatiecompany.mypixieset.com/?fbclid=IwZXh0bgNhZW0CMTAAAR2JZkknzxaJTcSauE0-UxHHwngLhIOk-yGQqK0JyqnN0Kjs1w5O_lFdO0Y_aem_jUcWTNfORl4q0K6EughKQw" class="card__author" title="author">Kate & Katie Photography</a></span>
+            </div>
+        </article>
+
+        <!--Jonnica Wedding-->
+        <article class="card card--2">
+            <div class="card__info-hover">
+            </div>
+
+            <div class="card__img"></div>
+            <a href="wedding_jb.html" class="card_link">
+                <div class="card__img--hover"></div>
+            </a>
+            <div class="card__info">
+                <span class="card__category">Leaping Deer Ranch, NM</span>
+                <h3 class="card__title">Jonnica + Blake</h3>
+                <span class="card__by">by <a href="https://www.bluespruceweddingphoto.com/" class="card__author" title="author">Blue Spruce Photography</a></span>
+            </div>
+        </article>
+    </div>
+  
+    <div class="cards">
+
+        <!--Karissa Wedding-->
+        <article class="card card--3">
+            <div class="card__info-hover">
+            </div>
+
+            <div class="card__img"></div>
+            <a href="wedding_kc.html" class="card_link">
+                <div class="card__img--hover"></div>
+            </a>
+            <div class="card__info">
+                <span class="card__category">Marquette Regional History Museum, MI</span>
+                <h3 class="card__title">Karissa + Christopher</h3>
+                <span class="card__by">by <a href="https://creativeclicksandmore.com/" class="card__author" title="author">Creative Clicks & More Photography</a></span>
+            </div>
+        </article>
+
+        <!--Emma Wedding-->
+        <article class="card card--4">
+            <div class="card__info-hover">
+            </div>
+
+            <div class="card__img"></div>
+            <a href="wedding_em.html" class="card_link">
+                <div class="card__img--hover"></div>
+            </a>
+            <div class="card__info">
+                <span class="card__category"> New Mexico Museum of Art, NM</span>
+                <h3 class="card__title">Emma + Michael</h3>
+                <span class="card__by">by <a href="https://www.laurennataliaphotography.com/" class="card__author" title="author">Lauren Natalia Photography</a></span>
+            </div>
+        </article>
+    </div>
+
+
+
+
+    <!--Gallery Accordian/ Karissa--
 
     <div class="acc-container-before">
         <div class="acc-container-before-couple">
@@ -405,29 +712,7 @@
 
 
 
-    <!--It's All About the Stories-->
 
-    <div class="gallery-container">
-        <div class="gallery-opaque">
-            <p class="gallery-p">MORE PHOTOS AND EVENTS:</p>
-
-            <div class="gallery-button">
-                <a href="packages.html" class="buttong buttong1">
-                    Instagram &#x1F822;
-                </a>
-            </div>
-            <br />
-            <br />
-            <br />
-            <div class="gallery-button">
-                <a href="packages.html" class="buttong buttong1">
-                    Facebook &#x1F822;
-                </a>
-            </div>
-        </div>
-
-
-    </div>
 
 
     <!--Intro--
@@ -475,7 +760,7 @@
                 </div>
             </div>
         </div>-->
-    <!--Gallery Accordian/ Tyler-->
+    <!--Gallery Accordian/ Tyler--
 
 
     <div class="acc-container2">
@@ -513,8 +798,7 @@
                 </i>
             </p>
         </div>
-    </div>
-
+    </div>-->
     <!--First Row and Pic--
     <div class="section animate">
         <div class="middle">
@@ -558,10 +842,35 @@
 
 
                     </i>
-      
+
+           <!--It's All About the Stories-->
+
+    <div class="gallery-container">
+        <div class="gallery-opaque">
+            <p class="gallery-p">MORE PHOTOS AND EVENTS:</p>
+
+            <div class="gallery-button">
+                <a href="packages.html" class="buttong buttong1">
+                    Instagram &#x1F822;
+                </a>
+            </div>
+            <br />
+            <br />
+            <br />
+            <div class="gallery-button">
+                <a href="packages.html" class="buttong buttong1">
+                    Facebook &#x1F822;
+                </a>
+            </div>
+        </div>
+
+
+    </div>
+
+
     <!--Footer-->
 
-    <footer class="footerbody" style="margin-top:1000px;">
+    <footer class="footerbody" style="position:absolute; margin-top:150px;">
         <div class="footercentered">
 
             <div class="footertitle">
@@ -573,7 +882,7 @@
                 <br />
                 <a class="big-text site-nav__link" style=" text-decoration: none; " href="gallerypage.html">GALLERY</a>
                 <br />
-                <a class="big-text site-nav__link" style=" text-decoration: none; " href="Services.html">SERVICES</a>
+                <a class="big-text site-nav__link" style=" text-decoration: none; " href="services.html">SERVICES</a>
                 <br />
                 <a class="big-text site-nav__link" style=" text-decoration: none; " href="homepage.html">HOME</a>
 
