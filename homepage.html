@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -413,8 +413,8 @@
 
         @media only screen and (max-width: 900px) {
             .oncontrol {
-                float:left;
-                margin-left:5px;
+                float: left;
+                margin-left: 5px;
             }
         }
 
@@ -705,9 +705,6 @@
         setTimeout(loadingRemove, 5000);
 
     </script>-->
-
-
-
     <!--Navigation Bar-->
     <header>
         <!--Mobile Navbar-->
@@ -809,13 +806,13 @@
 
 
                 <!--<div class="ee-photo-box" style="background-image: url('00.jpg');"></div>
-    <div class="ee-photo-box" style="background-image: url('10.jpg');"></div>
-    <div class="ee-photo-box" style="background-image: url('20.jpg');"></div>
-    <div class="ee-photo-box" style="background-image: url('30.jpg');"></div>
-    <div class="ee-photo-box" style="background-image: url('40.jpg');"></div>-->
+                <div class="ee-photo-box" style="background-image: url('10.jpg');"></div>
+                <div class="ee-photo-box" style="background-image: url('20.jpg');"></div>
+                <div class="ee-photo-box" style="background-image: url('30.jpg');"></div>
+                <div class="ee-photo-box" style="background-image: url('40.jpg');"></div>-->
 
             </div>
-            
+
             <p class="ee-font-style ee-font-padding">Our team (led by Anna Kaiser) brings expertise to ensure your experience is nothing short of magical.</p>
             <br />
             <p class="ee-font-style">
@@ -833,46 +830,46 @@
 
 
             <!---
-        <div class="ee-linebox">
-            <div class="ee-linebox1">
-                <div class="ee-linebox-circle">
-                    <i class="ee-icon fa-solid fa-mountain-sun"></i>
+                <div class="ee-linebox">
+                    <div class="ee-linebox1">
+                        <div class="ee-linebox-circle">
+                            <i class="ee-icon fa-solid fa-mountain-sun"></i>
+                        </div>
+                    </div>
+                    <div class="ee-linebox2">
+                        Our team (led by Anna Kaiser) brings a wealth of experience to ensure your event is nothing short of magical.
+                    </div>
                 </div>
-            </div>
-            <div class="ee-linebox2">
-                Our team (led by Anna Kaiser) brings a wealth of experience to ensure your event is nothing short of magical.
-            </div>
-        </div>
 
-        <div class="ee-linebox">
-            <div class="ee-linebox1">
-                <div class="ee-linebox-circle">
-                    <i class="ee-icon fa-solid fa-martini-glass-citrus"></i>
+                <div class="ee-linebox">
+                    <div class="ee-linebox1">
+                        <div class="ee-linebox-circle">
+                            <i class="ee-icon fa-solid fa-martini-glass-citrus"></i>
+                        </div>
+                    </div>
+                    <div class="ee-linebox2">
+                        We believe in the power of details (Whether it's selecting the perfect venue, beautiful florals, coordinating vendors, or adding personalized DIY touches).
+                    </div>
                 </div>
-            </div>
-            <div class="ee-linebox2">
-                We believe in the power of details (Whether it's selecting the perfect venue, beautiful florals, coordinating vendors, or adding personalized DIY touches).
-            </div>
-        </div>
-        <div class="ee-linebox">
-            <div class="ee-linebox1">
-                <div class="ee-linebox-circle">
-                    <i class="ee-icon fa-solid fa-signs-post"></i>
+                <div class="ee-linebox">
+                    <div class="ee-linebox1">
+                        <div class="ee-linebox-circle">
+                            <i class="ee-icon fa-solid fa-signs-post"></i>
+                        </div>
+                    </div>
+                    <div class="ee-linebox2">
+                        Let us be your guide as you embark on this exciting journey. We are here to make your dream a reality.
+                    </div>
                 </div>
-            </div>
-            <div class="ee-linebox2">
-                Let us be your guide as you embark on this exciting journey. We are here to make your dream a reality.
-            </div>
-        </div>
 
-        <div class="ending-text">Experience the simplicity of perfect weddings with Engage Events – contact us today!</div>
-        <br />
-        <br />
-        <br />
-        <br />
+                <div class="ending-text">Experience the simplicity of perfect weddings with Engage Events – contact us today!</div>
+                <br />
+                <br />
+                <br />
+                <br />
 
-        NOW BOOKING 2024 & 2025
-    </p>-->
+                NOW BOOKING 2024 & 2025
+            </p>-->
 
 
         </div>
@@ -881,7 +878,6 @@
 
 
     <!--Slideshow -->
-  
     <!--Slideshow--->
 
     <div class="wrapper">
@@ -1143,7 +1139,7 @@
     <br />
     <br />
     <br />
-   
+
     <!--Footer-->
 
     <footer class="footerbody" style="margin-top:100px;">
@@ -1249,7 +1245,7 @@
 
 
 </body>
-    </html>
+</html>
 
 <script>
 
@@ -1269,7 +1265,7 @@ function init() {
         Lslide[i].style.backgroundColor = color[i];
         Lslide[i].style.top = -slideHeight * i + "px";
         Rslide[i].style.top = slideHeight * i + "px";
-    }  
+    }
 }
 init()
 window.addEventListener('resize', function(){
@@ -1298,7 +1294,7 @@ function moveToBottom() {
     for (el = 0; el < Lslide.length; el++) {
         Lslide[el].style.top = parseInt(Lslide[el].style.top) - slideHeight + "px";
         Rslide[el].style.top = parseInt(Rslide[el].style.top) + slideHeight + "px";
-        
+
     }
     if (index < 0) {
         index = Rslide.length-1;
@@ -1315,20 +1311,20 @@ function transition() {
         Rslide[t].style.transition = "all 0.8s";
     }
 }
-  
+
 
 for (t = 0; t < control.length; t++) {
     control[t].addEventListener("click", function() {
 
         if (this.classList.contains('control-top')) {
             moveToTop()
-        } 
+        }
         if (this.classList.contains('control-bottom')) {
             moveToBottom()
         }
 
         transition()
-   
+
     });
 }
 
@@ -1337,9 +1333,9 @@ function mousemouve(e) {
 
     clearTimeout(wheeling);
     e.preventDefault();
-    var e = window.event || e; 
+    var e = window.event || e;
     var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
-    
+
     wheeling = setTimeout(function() {
         wheeling = undefined;
         if (delta === 1) {
