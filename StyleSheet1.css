@@ -1,4 +1,4 @@
-﻿﻿ /*Google Fonts*/
+﻿﻿﻿ /*Google Fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
 @font-face {
     font-family: 'Martel Sans';
@@ -2295,7 +2295,7 @@ section {
 
 .buttonyou {
     background-color: rgba(255,255,255,0.5);
-    color: black;
+    color: white;
     letter-spacing: 2px;
     font-family: Martel Sans;
     font-weight: lighter;
@@ -2539,7 +2539,7 @@ section {
 
 @media only screen and (max-width: 800px) {
     .ee-photo-container {
-        display:none;
+        display: none;
     }
 }
 
@@ -7656,7 +7656,8 @@ height: 600px;
 
 .index-image {
     background-color: rgba(255,255,255,0.3);
-    background-image: url('Lauren_Natalia_Photography_Photo5.jpg');
+    /*background-image: url('Lauren_Natalia_Photography_Photo5.jpg');*/
+    background-image: url('shot_by_dom_LLC_6.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -7679,7 +7680,8 @@ height: 600px;
     margin-right: 10%;
     width: 40%;
     height: 100%;
-    background-color: rgba(255,255,255,0.2);
+    background-color: rgba(255,255,255,0.3);
+    /*background-color: #dcddd7;*/
     padding: 15% 5%;
 }
 
@@ -8812,7 +8814,7 @@ height: 600px;
     .otherweddings_intro_p {
         font-size: 12px;
         font-family: 'Martel Sans';
-        margin-top:30px;
+        margin-top: 30px;
     }
 }
 
