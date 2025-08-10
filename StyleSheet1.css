@@ -4565,6 +4565,7 @@ html {
     .map-circle {
         width: 337px;
         height: 337px;
+        margin:auto;
     }
 }
 
@@ -4643,7 +4644,7 @@ html {
     height: 450px;
     width: 90%;
     /*background-color: rgba(191,183,167,1);*/
-    background-image: url('form.png');
+    background-image: url('shot_by_dom_LLC_3.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -7862,7 +7863,7 @@ height: 600px;
 }
 
 .meet-header-left-pic {
-    background-image: url("anna_new2.jpeg");
+    background-image: url("shot_by_dom_LLC_2.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
