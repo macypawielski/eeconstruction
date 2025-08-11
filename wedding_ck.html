@@ -1,0 +1,319 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Claire and Luke's Wedding</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="StyleSheet1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/b2a08806f6.js" crossorigin="anonymous"></script>
+    <title></title>
+
+
+    <link rel="stylesheet" href="/Users/amalfarah/Desktop/Responsive gallery /css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #323924;
+            overflow-x: hidden;
+            overflow-y: scroll;
+        }
+
+        .container_feat {
+            display: flex;
+            align-items: flex-start;
+            /*justify-content: space-between;*/
+            width: 70%;
+            height: 80%;
+            margin: auto;
+        }
+
+        @media only screen and (max-width: 900px) {
+            .container_feat {
+                display: revert;
+                height: 60%;
+            }
+        }
+
+        img {
+            max-width: 100%;
+            max-height: 50%;
+            margin: auto;
+            object-fit: cover;
+            border: 4px solid transparent;
+        }
+
+        .it_feature {
+            font-family: 'Raleway', sans-serif;
+            text-transform: uppercase;
+            font-size: 10px;
+            letter-spacing: 2px;
+            font-weight: 500;
+            margin: auto;
+        }
+
+        .it_welcome {
+            font-family: 'Martel Sans';
+            text-transform: uppercase;
+            font-weight: lighter;
+            letter-spacing: 2px;
+            font-size: 15px;
+            margin: auto;
+        }
+
+        .it_names {
+            font-family: 'Martel Sans';
+            text-transform: uppercase;
+            font-weight: lighter;
+            letter-spacing: 2px;
+            font-size: 40px;
+            margin: auto;
+        }
+
+        .morephotos-header {
+            height: 300px;
+            width: 90%;
+            margin: auto;
+            text-align: center;
+            padding-top: 40px;
+            color: white;
+        }
+
+        @media only screen and (max-width: 900px) {
+            .morephotos-header {
+                width: 100%;
+                height: 500px;
+            }
+        }
+
+
+
+
+        .mp-left {
+            float: left;
+            height: 100%;
+            width: 10%;
+            text-decoration: none;
+            padding: 50px;
+        }
+
+        @media only screen and (max-width: 900px) {
+            .mp-left {
+                padding: 0px;
+                position: absolute;
+                left: 15px;
+                height: 20%;
+            }
+        }
+
+        .mp-left-icon {
+            font-size: 70px;
+            color: rgba(255,255,255,0.6);
+            transition-duration: 0.4s;
+            cursor: pointer;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+        }
+
+        @media only screen and (max-width: 900px) {
+            .mp-left-icon {
+                padding: 0px;
+                font-size: 60px;
+            }
+        }
+
+        .mp-left-icon:hover {
+            font-size: 75px;
+            color: rgba(255,255,255,0.9);
+        }
+
+
+        .mp-mid-top {
+            float: left;
+            width: 80%;
+            height: 100%;
+        }
+
+        @media only screen and (max-width: 900px) {
+            .mp-mid-top {
+                float: none;
+                width: auto;
+                margin: auto;
+            }
+        }
+
+        .mp-right {
+            float: right;
+            width: 10%;
+            height: 100%;
+        }
+
+        .p-left {
+            float: left;
+            width: calc(100%/3);
+        }
+
+        @media only screen and (max-width: 900px) {
+            .p-left {
+                float: none;
+                margin: auto;
+                width: 95%;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+        }
+
+        .above-logo {
+            margin: auto;
+            height: 100px;
+            width: auto;
+        }
+
+        .item {
+            max-width: calc(100%/3);
+        }
+
+        @media only screen and (max-width: 900px) {
+            .item {
+                max-width: 100%;
+                margin: auto;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="morephotos-header">
+        <!--Back Button-->
+        <div class="mp-left">
+            <a href="gallerypage.html">
+                <i class="fa-solid fa-circle-chevron-left mp-left-icon"></i>
+            </a>
+        </div>
+
+        <div class="mp-mid-top">
+            <img src="oflogoop.png" class="above-logo" />
+
+            <p class="it_names"> Claire + Luke</p>
+            <br />
+
+            <!--Photographer-->
+            <div class="p-left">
+                <p class="it_feature">
+                    <i class="fa-solid fa-camera"></i>
+                    Grayson Reece Photos
+                </p>
+            </div>
+
+            <!--Featured-->
+            <div class="p-left">
+                <p class="it_feature">
+                    <i class="fa-solid fa-star"></i>
+                    FEATURED ENGAGE EVENTS WEDDING
+                </p>
+            </div>
+
+            <!--Location-->
+            <div class="p-left">
+                <p class="it_feature">
+                    <i class="fa-solid fa-location-dot"></i>
+                    New Mexico Museum of Art, NM
+                </p>
+            </div>
+
+
+
+
+
+            <div class="mp-right"></div>
+
+        </div>
+
+    </div>
+
+    <div class="container_feat">
+        <div class="item">
+            <a href="Greyson_Reece_Photos_2.jpg" class="image">
+                <img src="Greyson_Reece_Photos_2.jpg" alt="">
+            </a>
+
+            <a href="Greyson_Reece_Photos_6.jpg" class="image">
+                <img src="Greyson_Reece_Photos_6.jpg" alt="">
+            </a>
+            <a href="Greyson_Reece_Photos_1.jpg" class="image">
+                <img src="Greyson_Reece_Photos_1.jpg" alt="">
+            </a>
+
+        </div>
+        <div class="item">
+            <a href="Greyson_Reece_Photos_5.jpg" class="image">
+                <img src="Greyson_Reece_Photos_5.jpg" alt="">
+            </a>
+            <a href="Greyson_Reece_Photos_3.jpg" class="image">
+                <img src="Greyson_Reece_Photos_3.jpg" alt="">
+            </a>
+            <a href="Greyson_Reece_Photos_7.jpg" class="image">
+                <img src="Greyson_Reece_Photos_7.jpg" alt="">
+            </a>
+
+        </div>
+        <div class="item">
+            <a href="Greyson_Reece_Photos_8.jpg" class="image">
+                <img src="Greyson_Reece_Photos_8.jpg" alt="">
+            </a>
+
+            <a href="Greyson_Reece_Photos_9.jpg" class="image">
+                <img src="Greyson_Reece_Photos_9.jpg" alt="">
+            </a>
+            <a href="Greyson_Reece_Photos_4.jpg" class="image">
+                <img src="Greyson_Reece_Photos_4.jpg" alt="">
+            </a>
+
+        </div>
+
+
+
+
+
+    </div>
+
+    <!--Ending-->
+
+    <div class="back_container">
+        <div class="back_container_centered">
+            <div class="back_thank_you">
+                Photos by: Grayson Reece Photos.<br />
+                <a href="https://graysonreesephotos.com/" style="color:lightblue;"> Grayson Reece Photos</a>
+            </div>
+            <div class="back_link">
+                <a href="gallerypage.html" class="back_link_button"><i class="fa-solid fa-arrow-left-long"></i> back to photo gallery</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+<script>
+    $(".container_feat").magnificPopup({
+        delegate: 'a',
+        type: 'image',
+        gallery: {
+            enabled: true
+        }
+    });
+</script>
