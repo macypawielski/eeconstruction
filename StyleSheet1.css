@@ -1325,7 +1325,7 @@ section {
 }
 
 .anna-picture1 {
-    background-image: url("swing.jpg");
+    background-image: url("shot_by_dom_LLC_13.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -2548,7 +2548,7 @@ section {
     opacity: 0.6;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     background-repeat: no-repeat;
-    background-image: url('walk.jpg');
+    background-image: url('building.jpeg');
     background-position: center center;
     background-size: cover;
     background-attachment: fixed;
@@ -3674,7 +3674,7 @@ html {
     font-variant: normal;
     text-transform: none;
     /* fix buttons height, for twitter bootstrap */
-    line-height: 1em;
+    /*line-height: 1em;*/
     /* Animation center compensation - margins should be symmetric */
     /* remove if not needed */
     margin-left: .2em;
@@ -4644,7 +4644,7 @@ html {
     height: 450px;
     width: 90%;
     /*background-color: rgba(191,183,167,1);*/
-    background-image: url('shot_by_dom_LLC_3.jpg');
+    background-image: url('shot_by_dom_LLC_9.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -6307,7 +6307,7 @@ height: 600px;
 .s-weddings-1_Photo {
     height: 550px;
     width: 100%;
-    background-image: url('weddingp.jpg');
+    background-image: url('weddings_image.jpeg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -6317,7 +6317,7 @@ height: 600px;
 .s-florals-2_Photo {
     height: 550px;
     width: auto;
-    background-image: url('florals1.jpg');
+    background-image: url('florals_image.jpeg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -6327,7 +6327,7 @@ height: 600px;
 .s-otherevents-3_Photo {
     height: 550px;
     width: auto;
-    background-image: url('events.jpg');
+    background-image: url('otherevents_image.jpeg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
