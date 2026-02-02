@@ -7665,7 +7665,7 @@ height: 600px;
 /* LEFT: image panel */
 .index-image {
     background-color: rgba(255,255,255,0.3);
-    background-image: url('shot_by_dom_LLC_6.jpg');
+    background-image: url('EngageEventsLLC.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
     /* Fix: predictable crop framing */
@@ -7698,16 +7698,16 @@ height: 600px;
     .index-container {
         width: 99.9%;
         height: 600px;
-        margin: 0 auto; /* replaces revert */
+        margin: 0 auto; 
         display: flex;
-        flex-direction: column; /* stack */
+        flex-direction: column; 
     }
 
     .index-image {
         width: 98%;
         height: 39%;
         margin: 1% 1% 0% 1%;
-        background-position: center 20%; /* optional: adjust framing on mobile */
+        background-position: center 20%; 
     }
 
     .index-textbox {
@@ -8915,3 +8915,4 @@ height: 600px;
     .back_link {
     }
 }
+
