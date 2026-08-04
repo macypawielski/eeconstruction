@@ -6293,82 +6293,92 @@ height: 600px;
 /*Services Page*/
 
 
-.services-navbarpadding {
-    height: 130px;
-    width: 60%;
-    /*background-color:rgba(255,255,255,0.1);*/
-}
-
 .services-flexcontainer {
-    display: flex;
-    flex-direction: row;
-    font-size: 30px;
-    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 0.625rem;
     width: 97%;
-    margin: auto;
+    max-width: 75rem;
+    margin: 3rem auto 0;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 50em) { /* 800px */
     .services-flexcontainer {
-        flex-direction: column;
+        grid-template-columns: 1fr;
     }
 }
 
 .s-flex {
-    flex: 50%;
-    padding: 10px;
+    padding: 0.625rem;
+}
+
+.s-photo {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 5; 
+    max-height: 34.375rem; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+@media (max-width: 50em) {
+    .s-photo {
+        aspect-ratio: 4 / 3.5;
+        max-height: 28.125rem;
+    }
+    /* 450px */
 }
 
 .s-weddings-1_Photo {
-    height: 550px;
-    width: 100%;
     background-image: url('weddings_image.jpeg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding-top: 70%;
-}
-
-.s-florals-2_Photo {
-    height: 550px;
-    width: auto;
-    background-image: url('florals_image.jpeg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding-top: 70%;
 }
 
 .s-otherevents-3_Photo {
-    height: 550px;
-    width: auto;
     background-image: url('otherevents_image.jpeg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding-top: 70%;
 }
-
-@media only screen and (max-width: 800px) {
-    .s-weddings-1_Photo, .s-florals-2_Photo, .s-otherevents-3_Photo {
-        padding-top: 72%;
-        height: 450px
-    }
-}
-
 
 .s-flex-overlay2 {
+    position: absolute;
+    inset: 0; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
     background-color: rgba(0,0,0,0.5);
-    padding: 80px;
-    height: 100%;
-    width: 100%;
+    padding: 1.25rem;
+    text-align: center;
 }
 
-@media only screen and (max-width: 800px) {
-    .s-flex-overlay2 {
-        padding-top: 15%;
-    }
+.s-title, .s-title2 {
+    font-family: 'Martel Sans', sans-serif;
+    font-weight: 300;
+    color: white;
+    letter-spacing: 0.125rem;
+    margin: 0;
+    font-size: clamp(1.25rem, 1rem + 1vw, 1.875rem); 
 }
+
+.forward-on-hover {
+    display: inline-block;
+    vertical-align: middle;
+    transform: perspective(1px) translateZ(0);
+    transition-duration: 0.3s;
+    transition-property: transform;
+}
+
+    .forward-on-hover:hover,
+    .forward-on-hover:focus,
+    .forward-on-hover:active {
+        transform: translateX(0.5rem);
+    }
+
+.s-flex-overlay2 a {
+    text-decoration: none;
+}
+
 
 .s-title {
     font-family: 'Martel Sans';
