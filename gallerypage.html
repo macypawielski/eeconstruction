@@ -27,177 +27,15 @@
 
     <style>
         body {
-            background-color: #323924;
+            background-color: #9b8484;
             overflow: visible;
-            width: 100vw);
+            width: 100vw;
         }
 
         * {
             margin: 0;
             padding: 0;
         }
-
-        #navbar {
-            overflow: hidden;
-            padding: 10px 0 20px 0; /* Large padding which will shrink on scroll (using JS) */
-            transition: 0.4s; /* Adds a transition effect when the padding is decreased */
-            /* position: fixed; Sticky/fixed navbar */
-            position:absolute;
-            width: 100%;
-            top: 0; /* At the top */
-            z-index: 99;
-        }
-
-        @media only screen and (max-width: 800px) {
-            #navbar {
-                padding: 0px 0px 0px 0px;
-                width: 1px;
-            }
-        }
-
-        .navbarcentered {
-            width: 10%;
-            height: 120px;
-            float: left;
-        }
-
-        .navbarsides {
-            width: 1500px;
-            height: 80px;
-            margin: auto;
-            font-family: 'Martel Sans';
-            list-style-type: none;
-        }
-
-        @media only screen and (max-width: 800px) {
-            .navbarsides {
-                visibility: hidden;
-                width: 20%;
-            }
-        }
-
-        .navbarsides a {
-            color: white;
-            text-decoration: none;
-            font-family: 'Martel Sans';
-            text-transform: uppercase;
-            text-decoration: none;
-        }
-        /* Style the navbar links */
-
-
-        .logo-centered {
-            height: 100px;
-            width: 135.35px;
-            margin: auto;
-            display: block;
-            transition: 0.4s;
-        }
-
-
-        .logo-upper {
-            height: 0px;
-            width: 135.35px;
-            margin: auto;
-            display: block;
-            transition: 0.4s;
-        }
-
-        #logo {
-        }
-
-
-        .navcirclelinks {
-            width: 200px;
-            float: right;
-            padding-top: 22px;
-        }
-
-
-        @media only screen and (max-width: 800px) {
-            .navcirclelinks {
-                width: 2%;
-            }
-        }
-
-        .nav {
-            padding: 20px 20px;
-            width: 470px;
-            float: right;
-            font-family: 'Martel Sans';
-            list-style-type: none;
-        }
-
-
-
-        @media only screen and (max-width: 800px) {
-            .nav {
-                width: 0px;
-                padding: 0px;
-            }
-        }
-
-        .nav li {
-            padding: 10px;
-            float: left;
-            text-decoration: none;
-            cursor: pointer;
-            font-size: 16px;
-            margin-left: 25px;
-            margin-right: 25px;
-        }
-
-            .nav li:after {
-                content: '';
-                display: block;
-                border-bottom: 2px solid #e4a989;
-                transform: scaleX(0);
-                transition: .2s ease-in-out;
-            }
-
-            .nav li:hover:after {
-                transform: scaleX(1);
-            }
-
-
-
-        .navf {
-            padding: 20px 20px;
-            width: 670px;
-            float: left;
-            font-family: 'Martel Sans';
-            list-style-type: none;
-        }
-
-        @media only screen and (max-width: 800px) {
-            .navf {
-                padding: 0px;
-                width: 0px;
-            }
-        }
-
-
-        .navf li {
-            padding: 10px;
-            float: right;
-            margin-left: 25px;
-            margin-right: 25px;
-            text-decoration: none;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-            .navf li:after {
-                content: '';
-                display: block;
-                border-bottom: 2px solid #e4a989;
-                transform: scaleX(0);
-                transition: .2s ease-in-out;
-            }
-
-            .navf li:hover:after {
-                transform: scaleX(1);
-            }
 
         @-webkit-keyframes bob-on-hover {
             0% {
@@ -324,7 +162,14 @@
         .card--4 .card__img, .card--4 .card__img--hover {
             background-image: url('Swan_Photography_Photo_3.jpg');
         }
+       .card--5 .card__img, .card--5 .card__img--hover {
+            background-image: url('Lauren_Natalia_Photography_Photo7.jpg');
+        }
+        .card--6 .card__img, .card--6 .card__img--hover {
+            background-image: url('christ_centered_captures_1.JPG');
+        }
 
+        
         .card__img {
             visibility: hidden;
             background-size: cover;
@@ -449,65 +294,97 @@
 </head>
 
 <body>
-    <!--Navigation Bar-->
-    <!--Mobile Navbar-->
-    <div id="mobilenav" class="responsivenav">
-        <input type="checkbox" id="nav-check">
-        <div class="nav-header">
-            <div class="nav-title">
-                <img src="oflogoop.png" class="logo-responsive" />
-            </div>
-        </div>
-        <div class="nav-btn">
-            <label for="nav-check">
-                <span></span>
-                <span></span>
-                <span></span>
-            </label>
-        </div>
+ <!--Navigation Bar-->
+    <header>
 
-        <div class="nav-links">
-            <a href="homepage.html">Homepage</a>
-            <a href="Services.html">Services</a>
-            <a href="contact.html">Contact</a>
-            <a href="aboutme.html">About Me</a>
-            <a href="gallerypage.html">Featured Weddings</a>
-        </div>
-    </div>
-    <!--Main Navbar-->
-    <div id="navbar">
-        <div class="navbarsides">
-            <div class="navcirclelinks">
-                <div class="nav-social-one">
-                    <a href="https://www.facebook.com/engageeventsllc/" class="nav-social-circle grow-on-hover" style="padding-top:8px; text-decoration:none; padding-left:6px;">
-                        <span><i style="text-decoration:none; color:white;" class="icon-facebook"></i></span>
-                    </a>
-                    <a href="https://www.instagram.com/engage.events/" class="nav-social-circle grow-on-hover" style="padding-top: 8px; padding-left: 5px;">
-                        <span><i style="text-decoration: none; color: white; margin-top: -2px; margin-left:2px;" class="icon-instagram"></i></span>
-                    </a>
+        <!--Mobile Navbar-->
+        <div id="mobilenav" class="responsivenav">
+
+            <input type="checkbox" id="nav-check">
+
+            <div class="nav-header">
+                <div class="nav-title">
+                    <img src="oflogoop.png" class="logo-responsive" />
                 </div>
             </div>
 
-            <ul class="nav" id="spacing">
-                <li><a href="aboutme.html">About Me </a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <!--<li><a href="faq.html">FAQ</a></li>-->
-            </ul>
-            <ul class="navf" id="spacing">
-                <li><a href="gallerypage.html">Gallery </a></li>
-                <li><a href="Services.html">Services</a></li>
-                <li><a href="homepage.html">Home </a></li>
-            </ul>
-
-            <div class="logo-upper" id="upper"></div>
-            <div class="logo-centered" id="logo">
-                <img src="oflogo.png" style="object-fit:cover; height:100%; width:100%;" />
+            <div class="nav-btn">
+                <label for="nav-check">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
             </div>
 
+            <div class="nav-links">
+                <a href="homepage.html">Homepage</a>
+                <a href="Services.html">Services</a>
+                <a href="contact.html">Contact</a>
+                <a href="aboutme.html">About Me</a>
+                <a href="gallerypage.html">Featured Weddings</a>
+            </div>
 
         </div>
 
-    </div>
+        <!--Main Navbar-->
+        <div id="navbar">
+
+            <div class="navbarsides">
+
+                <!-- LEFT SIDE LINKS -->
+                <ul class="navf" id="spacing">
+                    <li><a href="homepage.html">Home</a></li>                    
+                    <li><a href="gallerypage.html">Gallery</a></li>
+                    <li><a href="Services.html">Services</a></li>
+                </ul>
+
+                <!-- CENTER LOGO -->
+                <div class="logo-centered" id="logo">
+                    <img src="oflogo.png" />
+                </div>
+
+                <!-- RIGHT SIDE LINKS -->
+                <ul class="nav" id="spacing">
+                    <li><a href="aboutme.html">About Me</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+
+                <!-- SOCIAL MEDIA BUTTONS -->
+                <div class="navcirclelinks">
+
+                    <div class="nav-social-one">
+
+                        <a href="https://www.facebook.com/engageeventsllc/"
+                           class="nav-social-circle grow-on-hover"
+                           style="padding-top:8px; text-decoration:none; padding-left:6px;">
+
+                            <span>
+                                <i style="text-decoration:none; color:white;"
+                                   class="icon-facebook"></i>
+                            </span>
+
+                        </a>
+
+                        <a href="https://www.instagram.com/engage.events/"
+                           class="nav-social-circle grow-on-hover"
+                           style="padding-top:8px; padding-left:5px;">
+
+                            <span>
+                                <i style="text-decoration:none; color:white; margin-top:-2px; margin-left:2px;"
+                                   class="icon-instagram"></i>
+                            </span>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
 
 
     <!--End Nav Bar-->
@@ -552,8 +429,8 @@
                                 <br />
                                 <br />
                                 <p class="it_welcome">Welcome to the Wedding of:</p>
-                                <p class="it_names"> Emma + Michael</p>
-                                <a class="er-button" href="wedding_em.html">take a look inside <i class="fa-solid fa-angles-right"></i></a>
+                                <p class="it_names"> Maddie + Austin</p>
+                                <a class="er-button" href="wedding_ma.html">take a look inside <i class="fa-solid fa-angles-right"></i></a>
                                 <!--<button class="er-button" href="weddingoa.html">take a look inside <i class="fa-solid fa-angles-right"></i></button>-->
                             </div>
 
@@ -586,30 +463,48 @@
         <img src="logo.png" class="logo-otherweddings" />
         <!--<p>More Weddings:</p>-->
         <p class="otherweddings_intro_p">
-            Explore other Engage Events weddings below
-            -a curated collection of unforgettable events from our real couples.
+            Explore other Engage Events weddings below-<br>
+            a curated collection of unforgettable events from our real couples.
         </p>
     </div>
 
-
     <div class="cards">
 
-        <!--Sydney Wedding-->
-        <article class="card card--1">
+        <!--Mireya Wedding-->
+        <article class="card card--6">
             <div class="card__info-hover">
             </div>
 
             <div class="card__img"></div>
-            <a href="wedding_sk.html" class="card_link">
+            <a href="wedding_mj.html" class="card_link">
                 <div class="card__img--hover"></div>
             </a>
             <div class="card__info">
-                <span class="card__category">La Posada de Santa Fe, NM </span>
-                <h3 class="card__title">Sydney + Kevin</h3>
-                <span class="card__by">by <a href="https://kearalloydphotography.com/" class="card__author" title="author">Keara Lloyd Photography</a></span>
+                <span class="card__category">Sandia Resort, NM </span>
+                <h3 class="card__title">Mireya + Johnny</h3>
+                <span class="card__by">by <a href="" class="card__author" title="author">Christ Centered Captures</a></span>
+            </div>
+        </article> 
+
+
+        <!--Emma Wedding-->
+        <article class="card card--5">
+            <div class="card__info-hover">
+            </div>
+
+            <div class="card__img"></div>
+            <a href="wedding_em.html" class="card_link">
+                <div class="card__img--hover"></div>
+            </a>
+            <div class="card__info">
+                <span class="card__category"> New Mexico Museum of Art, NM</span>
+                <h3 class="card__title">Emma + Michael</h3>
+                <span class="card__by">by <a href="https://www.laurennataliaphotography.com/" class="card__author" title="author">Lauren Natalia Photography</a></span>
             </div>
         </article>
-
+    </div>
+    <div class="cards">
+        
         <!--Jonnica Wedding-->
         <article class="card card--2">
             <div class="card__info-hover">
@@ -623,6 +518,22 @@
                 <span class="card__category">Leaping Deer Ranch, NM</span>
                 <h3 class="card__title">Jonnica + Blake</h3>
                 <span class="card__by">by <a href="https://www.bluespruceweddingphoto.com/" class="card__author" title="author">Blue Spruce Photography</a></span>
+            </div>
+        </article>
+
+        <!--Ann Wedding-->
+        <article class="card card--4">
+            <div class="card__info-hover">
+            </div>
+
+            <div class="card__img"></div>
+            <a href="weddingoa.html" class="card_link">
+                <div class="card__img--hover"></div>
+            </a>
+            <div class="card__info">
+                <span class="card__category"> New Mexico Museum of Art, NM</span>
+                <h3 class="card__title">Ann + Orlando</h3>
+                <span class="card__by">by <a href="https://www.swanphotovideo.com/" class="card__author" title="author">Swan Photography</a></span>
             </div>
         </article>
     </div>
@@ -644,46 +555,29 @@
                 <span class="card__by">by <a href="https://graysonreesephotos.com/" class="card__author" title="author">Gryson Reese Photos</a></span>
             </div>
         </article>
-
-
-        <!--Ann Wedding-->
-        <article class="card card--4">
+        <!--Sydney Wedding-->
+        <article class="card card--1">
             <div class="card__info-hover">
             </div>
 
             <div class="card__img"></div>
-            <a href="weddingoa.html" class="card_link">
+            <a href="wedding_sk.html" class="card_link">
                 <div class="card__img--hover"></div>
             </a>
             <div class="card__info">
-                <span class="card__category"> New Mexico Museum of Art, NM</span>
-                <h3 class="card__title">Ann + Orlando</h3>
-                <span class="card__by">by <a href="https://www.swanphotovideo.com/" class="card__author" title="author">Swan Photography</a></span>
+                <span class="card__category">La Posada de Santa Fe, NM </span>
+                <h3 class="card__title">Sydney + Kevin</h3>
+                <span class="card__by">by <a href="https://kearalloydphotography.com/" class="card__author" title="author">Keara Lloyd Photography</a></span>
             </div>
         </article>
     </div>
 
-    <!--Emma Wedding--
-    <article class="card card--4">
-        <div class="card__info-hover">
-        </div>
-
-        <div class="card__img"></div>
-        <a href="" class="card_link">
-            <div class="card__img--hover"></div>
-        </a>
-        <div class="card__info">
-            <span class="card__category"> New Mexico Museum of Art, NM</span>
-            <h3 class="card__title">Emma + Michael</h3>
-            <span class="card__by">by <a href="https://www.laurennataliaphotography.com/" class="card__author" title="author">Lauren Natalia Photography</a></span>
-        </div>
-    </article>
-    </div>-->
 
 
 
 
-    <!--Gallery Accordian/ Karissa--
+
+    <!--y Accordian/ Karissa--
 
     <div class="acc-container-before">
         <div class="acc-container-before-couple">
@@ -729,10 +623,10 @@
 
 
 
-    <!--Intro--
-        <div class="gallery-container">
-            <div class="gallery-imagebox">
-                <div class="gallery-desc">
+   Intro--
+        <div class="y-container">
+            <div class="y-imagebox">
+                <div class="y-desc">
                     <p style="font-size:20px;">IT'S ALL ABOUT THE STORIES</p>
                     <div style="height:2px; width:350px; border-top:1px solid black; margin:auto;"></div>
                     <br />
@@ -774,7 +668,7 @@
                 </div>
             </div>
         </div>-->
-    <!--Gallery Accordian/ Tyler--
+    <!--y Accordian/ Tyler--
 
 
     <div class="acc-container2">
@@ -838,7 +732,7 @@
             <img src="tw.jpg" />
         </div>
     </div>
-    <!--Second Row and Pic--
+    Second Row and Pic--
 
     <div class="section">
         <div class="middle">
@@ -857,7 +751,7 @@
 
                     </i>
 
-           <!--It's All About the Stories-->
+           It's All About the Stories-->
 
     <div class="gallery-container">
         <div class="gallery-opaque">
@@ -865,7 +759,7 @@
 
             <div class="gallery-button">
                 <a href="https://www.instagram.com/engage.events/?hl=en" class="buttong buttong1">
-                    Instagram &#x1F822;
+                    Instagram 
                 </a>
             </div>
             <br />
@@ -873,18 +767,16 @@
             <br />
             <div class="gallery-button">
                 <a href="https://www.facebook.com/engageeventsllc/" class="buttong buttong1">
-                    Facebook &#x1F822;
+                    Facebook 
                 </a>
             </div>
         </div>
-
-
     </div>
 
 
     <!--Footer-->
 
-    <footer class="footerbody" style="position:absolute; margin-top:150px;">
+    <footer class="footerbody" style="margin-top:100px;">
         <div class="footercentered">
 
             <div class="footertitle">
@@ -896,7 +788,7 @@
                 <br />
                 <a class="big-text site-nav__link" style=" text-decoration: none; " href="gallerypage.html">GALLERY</a>
                 <br />
-                <a class="big-text site-nav__link" style=" text-decoration: none; " href="services.html">SERVICES</a>
+                <a class="big-text site-nav__link" style=" text-decoration: none; " href="Services.html">SERVICES</a>
                 <br />
                 <a class="big-text site-nav__link" style=" text-decoration: none; " href="homepage.html">HOME</a>
 
@@ -982,14 +874,12 @@
 
 
         </div>
-
+    </div>
     </footer>
-
 </body>
 
 </html>
 <script>
-
    window.onscroll = function () { scrollFunction() };
 
     function scrollFunction() {
@@ -999,11 +889,6 @@
             document.getElementById("logo").style.width = "115.35px";
             document.getElementById("upper").style.height = "4px";
             document.getElementById("navbar").style.background = "rgba(171, 183, 183,0.4)";
-
-
-
-
-
         } else {
             document.getElementById("navbar").style.padding = "10px 0 20px 0";
             document.getElementById("logo").style.height = "100px";
