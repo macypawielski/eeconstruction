@@ -30,13 +30,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Neonderthaw&display=swap" rel="stylesheet">
 
 
-
-    <style>
-
+<style>
 
         * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
 
         a:hover, a:focus, a:active, a:visited, a:link {
@@ -44,16 +43,17 @@
         }
 
         body {
-            background-color: #323924;
+            /*background-color: #323924;*/
+            background-color:#7c696a;
             overflow-x: hidden;
             overflow-y: scroll;
         }
 
         .row {
             width: 1200px;
+            max-width: 100%;
             background-color: aqua;
         }
-
 
         .stat-ring-container {
             height: 500px;
@@ -135,7 +135,6 @@
             border-radius: 50%;
         }
 
-
         .cnumber-half {
             height: 100px;
             width: 55%;
@@ -165,142 +164,7 @@
         }
 
 
-        #navbar {
-            overflow: hidden;
-            padding: 10px 0 20px 0; /* Large padding which will shrink on scroll (using JS) */
-            transition: 0.4s; /* Adds a transition effect when the padding is decreased */
-            position: fixed; /* Sticky/fixed navbar */
-            width: 100%;
-            top: 0; /* At the top */
-            z-index: 99;
-        }
 
-        @media only screen and (max-width: 899px) {
-            #navbar {
-                visibility: hidden;
-                width: 0px;
-                height: 0px;
-                padding: 0px;
-            }
-        }
-
-        .navbarcentered {
-            width: 10%;
-            height: 120px;
-            float: left;
-        }
-
-        .navbarsides {
-            width: 1500px;
-            height: 80px;
-            margin: auto;
-            font-family: 'Martel Sans';
-            list-style-type: none;
-        }
-
-        @media only screen and (max-width: 899px) {
-            .navbarsides {
-                width: 2%;
-            }
-        }
-
-        .navbarsides a {
-            color: white;
-            text-decoration: none;
-            font-family: 'Martel Sans';
-            text-transform: uppercase;
-            text-decoration: none;
-        }
-        /* Style the navbar links */
-
-
-        .logo-centered {
-            height: 100px;
-            width: 135.35px;
-            margin: auto;
-            display: block;
-            transition: 0.4s;
-        }
-
-
-        .logo-upper {
-            height: 0px;
-            width: 135.35px;
-            margin: auto;
-            display: block;
-            transition: 0.4s;
-        }
-
-        #logo {
-        }
-
-
-        .navcirclelinks {
-            width: 200px;
-            float: right;
-            padding-top: 22px;
-        }
-
-        .nav {
-            padding: 20px 20px;
-            width: 470px;
-            float: right;
-            font-family: 'Martel Sans';
-            list-style-type: none;
-        }
-
-            .nav li {
-                padding: 10px;
-                float: left;
-                text-decoration: none;
-                cursor: pointer;
-                font-size: 16px;
-                margin-left: 25px;
-                margin-right: 25px;
-            }
-
-                .nav li:after {
-                    content: '';
-                    display: block;
-                    border-bottom: 2px solid #e4a989;
-                    transform: scaleX(0);
-                    transition: .2s ease-in-out;
-                }
-
-                .nav li:hover:after {
-                    transform: scaleX(1);
-                }
-
-
-        .navf {
-            padding: 20px 20px;
-            width: 670px;
-            float: left;
-            font-family: 'Martel Sans';
-            list-style-type: none;
-        }
-
-            .navf li {
-                padding: 10px;
-                float: right;
-                margin-left: 25px;
-                margin-right: 25px;
-                text-decoration: none;
-                cursor: pointer;
-                font-size: 16px;
-            }
-
-                .navf li:after {
-                    content: '';
-                    display: block;
-                    border-bottom: 2px solid #e4a989;
-                    transform: scaleX(0);
-                    transition: .2s ease-in-out;
-                }
-
-                .navf li:hover:after {
-                    transform: scaleX(1);
-                }
     </style>
 
 </head>
@@ -308,14 +172,18 @@
 <body>
     <!--Navigation Bar-->
     <header>
+
         <!--Mobile Navbar-->
         <div id="mobilenav" class="responsivenav">
+
             <input type="checkbox" id="nav-check">
+
             <div class="nav-header">
                 <div class="nav-title">
                     <img src="oflogoop.png" class="logo-responsive" />
                 </div>
             </div>
+
             <div class="nav-btn">
                 <label for="nav-check">
                     <span></span>
@@ -331,38 +199,62 @@
                 <a href="aboutme.html">About Me</a>
                 <a href="gallerypage.html">Featured Weddings</a>
             </div>
+
         </div>
 
         <!--Main Navbar-->
         <div id="navbar">
+
             <div class="navbarsides">
-                <div class="navcirclelinks">
-                    <div class="nav-social-one">
-                        <a href="https://www.facebook.com/engageeventsllc/" class="nav-social-circle grow-on-hover" style="padding-top:8px; text-decoration:none; padding-left:6px;">
-                            <span><i style="text-decoration:none; color:white;" class="icon-facebook"></i></span>
-                        </a>
-                        <a href="https://www.instagram.com/engage.events/" class="nav-social-circle grow-on-hover" style="padding-top: 8px; padding-left: 5px;">
-                            <span><i style="text-decoration: none; color: white; margin-top: -2px; margin-left:2px;" class="icon-instagram"></i></span>
-                        </a>
-                    </div>
-                </div>
 
-                <ul class="nav" id="spacing">
-                    <li><a href="aboutme.html">About Me </a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <!--<li><a href="faq.html">FAQ</a></li>-->
-                </ul>
+                <!-- LEFT SIDE LINKS -->
                 <ul class="navf" id="spacing">
-                    <li><a href="gallerypage.html">Gallery </a></li>
+                    <li><a href="homepage.html">Home</a></li>
+                    <li><a href="gallerypage.html">Gallery</a></li>
                     <li><a href="Services.html">Services</a></li>
-                    <li><a href="homepage.html">Home </a></li>
                 </ul>
 
-                <div class="logo-upper" id="upper"></div>
+                <!-- CENTER LOGO -->
                 <div class="logo-centered" id="logo">
-                    <img src="oflogo.png" style="object-fit:cover; height:100%; width:100%;" />
+                    <img src="oflogo.png" />
                 </div>
 
+                <!-- RIGHT SIDE LINKS -->
+                <ul class="nav" id="spacing">
+                    <li><a href="aboutme.html">About Me</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+
+                <!-- SOCIAL MEDIA BUTTONS -->
+                <div class="navcirclelinks">
+
+                    <div class="nav-social-one">
+
+                        <a href="https://www.facebook.com/engageeventsllc/"
+                           class="nav-social-circle grow-on-hover"
+                           style="padding-top:8px; text-decoration:none; padding-left:6px;">
+
+                            <span>
+                                <i style="text-decoration:none; color:white;"
+                                   class="icon-facebook"></i>
+                            </span>
+
+                        </a>
+
+                        <a href="https://www.instagram.com/engage.events/"
+                           class="nav-social-circle grow-on-hover"
+                           style="padding-top:8px; padding-left:5px;">
+
+                            <span>
+                                <i style="text-decoration:none; color:white; margin-top:-2px; margin-left:2px;"
+                                   class="icon-instagram"></i>
+                            </span>
+
+                        </a>
+
+                    </div>
+
+                </div>
 
             </div>
 
