@@ -33,155 +33,11 @@
 
     <style>
         body {
-            background-color: #323924;
+            background-color: #9b8484;;
             height: 100%;
             overflow-x: hidden;
             overflow-y: scroll;
         }
-
-        * {
-            margin: 0;
-            padding: 0;
-        }
-
-
-        #navbar {
-            overflow: hidden;
-            padding: 10px 0 20px 0; /* Large padding which will shrink on scroll (using JS) */
-            transition: 0.4s; /* Adds a transition effect when the padding is decreased */
-            position: absolute; /*Sticky fixed navbar */
-            width: 100%;
-            top: 0; /* At the top */
-            z-index: 99;
-        }
-
-        @media only screen and (max-width: 899px) {
-            #navbar {
-                visibility: hidden;
-                width: 0px;
-                height: 0px;
-                padding: 0px;
-            }
-        }
-
-        .navbarcentered {
-            width: 10%;
-            height: 120px;
-            float: left;
-        }
-
-        .navbarsides {
-            width: 1500px;
-            height: 80px;
-            margin: auto;
-            font-family: 'Martel Sans';
-            list-style-type: none;
-        }
-
-        @media only screen and (max-width: 899px) {
-            .navbarsides {
-                width: 2%;
-            }
-        }
-
-        .navbarsides a {
-            color: white;
-            text-decoration: none;
-            font-family: 'Martel Sans';
-            text-transform: uppercase;
-            text-decoration: none;
-        }
-        /* Style the navbar links */
-
-
-        .logo-centered {
-            height: 100px;
-            width: 135.35px;
-            margin: auto;
-            display: block;
-            transition: 0.4s;
-        }
-
-
-        .logo-upper {
-            height: 0px;
-            width: 135.35px;
-            margin: auto;
-            display: block;
-            transition: 0.4s;
-        }
-
-        #logo {
-        }
-
-
-        .navcirclelinks {
-            width: 200px;
-            float: right;
-            padding-top: 22px;
-        }
-
-        .nav {
-            padding: 20px 20px;
-            width: 470px;
-            float: right;
-            font-family: 'Martel Sans';
-            list-style-type: none;
-        }
-
-            .nav li {
-                padding: 10px;
-                float: left;
-                text-decoration: none;
-                cursor: pointer;
-                font-size: 16px;
-                margin-left: 25px;
-                margin-right: 25px;
-            }
-
-                .nav li:after {
-                    content: '';
-                    display: block;
-                    border-bottom: 2px solid #e4a989;
-                    transform: scaleX(0);
-                    transition: .2s ease-in-out;
-                }
-
-                .nav li:hover:after {
-                    transform: scaleX(1);
-                }
-
-
-
-        .navf {
-            padding: 20px 20px;
-            width: 670px;
-            float: left;
-            font-family: 'Martel Sans';
-            list-style-type: none;
-        }
-
-            .navf li {
-                padding: 10px;
-                float: right;
-                margin-left: 25px;
-                margin-right: 25px;
-                text-decoration: none;
-                cursor: pointer;
-                font-size: 16px;
-            }
-
-                .navf li:after {
-                    content: '';
-                    display: block;
-                    border-bottom: 2px solid #e4a989;
-                    transform: scaleX(0);
-                    transition: .2s ease-in-out;
-                }
-
-                .navf li:hover:after {
-                    transform: scaleX(1);
-                }
 
         * {
             margin: 0;
@@ -211,7 +67,7 @@
             padding-top: 50px;
             padding-bottom: 50px;
             display: block;
-            background-color: rgba(0,0,0,0.1);
+            /*background-color: rgba(0,0,0,0.1);*/
             overflow: hidden;
             margin: auto;
         }
@@ -649,7 +505,7 @@
             bottom: 0;
             right: 0;
             left: 0;
-            background-color: rgba(171,116,116,255);
+            background-color: #323924;
             opacity: 1;
             transition: all 600ms ease-out;
         }
@@ -705,16 +561,19 @@
         setTimeout(loadingRemove, 5000);
 
     </script>-->
-    <!--Navigation Bar-->
-    <header>
+     <header>
+
         <!--Mobile Navbar-->
         <div id="mobilenav" class="responsivenav">
+
             <input type="checkbox" id="nav-check">
+
             <div class="nav-header">
                 <div class="nav-title">
                     <img src="oflogoop.png" class="logo-responsive" />
                 </div>
             </div>
+
             <div class="nav-btn">
                 <label for="nav-check">
                     <span></span>
@@ -729,40 +588,63 @@
                 <a href="contact.html">Contact</a>
                 <a href="aboutme.html">About Me</a>
                 <a href="gallerypage.html">Featured Weddings</a>
-
-
             </div>
+
         </div>
+
         <!--Main Navbar-->
         <div id="navbar">
+
             <div class="navbarsides">
-                <div class="navcirclelinks">
-                    <div class="nav-social-one">
-                        <a href="https://www.facebook.com/engageeventsllc/" class="nav-social-circle grow-on-hover" style="padding-top:8px; text-decoration:none; padding-left:6px;">
-                            <span><i style="text-decoration:none; color:white;" class="icon-facebook"></i></span>
-                        </a>
-                        <a href="https://www.instagram.com/engage.events/" class="nav-social-circle grow-on-hover" style="padding-top: 8px; padding-left: 5px;">
-                            <span><i style="text-decoration: none; color: white; margin-top: -2px;" class="icon-instagram"></i></span>
-                        </a>
-                    </div>
-                </div>
 
-                <ul class="nav" id="spacing">
-                    <li><a href="aboutme.html">About Me </a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <!--<li><a href="faq.html">FAQ</a></li>-->
-                </ul>
+                <!-- LEFT SIDE LINKS -->
                 <ul class="navf" id="spacing">
-                    <li><a href="gallerypage.html">Gallery </a></li>
+                    <li><a href="homepage.html">Home</a></li>                 
+                    <li><a href="gallerypage.html">Gallery</a></li>
                     <li><a href="Services.html">Services</a></li>
-                    <li><a href="homepage.html">Home </a></li>
                 </ul>
 
-                <div class="logo-upper" id="upper"></div>
+                <!-- CENTER LOGO -->
                 <div class="logo-centered" id="logo">
-                    <img src="oflogo.png" style="object-fit:cover; height:100%; width:100%;" />
+                    <img src="oflogo.png" />
                 </div>
 
+                <!-- RIGHT SIDE LINKS -->
+                <ul class="nav" id="spacing">
+                    <li><a href="aboutme.html">About Me</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+
+                <!-- SOCIAL MEDIA BUTTONS -->
+                <div class="navcirclelinks">
+
+                    <div class="nav-social-one">
+
+                        <a href="https://www.facebook.com/engageeventsllc/"
+                           class="nav-social-circle grow-on-hover"
+                           style="padding-top:8px; text-decoration:none; padding-left:6px;">
+
+                            <span>
+                                <i style="text-decoration:none; color:white;"
+                                   class="icon-facebook"></i>
+                            </span>
+
+                        </a>
+
+                        <a href="https://www.instagram.com/engage.events/"
+                           class="nav-social-circle grow-on-hover"
+                           style="padding-top:8px; padding-left:5px;">
+
+                            <span>
+                                <i style="text-decoration:none; color:white; margin-top:-2px; margin-left:2px;"
+                                   class="icon-instagram"></i>
+                            </span>
+
+                        </a>
+
+                    </div>
+
+                </div>
 
             </div>
 
@@ -781,7 +663,7 @@
                 <p id="big">Your Perfect Combination.</p>
             </div>
             <a href="Services.html" class="buttonyou button1 buttonpadding">
-                our services &#x1F822;
+                Our Services     <i class="fa fa-chevron-right" aria-hidden="true" style="color:rgba(225,225,225,0.5); size:10px; margin-left:10px;"></i>
             </a>
         </div>
     </div>
@@ -790,8 +672,8 @@
 
     <div class="ee-introcontainer">
         <div class="ee-intro1">
-            <div class="ee-intro3">
-                <img src="logosolid.png" style="height:100px; margin:auto;" />
+            <div class="ee-fintro3">
+                <!--<img src="logosolid.png" style="height:100px; margin:auto;" />-->
             </div>
         </div>
         <div class="ee-intro2">
@@ -813,20 +695,21 @@
 
             </div>
 
-            <p class="ee-font-style ee-font-padding">Our team (led by Anna Kaiser) brings expertise to ensure your experience is nothing short of magical.</p>
-            <br />
-            <p class="ee-font-style">
-                We believe in the power of details (Whether it's selecting the perfect venue, beautiful florals, coordinating vendors, or adding personalized DIY touches).
+            <p class="ee-font-style ee-font-padding">Our team, led by Anna Kaiser, brings expertise to ensure your experience is nothing short of magical.We believe in the power of details (Whether it's selecting the perfect venue, beautiful florals, coordinating vendors, or adding personalized DIY touches).
             </p>
             <br />
             <p class="ee-font-style">
                 Let us be your guide as you embark on this exciting journey. We are here to make your dream a reality.
             </p>
             <br />
-            <div class="button-spacing"></div>
-            <a href="Services.html" class="buttonyou2 buttonpadding">
-                Now Booking 2026 & 2027 &#x1F822;
-            </a>
+            <br>
+            <br>
+            <br>
+            <div class="button-spacing">
+                <a href="Services.html" class="buttonyou2 buttonpadding">
+                    Now Booking 2027 & 2028 <i class="fa fa-chevron-right" aria-hidden="true" style=color:rgba(225,225,225,0.5);></i>
+                </a>
+            </div>
 
 
             <!---
@@ -886,7 +769,7 @@
             <div class="slideshow">
 
                 <div class="slideshow-left">
-                    <!--Reviews, Link to Gallery-->
+                    <!--Reviews, Link to y-->
                     <div class="Lslide">
                         <div class="Lslide-content">
                             <h2>Our Glowing Reviews</h2>
@@ -945,7 +828,7 @@
                     <div class="Rslide">
                         <img src="shot_by_dom_LLC_7.png" alt="" style="height:100%; width:50%;">
                     </div>
-                    <!--Reviews, Link to Gallery-->
+                    <!--Reviews, Link to y-->
                     <div class="Rslide">
                         <img src="coffeecontact.jpg" alt="" style="height:100%; width:50%;">
                     </div>
@@ -1140,9 +1023,7 @@
     <br />
     <br />
 
-    <!--Footer-->
-
-    <footer class="footerbody" style="margin-top:100px;">
+    <footer class="footerbody">
         <div class="footercentered">
 
             <div class="footertitle">
@@ -1156,7 +1037,7 @@
                 <br />
                 <a class="big-text site-nav__link" style=" text-decoration: none; " href="Services.html">SERVICES</a>
                 <br />
-                <a class="big-text site-nav__link" style=" text-decoration: none; " href="index.html">HOME</a>
+                <a class="big-text site-nav__link" style=" text-decoration: none; " href="homepage.html">HOME</a>
 
             </div>
             <div class="footerlinks">
@@ -1226,7 +1107,7 @@
 
                             <a href="https://www.instagram.com/engage.events/" class="icon instagram">
                                 <div class="tooltip">Instagram</div>
-                                <span><i class="fa-brands fa-instagram"></i></span>
+                                <span><i class="icon-instagram"></i></span>
                             </a>
 
                         </div>
@@ -1242,8 +1123,6 @@
         </div>
 
     </footer>
-
-
 </body>
 </html>
 
@@ -1255,7 +1134,7 @@ var Lslide      = document.querySelectorAll('.Lslide'),
     Rslide      = document.querySelectorAll('.Rslide'),
     control     = document.querySelectorAll('.oncontrol'),
     slideHeight = document.querySelector('.wrapper').clientHeight,
-    color = ['#cdb19e', '#ab7474', '#84887c'],
+    color = ['#797B69', '#7C696A', '#6A7C7B'],
     index = 0;
 
 
