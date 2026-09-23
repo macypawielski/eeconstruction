@@ -481,19 +481,355 @@
 }
 
 
+/* =========================================================
+    MAIN NAVBAR
+    ========================================================= */
 
-.navbar {
+#navbar {
+    overflow: visible;
+    padding: 10px 0 20px 0;
+    transition: 0.4s;
     position: fixed;
-    transition: 1s;
-    width: 99%;
+    width: 100%;
+    top: 0;
+    left: 0;
     z-index: 99;
-    text-decoration: none;
 }
 
-    .navbar a {
-        color: white;
-        text-decoration: none;
+.navbarsides {
+    width: min(1500px, 96%);
+    height: 100px;
+    margin: auto;
+    font-family: 'Martel Sans';
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 135.35px minmax(0, 1fr);
+    align-items: center;
+    position: relative;
+}
+
+.navbarsides a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Martel Sans';
+    text-transform: uppercase;
+}
+
+/*
+    * The center logo occupies the exact middle column.
+    * This keeps it centered independently of the widths of
+    * the navigation links on either side.
+    */
+.logo-centered {
+    height: 100px;
+    width: 135.35px;
+    margin: auto;
+    display: block;
+    transition: 0.4s;
+    grid-column: 2;
+    grid-row: 1;
+    z-index: 3;
+}
+
+.logo-centered img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.logo-upper {
+    display: none;
+}
+
+#logo {
+}
+
+/* =========================================================
+    LEFT SIDE NAVIGATION
+    ========================================================= */
+
+.navf {
+    padding: 20px 10px;
+    width: 100%;
+    float: none;
+    grid-column: 1;
+    grid-row: 1;
+    font-family: 'Martel Sans';
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: clamp(8px, 1.5vw, 25px);
+    padding-right: clamp(15px, 3vw, 50px);
+}
+
+.navf li {
+    padding: 10px;
+    float: none;
+    margin: 0;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: clamp(13px, 1.15vw, 16px);
+    white-space: nowrap;
+}
+
+.navf li:after {
+    content: '';
+    display: block;
+    border-bottom: 2px solid #e4a989;
+    transform: scaleX(0);
+    transition: .2s ease-in-out;
+}
+
+.navf li:hover:after {
+    transform: scaleX(1);
+}
+
+/* =========================================================
+    RIGHT SIDE NAVIGATION
+    ========================================================= */
+
+.nav {
+    padding: 20px 10px;
+    width: 100%;
+    float: none;
+    grid-column: 3;
+    grid-row: 1;
+    font-family: 'Martel Sans';
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: clamp(8px, 1.5vw, 25px);
+    padding-left: clamp(15px, 3vw, 50px);
+}
+
+.nav li {
+    padding: 10px;
+    float: none;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: clamp(13px, 1.15vw, 16px);
+    margin: 0;
+    white-space: nowrap;
+}
+
+.nav li:after {
+    content: '';
+    display: block;
+    border-bottom: 2px solid #e4a989;
+    transform: scaleX(0);
+    transition: .2s ease-in-out;
+}
+
+.nav li:hover:after {
+    transform: scaleX(1);
+}
+
+/* =========================================================
+    SOCIAL MEDIA BUTTONS
+    Always remain on the far right of the navbar.
+    ========================================================= */
+
+.navcirclelinks {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: auto;
+    padding: 0;
+    z-index: 4;
+}
+
+.nav-social-one {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+}
+
+/* =========================================================
+    TABLET
+    ========================================================= */
+
+@media only screen and (max-width: 1100px) {
+
+    #navbar {
+        padding-top: 5px;
+        padding-bottom: 10px;
     }
+
+    .navbarsides {
+        width: 98%;
+        height: 85px;
+        grid-template-columns: minmax(0, 1fr) 110px minmax(0, 1fr);
+    }
+
+    .logo-centered {
+        width: 110px;
+        height: 82px;
+    }
+
+    .navf {
+        padding-right: 30px;
+        gap: 5px;
+    }
+
+    .nav {
+        padding-left: 30px;
+        gap: 5px;
+    }
+
+    .navf li,
+    .nav li {
+        padding: 7px;
+        font-size: 13px;
+    }
+
+    .navcirclelinks {
+        right: 8px;
+    }
+
+    .nav-social-one {
+        gap: 5px;
+    }
+}
+
+/* =========================================================
+    SMALL TABLET / LARGE MOBILE
+    ========================================================= */
+
+@media only screen and (max-width: 899px) {
+
+    /*
+        * Hide the desktop navigation and show the existing
+        * mobile navigation below 900px.
+        */
+    #navbar {
+        display: none;
+    }
+
+    #mobilenav {
+        display: block;
+    }
+}
+
+/* =========================================================
+    MOBILE NAVIGATION
+    ========================================================= */
+
+#mobilenav {
+    display: none;
+}
+
+.responsivenav {
+    width: 100%;
+    background-color: #323924;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    font-family: 'Martel Sans';
+}
+
+.responsivenav #nav-check {
+    display: none;
+}
+
+.responsivenav .nav-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 75px;
+}
+
+.responsivenav .nav-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-responsive {
+    width: 105px;
+    height: auto;
+    display: block;
+}
+
+.responsivenav .nav-btn {
+    display: none;
+}
+
+.responsivenav .nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.responsivenav .nav-links a {
+    color: white;
+    text-transform: uppercase;
+    font-size: 13px;
+    padding: 10px;
+}
+
+/* =========================================================
+    NARROW MOBILE
+    ========================================================= */
+
+@media only screen and (max-width: 600px) {
+
+    .responsivenav .nav-header {
+        justify-content: flex-start;
+        padding-left: 20px;
+    }
+
+    .responsivenav .nav-btn {
+        display: inline-block;
+        position: absolute;
+        right: 15px;
+        top: 17px;
+    }
+
+    .responsivenav .nav-btn label {
+        display: inline-block;
+        width: 42px;
+        height: 38px;
+        padding: 7px;
+        cursor: pointer;
+    }
+
+    .responsivenav .nav-btn label span {
+        display: block;
+        height: 2px;
+        width: 25px;
+        margin: 5px auto;
+        background-color: white;
+    }
+
+    .responsivenav .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        padding: 10px 0 20px;
+        background-color: #323924;
+    }
+
+    .responsivenav .nav-links a {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 12px 20px;
+    }
+
+    .responsivenav #nav-check:checked ~ .nav-links {
+        display: flex;
+    }
+}
+
 
 .navbar-brand {
     float: left;
@@ -535,47 +871,6 @@
     height: 50px;
     width: 180px;
 }
-
-.nav-padding-right {
-    width: 300px;
-    margin: auto;
-    height: 90px;
-    float: left;
-    font-family: 'Martel Sans';
-    list-style-type: none;
-}
-
-.nav {
-    color: #fff;
-    padding: 20px 20px;
-    width: 700px;
-    margin: auto;
-    float: left;
-    font-family: 'Martel Sans';
-    list-style-type: none;
-}
-
-    .nav li {
-        padding: 10px;
-        float: left;
-        padding-left: 30px;
-        text-decoration: none;
-        cursor: pointer;
-        font-size: 16px;
-    }
-
-        .nav li:after {
-            content: '';
-            display: block;
-            border-bottom: 2px solid #e4a989;
-            transform: scaleX(0);
-            transition: .2s ease-in-out;
-        }
-
-        .nav li:hover:after {
-            transform: scaleX(1);
-        }
-
 
 
 
@@ -619,8 +914,8 @@
 }
 
     .button1:hover {
-        background-color: rgba(171,116,116,255);
-        color: white;
+        background-color: #a2897b;
+        transition: ease-in 0.2s;
     }
 
 .button9 {
@@ -681,10 +976,11 @@
     font-size: 16px;
     transition-duration: 0.4s;
     cursor: pointer;
+    
 }
 
     .button2:hover {
-        background-color: #ff9b71;
+        background-color: #71b8ff;
         color: white;
     }
 
@@ -1325,7 +1621,7 @@ section {
 }
 
 .anna-picture1 {
-    background-image: url("shot_by_dom_LLC_13.jpg");
+    background-image: url("emmoon_creative_photography_4.JPG");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -1381,7 +1677,7 @@ section {
     margin: 1%;
     margin-top: 0%;
     height: 400px;
-    background-image: url("newmexico.jpg");
+    background-image: url("emmoon_creative_photography_3.JPG");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -2218,8 +2514,8 @@ section {
 }
 
 .buttonpadding {
-    margin-left: 0%;
-    margin-right: 0;
+    /*margin-left: 0%;
+    margin-right: 0;*/
     margin-top: 30px;
 }
 
@@ -2249,7 +2545,7 @@ section {
 
 
 .buttonyou2 {
-    background-color: rgba(171,116,116,255);
+    background-color:#393E30;
     color: white;
     letter-spacing: 2px;
     font-family: Martel Sans;
@@ -2262,12 +2558,12 @@ section {
     border-radius: 30px;
     transition-duration: 0.4s;
     cursor: pointer;
-    float: left;
+    float: center;
 }
 
 @media only screen and (max-width: 800px) {
     .buttonyou2 {
-        padding: 10px 50px;
+        /*padding: 10px 50px;*/
         font-size: 13px;
         letter-spacing: 1px;
         float: none;
@@ -2276,25 +2572,30 @@ section {
     }
 }
 
+
+.button-spacing {
+    height:100px;
+    width:300px;
+    margin:auto;
+}
+
 @media only screen and (max-width: 800px) {
     .button-spacing {
-        height: 50px;
-        width: 100px;
         margin: auto;
     }
 }
 
 
 .buttonyou2:hover {
-    background-color: rgba(0,0,0,0.5);
-    color: white;
+    background-color: #c3d3db;
+    color: black;
 }
 
 
 
 
 .buttonyou {
-    background-color: rgba(255,255,255,0.5);
+    background-color: #393E30;
     color: white;
     letter-spacing: 2px;
     font-family: Martel Sans;
@@ -2369,7 +2670,7 @@ section {
     font-weight: lighter;
     font-size: 15px;
     letter-spacing: 1px;
-    text-align: left;
+    text-align: center;
 }
 
 .ee-font-padding {
@@ -2472,13 +2773,12 @@ section {
 }
 
 .ee-introcontainer {
-    height: 800px;
-    padding-top: 50px;
+    height: 700px;
+    /*padding-top: 50px;*/
     width: 70%;
     margin-left: 15%;
     margin-right: 15%;
     margin-bottom: 200px;
-    background-color:;
     float: none;
 }
 
@@ -2494,7 +2794,7 @@ section {
     }
 }
 
-.ee-intro1 {
+/*.ee-intro1 {
     width: 100%;
     height: 10%;
     background-color:;
@@ -2505,12 +2805,13 @@ section {
     .ee-intro1 {
         height: 5%;
     }
-}
+}*/
 
 .ee-intro2 {
     width: 100%;
     height: 100%;
     border: 2px solid white;
+    background-color:rgba(254, 254, 254, 0.3);
     z-index: 2;
     padding-left: 100px;
     padding-right: 100px;
@@ -2522,7 +2823,7 @@ section {
         padding-left: 10px;
         padding-right: 10px;
         font-size: 12px;
-        height:;
+        height:70%;
     }
 }
 
@@ -2611,13 +2912,13 @@ section {
 
 
 
-.ee-intro3 {
+/*.ee-intro3 {
     width: 129px;
     height: 100px;
     background-color:;
     z-index: 5;
     margin: auto;
-}
+}*/
 
 #icon-wrapper {
     width: 100%;
@@ -3465,7 +3766,6 @@ html {
     width: 99.9%;
 }
 
-
 .footercentered a {
     color: #ede6d6;
     text-decoration: none
@@ -3520,7 +3820,7 @@ html {
 @media only screen and (max-width: 800px) {
     .footerlinks {
         height: 100px;
-        width: 90%;
+        /*width: 90%;*/
         margin: auto;
     }
 }
@@ -4659,9 +4959,7 @@ html {
     }
 }
 
-/* =============================
-   SPLIT LAYOUT
-============================= */
+
 
 .form-banner-split {
     display: flex !important;
@@ -4669,23 +4967,15 @@ html {
     width: 100%;
 }
 
-/* =============================
-   LEFT: IMAGE PANEL
-============================= */
-
+/*Contact Page- Header Image*/
 .form-banner-image {
     width: 56%;
     height: 100%;
-    background-image: url('anna_form_header.jpeg');
-    /*background-position: center top;*/
+    background-image: url('emmoon_creative_photography_1.JPG');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center 15%;
+    background-position: center 60%;
 }
-
-/* =============================
-   RIGHT: CONTENT PANEL
-============================= */
 
 .form-banner-content {
     width: 44%;
@@ -4698,9 +4988,6 @@ html {
     color: white;
 }
 
-/* =============================
-   TEXT STYLING
-============================= */
 
 .form-banner-kicker {
     margin: 0 0 12px 0;
@@ -5746,21 +6033,30 @@ height: 600px;
 
 .gallery-container {
     width: 100%;
-    height: 400px;
+    min-height: 400px;
+    
     background-image: url("Swan_Photography_Photo_13.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+
     margin-top: 230px;
+    margin-bottom: 0;
+
     display: flex;
+    flex-direction: column;
+
+    position: relative;
+    box-sizing: border-box;
 }
 
 @media only screen and (max-width: 800px) {
     .gallery-container {
-        height: 600px;
-        background-image: url("Swan_Photography_Photo_13.jpg");
+        min-height: 600px;
+        margin-top: 150px;
     }
 }
+
 
 .gallery-opaque {
     width: 600px;
@@ -6291,22 +6587,23 @@ height: 600px;
 
 
 /*Services Page*/
-
-
 .services-flexcontainer {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); 
+    grid-template-columns: repeat(2, 1fr);
     gap: 0.625rem;
     width: 97%;
     max-width: 75rem;
-    margin: 3rem auto 0;
+    margin: 0 auto;
+    padding: 5rem 0 4rem;
 }
 
-@media (max-width: 50em) { /* 800px */
+@media (max-width: 50em) {
     .services-flexcontainer {
         grid-template-columns: 1fr;
+        padding: 3rem 0;
     }
 }
+
 
 .s-flex {
     padding: 0.625rem;
@@ -6330,6 +6627,34 @@ height: 600px;
     }
     /* 450px */
 }
+
+
+
+.ov-button {
+    border-radius: 30px;
+    margin: auto;
+    display: block;
+    width: 300px;
+    padding: 12px 32px;
+    color: black;
+    letter-spacing: 1px;
+    font-family: 'poppins';
+    text-transform: uppercase;
+    font-weight: lighter;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    font-size: 13px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: #E5E0E0;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+}
+
+    .ov-button:hover {
+        background-color: #bfd2f4;
+
+    }
 
 .s-weddings-1_Photo {
     background-image: url('weddings_image.jpeg');
@@ -6440,7 +6765,7 @@ height: 600px;
 .f-flexcontainer-margintop {
     margin: auto;
     width: 50%;
-    height: 0px;
+    height: 100px;
 }
 
 @media only screen and (max-width: 800px) {
@@ -6744,7 +7069,8 @@ height: 600px;
 
 .oe-first {
     height: 550px;
-    background-color: rgba(151, 132, 129, 255);
+    /*background-color: rgba(151, 132, 129, 255);*/
+    background-color:#24291a;
 }
 
 @media (max-width: 800px) {
@@ -6755,7 +7081,8 @@ height: 600px;
 
 .oe-second {
     height: 700px;
-    background-color: #8c8988;
+    /*background-color: #8c8988;*/
+    background-color:#24291a;
 }
 
 @media (max-width: 800px) {
@@ -6898,8 +7225,9 @@ height: 600px;
 
 
 .f-header {
-    background-color: rgba(229, 208, 192, 0.8);
-    height: 400px;
+    /*background-color: rgba(229, 208, 192, 0.8);*/
+    background-color:rgba(0,0,0,0.5);
+    height: 420px;
     width: 100%;
     margin-top: 2%;
     font-family: Poppins;
@@ -7689,14 +8017,14 @@ height: 600px;
 .index-textbox {
     width: 50%;
     height: 100%;
-    background-color: rgba(255,255,255,0.3);
+    background-color: rgba(226, 226, 226, 0.555);
     padding: 15% 5%;
 }
 
 /* Text */
 #index-tagline-text {
     font-size: 20px;
-    color: white;
+    color: black;
     font-family: Poppins;
     display: block;
 }
@@ -7851,6 +8179,8 @@ height: 600px;
     width: 100%;
     height: 750px;
     background-color: rgba(0,0,0,0.2);
+    /*background-color:rgba(255,255,255,0.5);*/
+
 }
 
 @media only screen and (max-width: 900px) {
@@ -7887,7 +8217,7 @@ height: 600px;
 }
 
 .meet-header-left-pic {
-    background-image: url("shot_by_dom_LLC_2.png");
+    background-image: url("emmoon_creative_photography_2.JPG");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -7939,7 +8269,8 @@ height: 600px;
 .mh-top {
     height: 3.5%;
     width: 30%;
-    background-color: rgba(171,116,116,0.8);
+    /*background-color: rgba(171,116,116,0.8);*/
+    background-color: rgba(225, 220, 220, 0.793);
     margin-left: 70%;
     float: right;
 }
@@ -7957,7 +8288,8 @@ height: 600px;
     margin-top: 150px;
     float: left;
     height: 73%;
-    background-color: rgba(171,116,116,0.8);
+    /*background-color: rgba(171,116,116,0.8);*/
+    background-color: rgba(225, 220, 220, 0.793);
     padding-top: 8%;
 }
 
@@ -8556,7 +8888,7 @@ height: 600px;
     background-repeat: no-repeat;
     background-size: cover;
     opacity: 0.3;
-    background-image: url('Lauren_Natalia_Photography_Photo7.jpg');
+    background-image: url('precious_pearl_photography_2.JPG');
 }
 
 @media only screen and (max-width: 900px) {
@@ -8579,7 +8911,7 @@ height: 600px;
     background-repeat: no-repeat;
     opacity: 0.5;
     background-size: cover;
-    background-image: url('Lauren_Natalia_Photography_Photo3.jpg');
+    background-image: url('precious_pearl_photography_4.JPG');
 }
 
 @media only screen and (max-width: 900px) {
@@ -8599,7 +8931,7 @@ height: 600px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url('Lauren_Natalia_Photography_Photo4.jpg');
+    background-image: url('precious_pearl_photography_9.JPG');
 }
 
 @media only screen and (max-width: 900px) {
@@ -8753,6 +9085,9 @@ height: 600px;
         border-width: 1px 170px 100px 170px;
     }
 }
+
+
+
 
 .er-button {
     border-radius: 30px;
@@ -8926,3 +9261,4 @@ height: 600px;
     }
 }
 
+/*More Photos Page(s)*/
