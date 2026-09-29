@@ -5,13 +5,14 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-WJ59BL4D25"></script>
     <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-  gtag('config', 'G-WJ59BL4D25');
+        gtag('config', 'G-WJ59BL4D25');
     </script>
 
+    <meta charset="utf-8" />
     <title>Packages</title>
     <link rel="icon" type="image/x-icon" href="EEIcon.png">
     <link rel="stylesheet" href="StyleSheet1.css">
@@ -23,15 +24,9 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/b2a08806f6.js" crossorigin="anonymous"></script>
 
-
-
     <style>
-        .html {
-            scroll-behavior: smooth;
-        }
-
         body {
-            background-color: #9b8484;;
+            background-color: #9b8484;
             height: 100%;
         }
 
@@ -40,89 +35,9 @@
             padding: 0;
         }
 
- /* ==== Plan Sections: side-by-side boxes with hover-reveal ==== */
-
-.plan-outline2,
-.plan-outline3 {
-    width: 100%;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.plan-contain-flexbox {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-}
-
-.plan-contain-flex {
-    flex: 1 1 50%;
-    min-width: 300px;
-}
-
-.plan-left-img,
-.plan-right-img {
-    height: 500px;
-    width: 100%;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.plan-left-textbox,
-.plan-right-textbox2 {
-    position: relative;
-    height: 500px;
-    width: 100%;
-    overflow: hidden;
-    box-sizing: border-box;
-    padding: 60px 40px;
-    text-align: center;
-}
-
-/* Fade out the front-facing content on hover */
-.plan-left-textbox > *:not(.cont-move-overlay),
-.plan-right-textbox2 > *:not(.cont-move-overlay) {
-    transition: opacity 0.35s ease;
-}
-
-.plan-left-textbox:hover > *:not(.cont-move-overlay),
-.plan-right-textbox2:hover > *:not(.cont-move-overlay) {
-    opacity: 0;
-}
-
-/* The hidden overlay that appears on hover */
-.cont-move-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    box-sizing: border-box;
-    padding: 60px 40px;
-    color: white;
-    text-align: center;
-    opacity: 0;
-    transform: scale(0.95);
-    transition: opacity 0.4s ease, transform 0.4s ease;
-    pointer-events: none;
-}
-
-.plan-left-textbox:hover .cont-move-overlay,
-.plan-right-textbox2:hover .cont-move-overlay {
-    opacity: 1;
-    transform: scale(1);
-    pointer-events: auto;
-}
-
-@media only screen and (max-width: 900px) {
-    .plan-contain-flexbox {
-        flex-direction: column;
-    }
-    .plan-contain-flex {
-        flex: 1 1 100%;
-    }
-}
+        /* =========================================================
+           PAGE HEADER ("Wedding Packages" + 3 feature labels)
+           ========================================================= */
 
         .morephotos-header {
             height: 200px;
@@ -133,127 +48,383 @@
             color: white;
         }
 
-        @media only screen and (max-width: 900px) {
-            .morephotos-header {
-                width: 100%;
-                height: 400px;
-            }
-        }
-
-        .mp-left {
-            float: left;
+        .mp-mid-top {
+            width: 80%;
             height: 100%;
-            width: 10%;
-            text-decoration: none;
-            padding: 50px;
-        }
-
-        @media only screen and (max-width: 900px) {
-            .mp-left {
-                padding: 0px;
-                position: absolute;
-                left: 15px;
-                height: 20%;
-            }
-        }
-
-        .mp-left-icon {
-            font-size: 70px;
-            color: rgba(255,255,255,0.6);
-            transition-duration: 0.4s;
-            cursor: pointer;
-            box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
-        }
-
-        @media only screen and (max-width: 900px) {
-            .mp-left-icon {
-                padding: 0px;
-                font-size: 60px;
-            }
-        }
-
-        .mp-left-icon:hover {
-            font-size: 75px;
-            color: rgba(255,255,255,0.9);
-        }
-
-
-.mp-mid-top {
-    width: 80%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    margin:auto;
-}
-
-@media only screen and (max-width: 900px) {
-    .mp-mid-top {
-        float: none;
-        width: auto;
-        margin: auto;
-    }
-}
-
-.it-features-row {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-
-@media only screen and (max-width: 900px) {
-    .it-features-row {
-        flex-direction: column;
-    }
-}
-
-.p-left {
-    width: auto;
-    padding: 0 20px;
-}
-
-@media only screen and (max-width: 900px) {
-    .p-left {
-        float: none;
-        margin: auto;
-        width: 95%;
-        padding-top: 10px;
-        padding-bottom: 10px;
-    }
-}
-
-        .above-logo {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
             margin: auto;
-            height: 100px;
-            width: auto;
         }
 
-.it_names {
-    font-family: 'Martel Sans';
-    text-transform: uppercase;
-    font-weight: lighter;
-    letter-spacing: 2px;
-    font-size: 40px;
-}
+        /* 40px on desktop (from ~1000px wide), scales down to 26px on phones */
+        .it_names {
+            font-family: 'Martel Sans';
+            text-transform: uppercase;
+            font-weight: lighter;
+            letter-spacing: 2px;
+            font-size: clamp(1.625rem, 1rem + 2.4vw, 2.5rem);
+        }
 
-@media only screen and (max-width: 900px) {
-    .it_names {
-        font-size: 30px;
-        margin-bottom: 50px;
-    }
-}
+        .it-features-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
 
+        .p-left {
+            width: auto;
+            padding: 0 20px;
+        }
 
+        /* =========================================================
+           PLAN CARDS (image + hover-reveal text box)
+           ========================================================= */
+
+        .plan-outline2,
+        .plan-outline3 {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .plan-contain-flexbox {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+
+        .plan-contain-flex {
+            flex: 1 1 50%;
+            min-width: 300px;
+        }
+
+        .plan-left-img,
+        .plan-right-img {
+            height: 500px;
+            width: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .plan-left-textbox,
+        .plan-right-textbox2 {
+            position: relative;
+            height: 500px;
+            width: 100%;
+            overflow: hidden;
+            box-sizing: border-box;
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        /* Text styles (moved out of inline styles so they can scale) */
+        .plan-eyebrow {
+            font-family: 'Martel Sans';
+            font-size: 12px;
+            text-transform: uppercase;
+            color: black;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        .plan-rule {
+            height: 15px;
+            width: 200px;
+            border-top: 1px solid black;
+            margin: 0 auto;
+        }
+
+        .plan-title {
+            font-family: 'Martel Sans';
+            font-size: clamp(1.5rem, 1rem + 2vw, 1.875rem); /* 30px from ~700px wide and up */
+            font-weight: lighter;
+            text-transform: uppercase;
+            color: black;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        .plan-list {
+            font-family: 'Martel Sans';
+            line-height: 30px;
+            font-size: 12px;
+            color: black;
+            text-align: left;
+            font-weight: lighter;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .plan-overlay-title {
+            font-family: 'Martel Sans';
+            font-size: clamp(1.5rem, 1rem + 2vw, 1.875rem);
+            font-weight: lighter;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            line-height: 25px;
+            margin-bottom: 20px;
+        }
+
+        .plan-overlay-text {
+            font-family: poppins;
+            font-weight: lighter;
+            font-size: 12px;
+            line-height: 25px;
+            letter-spacing: 1px;
+        }
+
+        .plan-price {
+            font-family: poppins;
+            font-weight: lighter;
+            font-size: 13px;
+            line-height: 25px;
+            letter-spacing: 1px;
+        }
+
+        /* "Tap for details" hint: only shown on touch devices (see below) */
+        .plan-tap-hint {
+            display: none;
+        }
+
+        /* Fade out the front-facing content on hover */
+        .plan-left-textbox > *:not(.cont-move-overlay),
+        .plan-right-textbox2 > *:not(.cont-move-overlay) {
+            transition: opacity 0.35s ease;
+        }
+
+        .plan-left-textbox:hover > *:not(.cont-move-overlay),
+        .plan-right-textbox2:hover > *:not(.cont-move-overlay) {
+            opacity: 0;
+        }
+
+        /* The hidden overlay that appears on hover */
+        .cont-move-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            box-sizing: border-box;
+            padding: 60px 40px;
+            color: white;
+            text-align: center;
+            opacity: 0;
+            transform: scale(0.95);
+            transition: opacity 0.4s ease, transform 0.4s ease;
+            pointer-events: none;
+        }
+
+        .plan-left-textbox:hover .cont-move-overlay,
+        .plan-right-textbox2:hover .cont-move-overlay {
+            opacity: 1;
+            transform: scale(1);
+            pointer-events: auto;
+        }
+
+        /* Keyboard focus reveals the same content as hover */
+        .plan-left-textbox:focus,
+        .plan-right-textbox2:focus {
+            outline: none;
+        }
+
+        .plan-left-textbox:focus-visible,
+        .plan-right-textbox2:focus-visible {
+            outline: 2px solid rgba(47, 79, 79, 0.95);
+            outline-offset: -6px;
+        }
+
+        .plan-left-textbox:focus-visible > *:not(.cont-move-overlay),
+        .plan-right-textbox2:focus-visible > *:not(.cont-move-overlay) {
+            opacity: 0;
+        }
+
+        .plan-left-textbox:focus-visible .cont-move-overlay,
+        .plan-right-textbox2:focus-visible .cont-move-overlay {
+            opacity: 1;
+            transform: scale(1);
+            pointer-events: auto;
+        }
+
+        /* Touch devices have no hover: a tap focuses the box and reveals the details */
+        @media (hover: none) {
+            .plan-tap-hint {
+                display: block;
+                margin-top: 8px;
+                font-family: 'Martel Sans';
+                font-size: 11px;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                color: rgba(47, 79, 79, 0.95);
+            }
+
+            .plan-left-textbox:focus > *:not(.cont-move-overlay),
+            .plan-right-textbox2:focus > *:not(.cont-move-overlay) {
+                opacity: 0;
+            }
+
+            .plan-left-textbox:focus .cont-move-overlay,
+            .plan-right-textbox2:focus .cont-move-overlay {
+                opacity: 1;
+                transform: scale(1);
+                pointer-events: auto;
+            }
+        }
+
+        /* =========================================================
+           TABLET (up to 900px)
+           Still two columns, but heights are automatic so text is never
+           clipped. Front content and overlay share one grid cell, so the
+           box is always as tall as whichever is longer.
+           ========================================================= */
+        @media only screen and (max-width: 900px) {
+
+            .morephotos-header {
+                height: auto;
+                width: 100%;
+                margin-top: 5rem;
+                padding: 1.5rem 1rem 2.5rem;
+            }
+
+            .mp-mid-top {
+                width: 100%;
+                height: auto;
+            }
+
+            .it_names {
+                margin-bottom: 1.5rem;
+            }
+
+            .plan-outline2,
+            .plan-outline3 {
+                height: auto;
+                border: 1px solid white;
+            }
+
+            .plan-contain-flexbox {
+                height: auto;
+                align-items: stretch;
+            }
+
+            .plan-contain-flex {
+                display: flex;
+                margin: 0;
+                padding: 2%;
+            }
+
+            .plan-left-img,
+            .plan-right-img {
+                flex: 1 1 auto;
+                height: auto;
+                min-height: 500px;
+            }
+
+            .plan-left-textbox,
+            .plan-right-textbox2 {
+                display: grid;
+                flex: 1 1 auto;
+                min-width: 0;
+                height: auto;
+                min-height: 500px;
+                padding: 0;
+            }
+
+            .plan-front,
+            .cont-move-overlay {
+                grid-area: 1 / 1;
+                min-width: 0;
+                padding: 2.5rem 1.5rem;
+            }
+
+            .plan-front {
+                align-self: center;
+            }
+
+            .cont-move-overlay {
+                position: relative;
+                top: auto;
+                right: auto;
+                bottom: auto;
+                left: auto;
+                width: auto;
+                height: auto;
+            }
+
+            .plan-overlay-title {
+                line-height: 1.3;
+            }
+        }
+
+        /* =========================================================
+           MOBILE (up to 700px): same breakpoint as the hamburger nav.
+           One column, image first in BOTH cards.
+           ========================================================= */
+        @media only screen and (max-width: 700px) {
+
+            .morephotos-header {
+                margin-top: 4.5rem;
+            }
+
+            .plan-outline2,
+            .plan-outline3 {
+                border: none;
+            }
+
+            .plan-contain-flexbox {
+                flex-direction: column;
+            }
+
+            .plan-contain-flex {
+                flex: 0 0 auto;
+                width: 100%;
+                min-width: 0;
+                padding: 0;
+            }
+
+            /* card 2 has its text first in the HTML; this puts the image on top */
+            .plan-img-cell {
+                order: -1;
+            }
+
+            .plan-left-img,
+            .plan-right-img {
+                flex: 1 1 auto;
+                min-height: 0;
+                height: clamp(16rem, 70vw, 28rem);
+            }
+
+            .plan-left-textbox,
+            .plan-right-textbox2 {
+                min-height: 0;
+            }
+
+            .plan-front,
+            .cont-move-overlay {
+                padding: 2rem 1.25rem;
+            }
+        }
+
+        /* Feature labels stack on small phones */
+        @media only screen and (max-width: 600px) {
+            .it-features-row {
+                flex-direction: column;
+            }
+
+            .p-left {
+                padding: 0.4rem 0;
+            }
+        }
     </style>
 </head>
 
-<body>
-<!--Navigation Bar-->
- <header>
+<body class="packages-page">
+    <!--Navigation Bar-->
+    <header>
 
         <!--Mobile Navbar-->
         <div id="mobilenav" class="responsivenav">
@@ -262,12 +433,12 @@
 
             <div class="nav-header">
                 <div class="nav-title">
-                    <img src="oflogoop.png" class="logo-responsive" />
+                    <img src="oflogoop.png" class="logo-responsive" alt="Engage Events logo" />
                 </div>
             </div>
 
             <div class="nav-btn">
-                <label for="nav-check">
+                <label for="nav-check" aria-label="Toggle navigation menu">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -291,14 +462,14 @@
 
                 <!-- LEFT SIDE LINKS -->
                 <ul class="navf" id="spacing">
-                    <li><a href="homepage.html">Home</a></li>                 
+                    <li><a href="homepage.html">Home</a></li>
                     <li><a href="gallerypage.html">Gallery</a></li>
                     <li><a href="Services.html">Services</a></li>
                 </ul>
 
                 <!-- CENTER LOGO -->
                 <div class="logo-centered" id="logo">
-                    <img src="oflogo.png" />
+                    <img src="oflogo.png" alt="Engage Events logo" />
                 </div>
 
                 <!-- RIGHT SIDE LINKS -->
@@ -314,6 +485,7 @@
 
                         <a href="https://www.facebook.com/engageeventsllc/"
                            class="nav-social-circle grow-on-hover"
+                           aria-label="Facebook"
                            style="padding-top:8px; text-decoration:none; padding-left:6px;">
 
                             <span>
@@ -325,6 +497,7 @@
 
                         <a href="https://www.instagram.com/engage.events/"
                            class="nav-social-circle grow-on-hover"
+                           aria-label="Instagram"
                            style="padding-top:8px; padding-left:5px;">
 
                             <span>
@@ -346,101 +519,80 @@
 
     <!--End Nav Bar-->
 
+    <div class="morephotos-header">
 
-    <!--Packages HEADER--
-    <div class="himg-packages" style="margin-bottom:100px;">
+        <div class="mp-mid-top">
 
-        <div class="hintro">
-            <div class="headerintro">
-                <br />
-                <p>
-                    PLANNING &amp; PACKAGES
-                </p>
+            <p class="it_names">Wedding Packages</p>
 
+            <div class="it-features-row">
+                <!--Day of Coordination-->
+                <div class="p-left">
+                    <p class="it_feature">
+                        DAY OF COORDINATION
+                    </p>
+                </div>
 
-                <p class="headerbio" style="letter-spacing:1px; line-height:15px; color:white;">
-                    What we Offer
-                </p>
+                <!--Rentals-->
+                <div class="p-left">
+                    <p class="it_feature">
+                        RENTALS
+                    </p>
+                </div>
 
+                <!--Elopements-->
+                <div class="p-left">
+                    <p class="it_feature">
+                        ELOPEMENTS
+                    </p>
+                </div>
             </div>
-        </div>
-    </div>-->
-
-
-
-<div class="morephotos-header">
-    <!--Back Button-->
-
-    <div class="mp-mid-top">
-        <!--<img src="oflogoop.png" class="above-logo" />-->
-
-        <p class="it_names">Wedding Packages</p>
-
-        <div class="it-features-row">
-            <!--Day of Coordination-->
-            <div class="p-left">
-                <p class="it_feature">
-                    DAY OF COORDINATION
-                </p>
-            </div>
-
-            <!--Rentals-->
-            <div class="p-left">
-                <p class="it_feature">
-                    RENTALS
-                </p>
-            </div>
-
-            <!--Elopements-->
-            <div class="p-left">
-                <p class="it_feature">
-                    ELOPEMENTS
-                </p>
-            </div>
-        </div>
-    </div> <!-- closes mp-mid-top -->
-</div> <!-- closes morephotos-header -->
-
+        </div> <!-- closes mp-mid-top -->
+    </div> <!-- closes morephotos-header -->
 
 
     <!--Day of Coordination-->
 
     <div class="plan-outline2">
         <div class="plan-contain-flexbox">
-            <div class="plan-contain-flex">
-                <div class="plan-left-img" style=" background-image: url('dayofbox.jpg'); "></div>
+            <div class="plan-contain-flex plan-img-cell">
+                <div class="plan-left-img" style="background-image: url('emmoon_creative_photography_9.JPG');"></div>
             </div>
             <div class="plan-contain-flex">
-                <div class="plan-left-textbox move cont-move" style="background: rgba( 240, 232, 223,0.8); color: black;">
-                    <p style="font-family: 'Martel Sans'; font-size: 12px; text-transform: uppercase; color: black; letter-spacing: 1px; margin-bottom: 20px;"> FOR THE COUPLE WHO WANTS A HANDS-FREE BIG DAY </p>
-                    <div style="height:15px; width:200px; margin-top:20px; border-top:1px solid black; margin:auto;"></div>
-                    <p style="font-family: 'Martel Sans'; font-size: 30px; font-weight:lighter; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px;"> Day of Coordination</p>
-                    <ul class="fa-ul" style="font-family: 'Martel Sans'; line-height:30px; font-size:12px; color: black; text-align: left; font-weight: lighter; text-transform: uppercase; letter-spacing: 1px; ">
-                        <li><span class="fa-li"><i style="font-size:10px;" class="fa-solid fa-check"></i></span>Ceremony rehearsal</li>
-                        <li><span class="fa-li"><i style="font-size:10px;" class="fa-solid fa-check"></i></span>Customized timeline and task list</li>
-                        <li><span class="fa-li"><i style="font-size:10px;" class="fa-solid fa-check"></i></span>Vendor coordination</li>
-                        <li><span class="fa-li"><i style="font-size:10px;" class="fa-solid fa-check"></i></span>Day of decoration</li>
-                        <li><span class="fa-li"><i style="font-size:10px;" class="fa-solid fa-check"></i></span>Problem solving expertise</li>
-                        <li><span class="fa-li"><i style="font-size:10px;" class="fa-solid fa-check"></i></span> Distribute vendor payments/tips</li>
-                        <li><span class="fa-li"><i style="font-size:10px;" class="fa-solid fa-check"></i></span> Peace of mind</li>
-                    </ul>
-                    <br />
-                    <i style="font-size: 30px; color: rgba(47,79,79,0.95);" class="fa-solid fa-angle-left"></i>
-                    <div class="cont-move-overlay" style="background: rgba(47,79,79,0.95);;">
+                <div class="plan-left-textbox move cont-move" tabindex="0" style="background: rgba(240, 232, 223, 0.8); color: black;">
+
+                    <div class="plan-front">
+                        <p class="plan-eyebrow">FOR THE COUPLE WHO WANTS A HANDS-FREE BIG DAY</p>
+                        <div class="plan-rule"></div>
+                        <p class="plan-title">Day of Coordination</p>
+                        <ul class="fa-ul plan-list">
+                            <li><span class="fa-li"><i style="font-size:10px;" class="fa-solid fa-check"></i></span>Ceremony rehearsal</li>
+                            <li><span class="fa-li"><i style="font-size:10px;" class="fa-solid fa-check"></i></span>Customized timeline and task list</li>
+                            <li><span class="fa-li"><i style="font-size:10px;" class="fa-solid fa-check"></i></span>Vendor coordination</li>
+                            <li><span class="fa-li"><i style="font-size:10px;" class="fa-solid fa-check"></i></span>Day of decoration</li>
+                            <li><span class="fa-li"><i style="font-size:10px;" class="fa-solid fa-check"></i></span>Problem solving expertise</li>
+                            <li><span class="fa-li"><i style="font-size:10px;" class="fa-solid fa-check"></i></span> Distribute vendor payments/tips</li>
+                            <li><span class="fa-li"><i style="font-size:10px;" class="fa-solid fa-check"></i></span> Peace of mind</li>
+                        </ul>
+                        <br />
+                        <i style="font-size: 30px; color: rgba(47,79,79,0.95);" class="fa-solid fa-angle-left"></i>
+                        <p class="plan-tap-hint">Tap for details</p>
+                    </div>
+
+                    <div class="cont-move-overlay" style="background: rgba(47,79,79,0.95);">
                         <i style="font-size:40px;" class="fa-regular fa-calendar"></i>
                         <br />
                         <br />
-                        <p style="font-family: 'Martel Sans'; font-size: 30px; font-weight: lighter; text-transform: uppercase; letter-spacing: 2px; line-height: 25px; margin-bottom: 20px; "> Sit back and enjoy!</p>
-                        <p style="font-family:poppins; font-weight:lighter; font-size:12px; line-height:25px; letter-spacing:1px;">
-                            Sit back and enjoy!
+                        <p class="plan-overlay-title"> Sit back and enjoy!</p>
+                        <p class="plan-overlay-text">
                             <br />
                             Day-Of Coordination servicesinclude full wedding management
-                            & coordination on the day of your event. We set up &
+                            &amp; coordination on the day of your event. We set up &amp;
                             coordinate your ceremony and reception.
                         </p>
                         <br />
                         <br />
-                        <p style="font-family:poppins; font-weight:lighter; font-size:13px; line-height:25px; letter-spacing:1px;"><i>Pricing: $1,500+;</i></p>
+                        <p class="plan-price"><i>Pricing: $1,500+</i></p>
                         <br />
                         <br />
                     </div>
@@ -454,50 +606,54 @@
     <br />
     <br />
 
-<div class="plan-outline3">
-    <div class="plan-contain-flexbox">
-        <div class="plan-contain-flex">
-            <div class="plan-right-textbox2 move cont-move" style="background: rgba( 240, 232, 223,0.8); color: black;">
-                <p style="font-family: 'Martel Sans'; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: black; margin-bottom: 20px;">SAVE MONEY, LESS STRESS</p>
-                <div style="height:15px; width:200px; margin-top:20px; border-top:1px solid black; margin:auto;"></div>
-                <p style="font-family: 'Martel Sans'; font-size: 30px; font-weight: lighter; text-transform: uppercase; color: black; letter-spacing: 1px; margin-bottom: 20px;"> Decoration Rentals</p>
-                <ul class="fa-ul" style="font-family: 'Martel Sans'; line-height:30px; font-size:12px; color: black; text-align: left; font-weight: lighter; text-transform: uppercase; letter-spacing: 1px; ">
-                    <li><span class="fa-li"></span><u>Rentals Available:</u></li>
-                    <li><span class="fa-li"><i style="font-size:10px;" class="fa-solid fa-check"></i></span>Vases</li>
-                    <li><span class="fa-li"><i style="font-size:10px;" class="fa-solid fa-check"></i></span>Linens</li>
-                    <li><span class="fa-li"><i style="font-size:10px;" class="fa-solid fa-check"></i></span>Votives</li>
-                    <li><span class="fa-li"><i style="font-size:10px;" class="fa-solid fa-check"></i></span>+ Much more!</li>
-                </ul>
+    <!--Decoration Rentals-->
 
-                <br />
-                <i style="font-size: 30px; color: rgba(47,79,79,0.95);" class="fa-solid fa-angle-left"></i>
-                <div class="cont-move-overlay" style="background: rgba(47,79,79,0.97); ">
-                    <i style="font-size:40px;" class="fa-solid fa-wine-glass-empty"></i>
-                    <br />
-                    <br />
-                    <p style="font-family: 'Martel Sans'; font-size: 30px; font-weight: lighter; text-transform: uppercase; letter-spacing: 2px; line-height: 25px; margin-bottom: 20px; "> Let's make this easy!</p>
-                    <p style="font-family:poppins; font-weight:lighter; font-size:12px; line-height:25px; letter-spacing:1px;">
-                        Renting decor and other items (instead of buying) can take a massive load off your shoulders- so we've got you covered! Contact us for a custom quote today!
-                    </p>
-                    <br />
-                    <br />
-                    <p style="font-family:poppins; font-weight:lighter; font-size:13px; line-height:25px; letter-spacing:1px;"><i>Prices: Contact for Details</i></p>
-                    <br />
-                    <br />
-                    <br />
+    <div class="plan-outline3">
+        <div class="plan-contain-flexbox">
+            <div class="plan-contain-flex">
+                <div class="plan-right-textbox2 move cont-move" tabindex="0" style="background: rgba(240, 232, 223, 0.8); color: black;">
+
+                    <div class="plan-front">
+                        <p class="plan-eyebrow">SAVE MONEY, LESS STRESS</p>
+                        <div class="plan-rule"></div>
+                        <p class="plan-title"> Decoration Rentals</p>
+                        <ul class="fa-ul plan-list">
+                            <li><span class="fa-li"></span><u>Rentals Available:</u></li>
+                            <li><span class="fa-li"><i style="font-size:10px;" class="fa-solid fa-check"></i></span>Vases</li>
+                            <li><span class="fa-li"><i style="font-size:10px;" class="fa-solid fa-check"></i></span>Linens</li>
+                            <li><span class="fa-li"><i style="font-size:10px;" class="fa-solid fa-check"></i></span>Votives</li>
+                            <li><span class="fa-li"><i style="font-size:10px;" class="fa-solid fa-check"></i></span>+ Much more!</li>
+                        </ul>
+                        <br />
+                        <i style="font-size: 30px; color: rgba(47,79,79,0.95);" class="fa-solid fa-angle-left"></i>
+                        <p class="plan-tap-hint">Tap for details</p>
+                    </div>
+
+                    <div class="cont-move-overlay" style="background: rgba(47,79,79,0.97);">
+                        <i style="font-size:40px;" class="fa-solid fa-wine-glass-empty"></i>
+                        <br />
+                        <br />
+                        <p class="plan-overlay-title"> Let's make this easy!</p>
+                        <p class="plan-overlay-text">
+                            Renting decor and other items (instead of buying) can take a massive load off your shoulders- so we've got you covered! Contact us for a custom quote today!
+                        </p>
+                        <br />
+                        <br />
+                        <p class="plan-price"><i>Prices: Contact for Details</i></p>
+                        <br />
+                        <br />
+                        <br />
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="plan-contain-flex">
-            <div class="plan-right-img" style="background-image:url('emmoon_creative_photography_5.jpg');"></div>
+            <div class="plan-contain-flex plan-img-cell">
+                <div class="plan-right-img" style="background-image: url('emmoon_creative_photography_5.jpg');"></div>
+            </div>
         </div>
     </div>
-</div>
     <br />
     <br />
     <br />
-
-
 
 
     <footer class="footerbody">
@@ -572,17 +728,17 @@
 
                         <div class="wrappericon">
 
-                            <a href="https://www.facebook.com/engageeventsllc/" class="icon facebook">
+                            <a href="https://www.facebook.com/engageeventsllc/" class="icon facebook" aria-label="Facebook">
                                 <div class="tooltip">Facebook</div>
                                 <span><i class="icon-facebook" style="line-height: 60px;"></i></span>
                             </a>
 
-                            <a href="https://www.google.com/search?sca_esv=587040545&rlz=1C1VDKB_enUS933US934&q=Engage+Events-+Wedding+and+Event+Planning&si=ALGXSlav9v2ESo4FabHCUDHSZqdp6_feqP4koY9qM2Ao6DS0o1Xc1i1XCzBrBfTcYUWeaoGO2nKXvbsnByarP2Q_4TSijZm8cE1dj_D4AP0Mz00kpTMB2DuZ1QQ6Qcrs635dDlHrY_1-JyV3W74WbTYm46MbeKgbgYK6mbvMlY-NWb-UncrfsDKxxXIt5W6ZCxp6LkGhZx93&sa=X&ved=2ahUKEwiK-fjDie-CAxWOvokEHdzeACcQ6RN6BAgLEAE&biw=1536&bih=738&dpr=1.25" class="icon google">
+                            <a href="https://www.google.com/search?sca_esv=587040545&rlz=1C1VDKB_enUS933US934&q=Engage+Events-+Wedding+and+Event+Planning&si=ALGXSlav9v2ESo4FabHCUDHSZqdp6_feqP4koY9qM2Ao6DS0o1Xc1i1XCzBrBfTcYUWeaoGO2nKXvbsnByarP2Q_4TSijZm8cE1dj_D4AP0Mz00kpTMB2DuZ1QQ6Qcrs635dDlHrY_1-JyV3W74WbTYm46MbeKgbgYK6mbvMlY-NWb-UncrfsDKxxXIt5W6ZCxp6LkGhZx93&sa=X&ved=2ahUKEwiK-fjDie-CAxWOvokEHdzeACcQ6RN6BAgLEAE&biw=1536&bih=738&dpr=1.25" class="icon google" aria-label="Google">
                                 <div class="tooltip" style="left:-19%;">Google</div>
                                 <span><i class="fa-brands fa-google"></i></span>
                             </a>
 
-                            <a href="https://www.instagram.com/engage.events/" class="icon instagram">
+                            <a href="https://www.instagram.com/engage.events/" class="icon instagram" aria-label="Instagram">
                                 <div class="tooltip">Instagram</div>
                                 <span><i class="icon-instagram"></i></span>
                             </a>
@@ -600,70 +756,21 @@
         </div>
 
     </footer>
+
+    <script>
+        (function () {
+            var navbar = document.getElementById("navbar");
+
+            function onScroll() {
+                if (!navbar) return;
+                var y = window.pageYOffset || document.documentElement.scrollTop;
+                navbar.classList.toggle("scrolled", y > 80);
+            }
+
+            window.addEventListener("scroll", onScroll, { passive: true });
+            onScroll();
+        })();
+    </script>
 </body>
 
-
-
 </html>
-
-<script>
-
-    window.onscroll = function () { scrollFunction() };
-
-    function scrollFunction() {
-        var navbar = document.getElementById("navbar");
-        var logo = document.getElementById("logo");
-        var upper = document.getElementById("upper");
-
-        var scrolled = document.body.scrollTop > 80 || document.documentElement.scrollTop > 80;
-
-        if (navbar) {
-            navbar.style.padding = scrolled ? "0px 0px" : "10px 0 20px 0";
-            navbar.style.background = scrolled ? "rgba(171, 183, 183,0)" : "transparent";
-        }
-        if (logo) {
-            logo.style.height = scrolled ? "80px" : "100px";
-            logo.style.width = scrolled ? "115.35px" : "135.35px";
-        }
-        if (upper) {
-            upper.style.height = scrolled ? "4px" : "0px";
-        }
-    }
-
-    //SCROLLEFFECT
-    var wheeling;
-    function mousemouve(e) {
-
-        clearTimeout(wheeling);
-        e.preventDefault();
-        var e = window.event || e;
-        var delta = Math.max(-1, Math.min(1, (e.wheelDelta || -e.detail)));
-
-        wheeling = setTimeout(function () {
-            wheeling = undefined;
-            if (delta === 1) {
-                moveToTop()
-            }
-            if (delta === -1) {
-                moveToBottom()
-            }
-        }, 100);
-
-        transition()
-    }
-
-    document.addEventListener("mousewheel", mousemouve);
-    document.addEventListener("DOMMouseScroll", mousemouve);
-
-    const scrollspace = document.querySelectorAll("[data-anime]");
-
-    window.addEventListener("scroll", () => {
-        const windowTop = window.pageYOffset + (window.innerHeight * 3) / 4;
-
-        scrollspace.forEach((scrollspace) => {
-            if (windowTop > scrollspace.offsetTop) scrollspace.classList.add("animate");
-            else scrollspace.classList.remove("animate");
-        });
-    });
-</script>
-

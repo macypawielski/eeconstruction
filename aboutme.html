@@ -671,7 +671,8 @@
     <br />
     <br />
     <!--About Engage Events -->
-    <div>
+    <!--About Engage Events -->
+    <div class="anna-wrapper">
 
         <div class="anna-picture1"></div>
         <div class="anna-picture1box">
@@ -719,7 +720,6 @@
         </div>
 
     </div>
-
     <!--info boxes small
     <div>
         <div class="cards-container">
@@ -796,48 +796,29 @@
             </ul>
         </div>
     </div>-->
+    <script>
+        // Shrink / tint the desktop navbar after scrolling
+        const navbar = document.getElementById("navbar");
 
+        function updateNavbar() {
+            const scrolled = (document.documentElement.scrollTop || document.body.scrollTop) > 80;
+            if (navbar) navbar.classList.toggle("scrolled", scrolled);
+        }
+
+        window.addEventListener("scroll", updateNavbar, { passive: true });
+        updateNavbar();
+
+        // Scroll-in animation for cards
+        const cards = document.querySelectorAll("[data-anime]");
+
+        window.addEventListener("scroll", () => {
+            const windowTop = window.pageYOffset + window.innerHeight;
+
+            cards.forEach((card) => {
+                if (windowTop > card.offsetTop) card.classList.add("animate");
+                else card.classList.remove("animate");
+            });
+        });
+    </script>
 </body>
 </html>
-<script>
-
-    window.onscroll = function () { scrollFunction() };
-
-    function scrollFunction() {
-        if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-            document.getElementById("navbar").style.padding = "0px 0px";
-            document.getElementById("logo").style.height = "80px";
-            document.getElementById("logo").style.width = "115.35px";
-            document.getElementById("upper").style.height = "4px";
-            document.getElementById("navbar").style.background = "rgba(171, 183, 183,0.4)";
-
-
-
-
-
-        } else {
-            document.getElementById("navbar").style.padding = "10px 0 20px 0";
-            document.getElementById("logo").style.height = "100px";
-            document.getElementById("logo").style.width = "135.35px";
-            document.getElementById("upper").style.height = "0px";
-            document.getElementById("navbar").style.background = "transparent";
-
-        }
-    }
-
-    const cards = document.querySelectorAll("[data-anime]");
-
-    window.addEventListener("scroll", () => {
-        const windowTop = window.pageYOffset + (window.innerHeight);
-
-        cards.forEach((card) => {
-            if (windowTop > card.offsetTop) card.classList.add("animate");
-            else card.classList.remove("animate");
-        });
-    });
-</script>
-
-
-
-
-
